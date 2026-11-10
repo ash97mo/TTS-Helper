@@ -40,29 +40,29 @@ const ttsData = {
         "ADVANCED": [
             {
                 "type": "case",
-                "text": "الحالة هي: Own The Case",
+                "text": "لو ال Status :Own The Case",
                 "target": "TIME_FRAME"
             },
             {
                 "type": "case",
                 "text": "حاله تاني",
                 "target": "ADV_OTHER"
-            },
-            {
-                "type": "note",
-                "text": "🗣️ اضغط لكتابة الملاحظة هنا..."
             }
         ],
         "TIME_FRAME": [
             {
-                "type": "case",
-                "text": "نعم (داخل المواعيد: 8AM to 11PM)",
-                "decKey": "ADV_TIME_IN"
+                "type": "step",
+                "num": "١",
+                "text": "مش هنعمل اي خطوات مع العميل&nbsp;"
             },
             {
-                "type": "case",
-                "text": "لا (خارج المواعيد: بعد 11PM أو قبل 8AM)",
-                "decKey": "ADV_TIME_OUT"
+                "type": "step",
+                "num": "٢",
+                "text": "هنعمل&nbsp; IR TTS Case ونابدت برقمها جوه الشكوه"
+            },
+            {
+                "type": "note",
+                "text": "ال SLA&nbsp;<span style=\"color: rgb(248, 250, 252); font-weight: 400;\">&nbsp;هيتم التواصل معاك في خلال ١٥ دقيقة من جانب القسم القسم المختص من مواعيد العمل من ٨ صباحا ل ١١ مسا</span>"
             }
         ],
         "MCU": [
@@ -258,7 +258,7 @@ const ttsData = {
     },
     "sectionTitles": {
         "ADVANCED": "ما هي حالة الشكوه (Status) داخل القسم؟",
-        "TIME_FRAME": "هل وقت المكالمة الآن داخل مواعيد العمل (من 8:00 صباحاً حتى 11:00 مساءً)؟",
+        "TIME_FRAME": "خطوات ومسارات لو ال Status :Own The Case:",
         "MCU": "حدد موقف الشكوه داخل MCU Call Center:",
         "INSTALLATION_OPS": "اختر نطاق الخط الجغرافي:",
         "CLOSING_AUTOMATION": "اختر حالة الغلق الخاصة:",
@@ -280,42 +280,17 @@ const ttsData = {
             "items": [
                 {
                     "type": "step",
-                    "num": "١",
-                    "text": "<b>[Troubleshooting]</b> ممنوع نهائياً عمل أي خطوات Troubleshooting مع العميل."
+                    "num": "1",
+                    "text": "مش هنعمل اي خطوات مع العميل&nbsp;"
                 },
                 {
                     "type": "step",
-                    "num": "٢",
-                    "text": "عمل IR tts case فوراً."
-                },
-                {
-                    "type": "step",
-                    "num": "٣",
-                    "text": "اختيار <b>Second Level Advanced</b> داخل خانة Case Type / Pool بالـ IR."
-                },
-                {
-                    "type": "step",
-                    "num": "٤",
-                    "text": "تسجيل رقم الـ IR Record بالكامل داخل خانة الملاحظات في الـ TTS."
-                },
-                {
-                    "type": "step",
-                    "num": "٥",
-                    "text": "إبلاغ العميل بأن المتابعة والتواصل معه ستتم خلال <b>15 دقيقة</b>."
-                },
-                {
-                    "type": "step",
-                    "num": "٦",
-                    "text": "فتح <b>SR متابعة / تصعيد TTs Cases</b> على نظام BSS."
-                },
-                {
-                    "type": "step",
-                    "num": "٧",
-                    "text": "🚫 ممنوع نهائياً سحب الشكوه (Withdrawing) من هذا القسم."
+                    "num": "2",
+                    "text": "هنعمل&nbsp; IR TTS Case ونابدت برقمها جوه الشكوه"
                 },
                 {
                     "type": "note",
-                    "text": "🗣️ يُقال للعميل نصاً: \"تم تصعيد شكوتك وسيتم التواصل معك ومتابعة حالتك خلال 15 دقيقة لحل المشكلة.\""
+                    "text": "ال SLA&nbsp;<span style=\"color: rgb(248, 250, 252); font-weight: 400;\">&nbsp;هيتم التواصل معاك في خلال ١٥ دقيقة من جانب القسم المختص.</span>"
                 }
             ]
         },
@@ -323,32 +298,17 @@ const ttsData = {
             "items": [
                 {
                     "type": "step",
-                    "num": "١",
-                    "text": "عمل IR tts case واختيار Second Level Advanced."
+                    "num": "1",
+                    "text": "مش هنعمل اي خطوات مع العميل&nbsp;"
                 },
                 {
                     "type": "step",
-                    "num": "٢",
-                    "text": "تسجيل رقم الـ IR Record داخل الـ TTS."
-                },
-                {
-                    "type": "step",
-                    "num": "٣",
-                    "text": "إبلاغ العميل بالتواصل معه فور بدء العمل في <b>الساعة 8:00 صباحاً</b>."
-                },
-                {
-                    "type": "step",
-                    "num": "٤",
-                    "text": "فتح <b>SR متابعة TTs Cases</b> على نظام BSS."
-                },
-                {
-                    "type": "step",
-                    "num": "٥",
-                    "text": "عدم إبلاغ العميل بمهلة الـ 15 دقيقة لانتهاء مواعيد العمل الرسمية."
+                    "num": "2",
+                    "text": "هنعمل IR tts case ونابدت برقمها جوه الشكوة ."
                 },
                 {
                     "type": "note",
-                    "text": "🗣️ يُقال للعميل: \"تم تسجيل الشكوه وسيتم التواصل معك ومتابعة حالتك فور بدء مواعيد عمل القسم المختص صباحاً (8:00 ص).\""
+                    "text": "ال SLA&nbsp;<span style=\"color: rgb(248, 250, 252); font-weight: 400;\">&nbsp;هيتم التواصل معاك في خلال ١٥ دقيقة من جانب القسم القسم المختص من مواعيد العمل من ٨ صباحا ل ١١ مسا</span>"
                 }
             ]
         },
@@ -503,87 +463,10 @@ const ttsData = {
             ]
         },
         "COMMON_SAME": {
-            "items": [
-                {
-                    "type": "step",
-                    "num": "١",
-                    "text": "الالتزام بما ورد في آخر <b>Update</b> مسجل بالشكوه وتطبيقه مع العميل."
-                },
-                {
-                    "type": "step",
-                    "num": "٢",
-                    "text": "عمل خطوات الفحص والتأكد من المشكلة الحالية."
-                },
-                {
-                    "type": "step",
-                    "num": "٣",
-                    "text": "تشغيل ASSIA Clear view بنمط (Last fix within 24h) لحالات BLQ و Instability."
-                },
-                {
-                    "type": "step",
-                    "num": "٤",
-                    "text": "مراجعة Voice verification وتاريخ الفاتورة لتجنب رفض الشكوه."
-                },
-                {
-                    "type": "step",
-                    "num": "٥",
-                    "text": "تحديث الشكوه خلال <b>5 دقائق كحد أقصى</b> بعد المكالمة."
-                },
-                {
-                    "type": "step",
-                    "num": "٦",
-                    "text": "عمل IR tts case باختيار اسم القسم الحالي في خانة Case Type / Pool."
-                },
-                {
-                    "type": "step",
-                    "num": "٧",
-                    "text": "فتح <b>Re-escalation SR</b> على نظام BSS."
-                },
-                {
-                    "type": "step",
-                    "num": "٨",
-                    "text": "🚫 ممنوع نهائياً عمل Withdrawing للشكوه من هذا القسم."
-                }
-            ]
+            "items": []
         },
         "COMMON_DIFF": {
-            "items": [
-                {
-                    "type": "step",
-                    "num": "١",
-                    "text": "عمل خطوات الفحص والـ Troubleshooting كاملة للمشكلة الجديدة."
-                },
-                {
-                    "type": "step",
-                    "num": "٢",
-                    "text": "هنأبدت بالخطوات عالشكوه بالتفصيل للمشكلة الجديدة."
-                },
-                {
-                    "type": "step",
-                    "num": "٣",
-                    "text": "إبلاغ العميل بالمهلة المقررة لنوع المشكلة الجديدة فقط."
-                },
-                {
-                    "type": "step",
-                    "num": "٤",
-                    "text": "عمل IR tts case مع تدوين رقم الـ IR داخل الشكوه."
-                },
-                {
-                    "type": "step",
-                    "num": "٥",
-                    "text": "إنشاء <b>\"Case needs to be escalated\" SR</b> الخاص بالمشكلة الجديدة."
-                },
-                {
-                    "type": "step",
-                    "num": "٦",
-                    "text": "فتح <b>Solvent SR</b> على نظام BSS."
-                },
-                {
-                    "type": "step",
-                    "num": "٧",
-                    "text": "🚫 ممنوع سحب (Withdraw) الشكوه السابقة."
-                }
-            ]
+            "items": []
         },
         "NOC_WITHIN": {
             "items": [
