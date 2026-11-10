@@ -71,17 +71,27 @@
             border: 1px solid var(--border-container); position: relative;
         }
         header { border-bottom: 1.5px solid var(--header-border); padding-bottom: 14px; margin-bottom: 18px; }
-        .header-title-box { display: flex; align-items: center; justify-content: center; gap: 10px; }
-        header h1 { font-size: 25px; color: var(--text-highlight); font-weight: 900; letter-spacing: 1px; margin: 0; }
-        .header-icons-box { display: flex; align-items: center; gap: 6px; }
+        .header-title-box { display: flex; align-items: center; justify-content: center; gap: 10px; position: relative; }
+        header h1 { font-size: 25px; color: var(--text-highlight); font-weight: 900; letter-spacing: 1px; margin: 0; direction: ltr; }
+        
+        /* الحرف السري المخفي داخل كلمة Helper */
+        .gear-secret {
+            cursor: pointer;
+            display: inline-block;
+            transition: color 0.2s ease, transform 0.2s ease;
+            user-select: none;
+        }
+        .gear-secret:hover { color: #f59e0b; }
+        .gear-secret.active-gear { color: #f59e0b; text-shadow: 0 0 8px rgba(245, 158, 11, 0.6); }
 
-        .theme-btn, .gear-btn {
+        .header-icons-box { position: absolute; right: 0; top: 50%; transform: translateY(-50%); display: flex; align-items: center; }
+
+        .theme-btn {
             background: transparent; border: none; color: var(--text-muted); font-size: 14px;
             width: 26px; height: 26px; border-radius: 50%; cursor: pointer;
             display: inline-flex; align-items: center; justify-content: center; transition: all 0.2s ease;
         }
-        .theme-btn:hover, .gear-btn:hover { color: var(--text-highlight); transform: scale(1.15); }
-        .gear-btn.active-gear { color: #f59e0b; }
+        .theme-btn:hover { color: var(--text-highlight); transform: scale(1.15); }
 
         .admin-bar {
             background: #1e1b4b; border: 1px dashed #818cf8; padding: 4px 8px;
@@ -123,7 +133,6 @@
         .unified-flow-list { display: flex; flex-direction: column; gap: 10px; width: 100%; }
         .flow-item-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
 
-        /* بطاقة القسم أو الحالة: بالحجم الأصلي */
         .card-case {
             flex: 1; background: var(--bg-btn); color: var(--text-btn);
             border: 1.5px solid var(--border-btn); padding: 14px 16px; border-radius: 10px;
@@ -152,7 +161,6 @@
         }
         .edit-mode-active .card-case .btn-go-step:hover { background: #0369a1; transform: translateY(-50%) scale(1.12); }
 
-        /* بطاقة خطوة القرار */
         .card-step {
             flex: 1; background: var(--list-item-bg); border: 1px solid var(--list-item-border);
             border-right: 4px solid #38bdf8; padding: 10px 14px; border-radius: 8px;
@@ -172,7 +180,6 @@
             outline: none; padding: 0 5px; user-select: text; transition: all 0.2s ease;
         }
 
-        /* بطاقة الملاحظة الزرقاء */
         .card-note {
             flex: 1; background: #0369a1; color: #fff; padding: 11px 14px; border-radius: 8px;
             font-size: 13.5px; font-weight: 700; border-right: 4px solid #facc15;
@@ -288,10 +295,10 @@
 <div class="container" id="appContainer">
     <header>
         <div class="header-title-box">
-            <h1>TTS Helper</h1>
+            <!-- الزرار السري مدمج داخل حرف الـ e في كلمة Helper -->
+            <h1>TTS Help<span id="gearBtn" class="gear-secret" onclick="toggleAdminMode()" title="">e</span>r</h1>
             <div class="header-icons-box">
                 <button class="theme-btn" id="themeToggleBtn" onclick="toggleTheme()" title="تبديل الوضع (معتم / ساطع)">☀️</button>
-                <button class="gear-btn" id="gearBtn" onclick="toggleAdminMode()" title="تفعيل / إيقاف وضع التعديل (محمي بكلمة مرور)">⚙️</button>
             </div>
         </div>
     </header>
@@ -378,7 +385,6 @@
 
     let appData = (loaded && typeof loaded === 'object') ? loaded : (typeof ttsData !== 'undefined' && ttsData ? JSON.parse(JSON.stringify(ttsData)) : {});
 
-    // دالة حيوية تضمن وجود هيكل البيانات حتى لو بدأ الموقع من الصفر وبدون داتا
     function ensureDataStructure() {
         if (!appData || typeof appData !== 'object') appData = {};
         if (!Array.isArray(appData.mainPools)) appData.mainPools = [];
@@ -472,7 +478,7 @@
         }
     }
 
-    // زر الترس محمي بكلمة مرور
+    // تفعيل وضع التعديل عبر الحرف السري بكلمة مرور
     function toggleAdminMode() {
         if (isEditMode) {
             exitAdminMode();
@@ -518,7 +524,6 @@
         });
     }
 
-    // حفظ في الذاكرة وتنزيل ملف data.js المحدث
     function saveDirectlyToFile() {
         if (document.activeElement && typeof document.activeElement.blur === 'function') {
             document.activeElement.blur();
@@ -607,7 +612,7 @@
 
         if (appData.mainPools.length === 0) {
             if (!isEditMode) {
-                grid.innerHTML = '<div style="text-align:center; padding: 30px; color: var(--text-muted); font-size: 14px;">لا توجد أقسام حالياً. اضغط على أيقونة الترس ⚙️ في الأعلى لإضافة أقسام جديدة.</div>';
+                grid.innerHTML = '<div style="text-align:center; padding: 30px; color: var(--text-muted); font-size: 14px;">لا توجد أقسام حالياً.</div>';
             }
             return;
         }
@@ -655,7 +660,6 @@
         });
     }
 
-    // إضافة قسم فوري يعمل بكفاءة حتى لو الداتا كانت فارغة 100%
     function addNewPoolItem() {
         ensureDataStructure();
         recordUndoSnapshot();
@@ -666,7 +670,6 @@
         renderMainPools();
         if (isEditMode) enableInPlaceEditing();
 
-        // التركيز مباشرة على القسم المضاف لكتابة اسمه فوراً
         const allSpans = document.querySelectorAll('#mainPoolsGrid .editable-content');
         if (allSpans.length > 0) {
             const last = allSpans[allSpans.length - 1];
