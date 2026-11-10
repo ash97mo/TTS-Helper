@@ -123,7 +123,7 @@
         .unified-flow-list { display: flex; flex-direction: column; gap: 10px; width: 100%; }
         .flow-item-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
 
-        /* حجم الأقسام الأصلي الكامل */
+        /* بطاقة القسم أو الحالة: بالحجم الأصلي */
         .card-case {
             flex: 1; background: var(--bg-btn); color: var(--text-btn);
             border: 1.5px solid var(--border-btn); padding: 14px 16px; border-radius: 10px;
@@ -152,7 +152,7 @@
         }
         .edit-mode-active .card-case .btn-go-step:hover { background: #0369a1; transform: translateY(-50%) scale(1.12); }
 
-        /* حجم خطوات القرار الأصلي */
+        /* بطاقة خطوة القرار */
         .card-step {
             flex: 1; background: var(--list-item-bg); border: 1px solid var(--list-item-border);
             border-right: 4px solid #38bdf8; padding: 10px 14px; border-radius: 8px;
@@ -172,7 +172,7 @@
             outline: none; padding: 0 5px; user-select: text; transition: all 0.2s ease;
         }
 
-        /* حجم الملاحظات الأصلي */
+        /* بطاقة الملاحظة الزرقاء */
         .card-note {
             flex: 1; background: #0369a1; color: #fff; padding: 11px 14px; border-radius: 8px;
             font-size: 13.5px; font-weight: 700; border-right: 4px solid #facc15;
@@ -370,9 +370,24 @@
     // كلمة المرور لوضع التعديل
     const ADMIN_PASSWORD = "1234";
 
-    // تحميل البيانات من localStorage أو من ملف data.js
-    let loaded = JSON.parse(localStorage.getItem('ttsAppData'));
-    let appData = (loaded && loaded.mainPools) ? loaded : (typeof ttsData !== 'undefined' ? JSON.parse(JSON.stringify(ttsData)) : {});
+    // تحميل البيانات من localStorage أو من ملف data.js بأمان
+    let loaded = null;
+    try {
+        loaded = JSON.parse(localStorage.getItem('ttsAppData'));
+    } catch(e) { loaded = null; }
+
+    let appData = (loaded && typeof loaded === 'object') ? loaded : (typeof ttsData !== 'undefined' && ttsData ? JSON.parse(JSON.stringify(ttsData)) : {});
+
+    // دالة حيوية تضمن وجود هيكل البيانات حتى لو بدأ الموقع من الصفر وبدون داتا
+    function ensureDataStructure() {
+        if (!appData || typeof appData !== 'object') appData = {};
+        if (!Array.isArray(appData.mainPools)) appData.mainPools = [];
+        if (!appData.sections || typeof appData.sections !== 'object') appData.sections = {};
+        if (!appData.sectionTitles || typeof appData.sectionTitles !== 'object') appData.sectionTitles = {};
+        if (!appData.decisions || typeof appData.decisions !== 'object') appData.decisions = {};
+        if (!appData.theme) appData.theme = 'dark';
+    }
+    ensureDataStructure();
 
     let isEditMode = false;
     let undoStack = [];
@@ -406,6 +421,7 @@
     }
 
     function recordUndoSnapshot() {
+        ensureDataStructure();
         undoStack.push(JSON.stringify(appData));
         if (undoStack.length > 25) undoStack.shift();
         updateUndoBtnState();
@@ -419,6 +435,7 @@
     function undoLastChange() {
         if (!undoStack.length) return;
         appData = JSON.parse(undoStack.pop());
+        ensureDataStructure();
         updateUndoBtnState();
 
         const currentNav = navStack[navStack.length - 1];
@@ -437,6 +454,7 @@
     }
 
     function toggleTheme() {
+        ensureDataStructure();
         const isLight = document.body.classList.toggle('theme-light');
         appData.theme = isLight ? 'light' : 'dark';
         document.getElementById('themeToggleBtn').innerText = isLight ? '🌙' : '☀️';
@@ -444,6 +462,7 @@
     }
 
     function initTheme() {
+        ensureDataStructure();
         if (appData.theme === 'light') {
             document.body.classList.add('theme-light');
             document.getElementById('themeToggleBtn').innerText = '🌙';
@@ -504,6 +523,7 @@
         if (document.activeElement && typeof document.activeElement.blur === 'function') {
             document.activeElement.blur();
         }
+        ensureDataStructure();
         localStorage.setItem('ttsAppData', JSON.stringify(appData));
         const jsContent = "const ttsData = " + JSON.stringify(appData, null, 4) + ";";
         const blob = new Blob([jsContent], { type: 'text/javascript;charset=utf-8' });
@@ -542,6 +562,7 @@
     }
 
     function openSection(secKey, title) {
+        ensureDataStructure();
         const cur = navStack[navStack.length - 1];
         const newPath = [...(cur.path || []), title];
         if (!appData.sections[secKey]) appData.sections[secKey] = [];
@@ -552,6 +573,7 @@
     }
 
     function openDecision(decKey, title) {
+        ensureDataStructure();
         const cur = navStack[navStack.length - 1];
         const newPath = [...(cur.path || []), title];
         navStack.push({ viewId: 'viewDecision', decKey: decKey, path: newPath });
@@ -573,16 +595,24 @@
     }
 
     function initAppUI() {
-        if (!appData.sections) appData.sections = {};
-        if (!appData.sectionTitles) appData.sectionTitles = {};
+        ensureDataStructure();
         initTheme();
         renderCurrentNavState();
     }
 
     function renderMainPools() {
+        ensureDataStructure();
         const grid = document.getElementById('mainPoolsGrid');
         grid.innerHTML = '';
-        (appData.mainPools || []).forEach((pool, idx) => {
+
+        if (appData.mainPools.length === 0) {
+            if (!isEditMode) {
+                grid.innerHTML = '<div style="text-align:center; padding: 30px; color: var(--text-muted); font-size: 14px;">لا توجد أقسام حالياً. اضغط على أيقونة الترس ⚙️ في الأعلى لإضافة أقسام جديدة.</div>';
+            }
+            return;
+        }
+
+        appData.mainPools.forEach((pool, idx) => {
             const wrapper = document.createElement('div');
             wrapper.className = 'flow-item-wrapper';
             wrapper.innerHTML = `
@@ -625,7 +655,9 @@
         });
     }
 
+    // إضافة قسم فوري يعمل بكفاءة حتى لو الداتا كانت فارغة 100%
     function addNewPoolItem() {
+        ensureDataStructure();
         recordUndoSnapshot();
         const newKey = 'POOL_' + Date.now();
         appData.mainPools.push({ key: newKey, title: 'اضغط لتعديل اسم القسم...' });
@@ -633,9 +665,22 @@
         appData.sectionTitles[newKey] = 'خطوات ومسارات القسم الجديد:';
         renderMainPools();
         if (isEditMode) enableInPlaceEditing();
+
+        // التركيز مباشرة على القسم المضاف لكتابة اسمه فوراً
+        const allSpans = document.querySelectorAll('#mainPoolsGrid .editable-content');
+        if (allSpans.length > 0) {
+            const last = allSpans[allSpans.length - 1];
+            last.focus();
+            const range = document.createRange();
+            range.selectNodeContents(last);
+            const sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+        }
     }
 
     async function deleteMainPool(idx) {
+        ensureDataStructure();
         const pool = appData.mainPools[idx];
         const ok = await appConfirm('حذف القسم', `هل أنت متأكد من حذف قسم "${pool.title}" بالكامل؟`);
         if (ok) {
@@ -647,6 +692,7 @@
     }
 
     function renderSectionView(secKey) {
+        ensureDataStructure();
         const titleEl = document.getElementById('secTitle');
         titleEl.innerText = appData.sectionTitles[secKey] || 'ما هو الموقف الحالي؟';
         titleEl.onblur = function() {
@@ -771,8 +817,10 @@
     function addNewStepFast() {
         const cur = navStack[navStack.length - 1];
         if (cur.viewId !== 'viewSection') return;
-        const items = appData.sections[cur.secKey];
+        ensureDataStructure();
         recordUndoSnapshot();
+        if (!appData.sections[cur.secKey]) appData.sections[cur.secKey] = [];
+        const items = appData.sections[cur.secKey];
         const stepCount = items.filter(i => i.type === 'step').length;
         const nextNum = ARABIC_DIGITS[stepCount] || String(stepCount + 1);
         items.push({ type: 'step', num: nextNum, text: 'اضغط لكتابة تفاصيل الخطوة هنا...' });
@@ -783,7 +831,9 @@
     function addNewCaseFast() {
         const cur = navStack[navStack.length - 1];
         if (cur.viewId !== 'viewSection') return;
+        ensureDataStructure();
         recordUndoSnapshot();
+        if (!appData.sections[cur.secKey]) appData.sections[cur.secKey] = [];
         const items = appData.sections[cur.secKey];
         const targetKey = 'SEC_' + Date.now();
         appData.sections[targetKey] = [];
@@ -796,8 +846,10 @@
     function addNewNoteFast() {
         const cur = navStack[navStack.length - 1];
         if (cur.viewId !== 'viewSection') return;
-        const items = appData.sections[cur.secKey];
+        ensureDataStructure();
         recordUndoSnapshot();
+        if (!appData.sections[cur.secKey]) appData.sections[cur.secKey] = [];
+        const items = appData.sections[cur.secKey];
         items.push({ type: 'note', text: '🗣️ اضغط لكتابة الملاحظة هنا...' });
         renderSectionView(cur.secKey);
         if (isEditMode) enableInPlaceEditing();
@@ -815,6 +867,7 @@
     }
 
     function renderDecisionView(key) {
+        ensureDataStructure();
         if (!appData.decisions[key]) {
             appData.decisions[key] = {
                 items: [{ type: 'step', num: '١', text: 'اضغط لكتابة تفاصيل الخطوة هنا...' }]
@@ -916,6 +969,8 @@
     function addNewDecisionStepFast() {
         const cur = navStack[navStack.length - 1];
         if (cur.viewId !== 'viewDecision') return;
+        ensureDataStructure();
+        if (!appData.decisions[cur.decKey]) appData.decisions[cur.decKey] = { items: [] };
         const dec = appData.decisions[cur.decKey];
         if (!dec.items) dec.items = [];
         recordUndoSnapshot();
@@ -929,6 +984,8 @@
     function addNewDecisionNoteFast() {
         const cur = navStack[navStack.length - 1];
         if (cur.viewId !== 'viewDecision') return;
+        ensureDataStructure();
+        if (!appData.decisions[cur.decKey]) appData.decisions[cur.decKey] = { items: [] };
         const dec = appData.decisions[cur.decKey];
         if (!dec.items) dec.items = [];
         recordUndoSnapshot();
