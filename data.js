@@ -136,23 +136,13 @@ const ttsData = {
         "IU": [
             {
                 "type": "case",
-                "text": "بيتابع نفس المشكلة خلال المده",
-                "decKey": "IU_SAME_WITHIN"
+                "text": "الشكوة اتصعدت مره وحده لل IU",
+                "target": "SEC_1794393999106"
             },
             {
                 "type": "case",
-                "text": "بيتابع نفس المشكلة وعدا المده",
-                "decKey": "IU_SAME_PASS"
-            },
-            {
-                "type": "case",
-                "text": "عنده مشكلة فيزيكال تانية خلال المده",
-                "decKey": "IU_PHYS_WITHIN"
-            },
-            {
-                "type": "case",
-                "text": "عنده مشكلة فيزيكال تانية وعدا المده",
-                "target": "SEC_1794363456024"
+                "text": "<span style=\"background-color: rgba(2, 132, 199, 0.15);\">الشكوة اتصعدت اكتر من مره لل IU</span>",
+                "target": "SEC_1794393974458"
             },
             {
                 "type": "case",
@@ -391,6 +381,259 @@ const ttsData = {
                 "type": "note",
                 "text": "ال Sla هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة"
             }
+        ],
+        "SEC_1794393974458": [
+            {
+                "type": "case",
+                "text": "بيتابع نفس المشكلة ولسه في خلال SLA من وقت اخر تصعيد",
+                "target": "SEC_1794394456271"
+            },
+            {
+                "type": "case",
+                "text": "بيتابع نفس المشكلة وعدا ال SLA من وقت اخر تصعيد",
+                "target": "SEC_1794394515987"
+            },
+            {
+                "type": "case",
+                "text": "عنده مشكلة فيزيكال تانية ولسه في خلال SLA من وقت اخر تصعيد",
+                "target": "SEC_1794395810049"
+            },
+            {
+                "type": "case",
+                "text": "عنده مشكلة فيزيكال تانية وعدا ال SLA من وقت اخر تصعيد",
+                "target": "SEC_1794396180763"
+            }
+        ],
+        "SEC_1794393999106": [
+            {
+                "type": "case",
+                "text": "بيتابع نفس المشكلة خلال SLA",
+                "target": "SEC_1794394093045"
+            },
+            {
+                "type": "case",
+                "text": "بيتابع نفس المشكلة وعدا SLA",
+                "target": "SEC_1794394110355"
+            },
+            {
+                "type": "case",
+                "text": "عنده مشكلة فيزيكال تانية خلال SLA",
+                "target": "SEC_1794395215315"
+            },
+            {
+                "type": "case",
+                "text": "عنده مشكلة فيزيكال تانية وعدا SLA",
+                "target": "SEC_1794395399583"
+            }
+        ],
+        "SEC_1794394093045": [
+            {
+                "type": "step",
+                "num": "١",
+                "text": "هنعمل IR Acceleration ونابدت بيه جوه الشكوه لو مش حياة كريمة"
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "هنعرض تعويض ٠١٥ لو متعرضش والشكوه physical instability او BLQ.&nbsp;<div>او Voice down وعليها ابديت بان عنده مشكله في النت ٣ جيجا لمده يومين</div>"
+            },
+            {
+                "type": "step",
+                "num": "٣",
+                "text": "هنعمل SR Follow up Within sla"
+            },
+            {
+                "type": "note",
+                "text": "ال Sla هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة"
+            }
+        ],
+        "SEC_1794394110355": [
+            {
+                "type": "step",
+                "num": "١",
+                "text": "هنعمل IR Acceleration ونابدت بيه عالشكوه&nbsp; لو مش حياة كريمة"
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "هنعمل IR Delay<div>ونابدت بيه جوه عالشكوه.</div>"
+            },
+            {
+                "type": "step",
+                "num": "٣",
+                "text": "هنعرض تعويض ٠١٥ حسب باقته لو مضفش قبل كده."
+            },
+            {
+                "type": "step",
+                "num": "٤",
+                "text": "هنعمل SR Follow After Sla.&nbsp;"
+            },
+            {
+                "type": "note",
+                "text": "ال Sla هتكون 24 ساعه وهتكون 24 ساعه لو حياة كريمة برضو"
+            }
+        ],
+        "SEC_1794394456271": [
+            {
+                "type": "step",
+                "num": "١",
+                "text": "هنعمل IR Acceleration ونابدت بيه جوه الشكوه لو مش حياة كريمة"
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "<div>لو عدت ٢٤ ساعه من وقت اول تصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+            },
+            {
+                "type": "step",
+                "num": "٣",
+                "text": "هنعمل SR Follow Up After ReEsclation Within Sla"
+            },
+            {
+                "type": "note",
+                "text": "ال Sla هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة"
+            }
+        ],
+        "SEC_1794394515987": [
+            {
+                "type": "step",
+                "num": "١",
+                "text": "هنعمل IR Acceleration ونابدت بيه عالشكوه&nbsp; لو مش حياة كريمة"
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "هنعمل IR Delay<div>ونابدت بيه جوه عالشكوه.</div>"
+            },
+            {
+                "type": "step",
+                "num": "٣",
+                "text": "هنعرض تعويض ٠١٥ حسب باقته لو مضفش قبل كده."
+            },
+            {
+                "type": "step",
+                "num": "٤",
+                "text": "هنعمل SR Follow Up After ReEsclation After SLA"
+            },
+            {
+                "type": "note",
+                "text": "ال Sla هتكون 24 ساعه وهتكون 24 ساعه لو حياة كريمة برضو"
+            }
+        ],
+        "SEC_1794394629022": [],
+        "SEC_1794395215315": [
+            {
+                "type": "step",
+                "num": "١",
+                "text": "هنأبدت عالشكوه المشكلة الفيزيكال الجديدة."
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "هنعمل IR Acceleration ونابدت بيه جوه الشكوه لو مش حياة كريمة"
+            },
+            {
+                "type": "step",
+                "num": "٣",
+                "text": "هنعمل SR Follow Up&nbsp; Within. عالمشكله اللي في TTS."
+            },
+            {
+                "type": "step",
+                "num": "٤",
+                "text": "<div>هنعرض تعويض ٠١٥ لو متعرضش&nbsp; والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها ابديت بان عنده مشكله في النت&nbsp; ٣ جيجا لمده يومين</div>"
+            },
+            {
+                "type": "note",
+                "text": "ال Sla هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة"
+            }
+        ],
+        "SEC_1794395399583": [
+            {
+                "type": "step",
+                "num": "١",
+                "text": "هنأبدت عالشكوه المشكلة الفيزيكال الجديدة."
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "هنعمل IR Delay ونابدت بيه جوه الشكوه."
+            },
+            {
+                "type": "step",
+                "num": "٣",
+                "text": "هنعمل IR Acceleration ونابدت جوه عالشكوه&nbsp; لو مش حياة كريمة"
+            },
+            {
+                "type": "step",
+                "num": "٤",
+                "text": "هنعمل SR Follow After Sla عالمشكلة اللي في TTS."
+            },
+            {
+                "type": "step",
+                "num": "٥",
+                "text": "هنعرض تعويض ٠١٥ حسب باقته لو مضفش قبل كده."
+            },
+            {
+                "type": "note",
+                "text": "ال Sla هتكون 24 ساعه وهتكون 24 ساعه لو حياة كريمة برضو"
+            }
+        ],
+        "SEC_1794395810049": [
+            {
+                "type": "step",
+                "num": "١",
+                "text": "هنأبدت عالشكوه المشكلة الفيزيكال الجديدة."
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "هنعمل IR Acceleration ونابدت بيه جوه الشكوه لو مش حياة كريمة"
+            },
+            {
+                "type": "step",
+                "num": "٣",
+                "text": "هنعمل SR Follow Up After ReEscalation Within SLA. عالمشكله اللي في TTS."
+            },
+            {
+                "type": "step",
+                "num": "٤",
+                "text": "<div>لو عدت ٢٤ ساعه من وقت اول تصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+            },
+            {
+                "type": "note",
+                "text": "ال Sla هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة"
+            }
+        ],
+        "SEC_1794396180763": [
+            {
+                "type": "step",
+                "num": "١",
+                "text": "هنأبدت عالشكوه المشكلة الفيزيكال الجديدة."
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "هنعمل IR Delay ونابدت بيه جوه الشكوه."
+            },
+            {
+                "type": "step",
+                "num": "٣",
+                "text": "هنعمل IR Acceleration ونابدت جوه عالشكوه&nbsp; لو مش حياة كريمة"
+            },
+            {
+                "type": "step",
+                "num": "٤",
+                "text": "هنعمل SR Follow Up After ReEscalation After Sla عالمشكلة اللي في TTS."
+            },
+            {
+                "type": "step",
+                "num": "٥",
+                "text": "هنعرض تعويض ٠١٥ حسب باقته لو مضفش قبل كده."
+            },
+            {
+                "type": "note",
+                "text": "ال Sla هتكون 24 ساعه وهتكون 24 ساعه لو حياة كريمة برضو"
+            }
         ]
     },
     "sectionTitles": {
@@ -400,7 +643,7 @@ const ttsData = {
         "INSTALLATION_OPS": "اختر نطاق الخط الجغرافي:",
         "CLOSING_AUTOMATION": "اختر حالة الغلق الخاصة:",
         "SLS_FOLLOWUP": "ما هو موقف العميل والمشكلة؟",
-        "IU": "<span style=\"font-size: 14px;\"><span style=\"color: rgb(250, 204, 21);\">قبل اي حاجه هنشوفها متصعده كام مره لل IU وعدت المده ولا لا من وقت اخر تصعيد ونكمل التالي:</span></span>",
+        "IU": "<span style=\"font-size: 14px;\"><span style=\"color: rgb(250, 204, 21);\">هنشوف الشكوة متصعدة كام مره لل IU&nbsp;</span></span>",
         "NOC": "موقف الشكوه في NOC:",
         "ADV_OTHER": false,
         "CUSTOM_1794074541102": false,
@@ -415,7 +658,18 @@ const ttsData = {
         "SEC_1794356613469": "📋 الخطوات المطلوبة:",
         "SEC_1794363456024": "📋 الخطوات المطلوبة:",
         "POOL_1794366041775": "📋 الخطوات المطلوبة:",
-        "SEC_1794390971766": "📋 الخطوات المطلوبة:"
+        "SEC_1794390971766": "📋 الخطوات المطلوبة:",
+        "SEC_1794393974458": false,
+        "SEC_1794393999106": false,
+        "SEC_1794394093045": "📋 الخطوات المطلوبة:",
+        "SEC_1794394110355": "📋 الخطوات المطلوبة:",
+        "SEC_1794394456271": "📋 الخطوات المطلوبة:",
+        "SEC_1794394515987": "📋 الخطوات المطلوبة:",
+        "SEC_1794394629022": "📋 الخطوات المطلوبة:",
+        "SEC_1794395215315": "📋 الخطوات المطلوبة:",
+        "SEC_1794395399583": "📋 الخطوات المطلوبة:",
+        "SEC_1794395810049": "📋 الخطوات المطلوبة:",
+        "SEC_1794396180763": "📋 الخطوات المطلوبة:"
     },
     "decisions": {
         "ADV_TIME_IN": {
@@ -611,12 +865,12 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "1",
-                    "text": "هنعمل IR Acceleration ونابدت بيه جوه الشكوه لو مش حياة كريمة"
+                    "text": "<br>"
                 },
                 {
                     "type": "step",
                     "num": "2",
-                    "text": "هنعرض تعويض ٠١٥ لو متعرضش  والشكوه physical instability او BLQ.&nbsp;<div>او Voice down وعليها ابديت بان عنده مشكله في النت  ٣ جيجا لمده يومين</div>"
+                    "text": "<br>"
                 },
                 {
                     "type": "step",
@@ -634,26 +888,26 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "1",
-                    "text": "هنعمل IR Acceleration ونابدت بيه عالشكوه&nbsp; لو مش حياة كريمة"
+                    "text": "<br>"
                 },
                 {
                     "type": "step",
                     "num": "2",
-                    "text": "هنعمل IR Delay<div>ونابدت بيه جوه عالشكوه.</div>"
+                    "text": "<br>"
                 },
                 {
                     "type": "step",
                     "num": "3",
-                    "text": "هنعرض تعويض ٠١٥ حسب باقته لو مضفش قبل كده."
+                    "text": "<br>"
                 },
                 {
                     "type": "step",
                     "num": "4",
-                    "text": "هنعمل SR Follow After Sla.&nbsp;"
+                    "text": "<br>"
                 },
                 {
                     "type": "note",
-                    "text": "ال Sla هتكون 24 ساعه وهتكون 24 ساعه لو حياة كريمة برضو"
+                    "text": "<br>"
                 }
             ]
         },
