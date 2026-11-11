@@ -177,7 +177,7 @@ const ttsData = {
         "CUSTOM_1794074541102": [
             {
                 "type": "case",
-                "text": "<span style=\"font-weight: 400; text-align: start;\">وعنده مشكلة فيزيكال&nbsp;</span>",
+                "text": "<span style=\"font-weight: 400; text-align: start;\">&nbsp;مشكلتة فيزيكال&nbsp;</span>",
                 "target": "SEC_1794356595043"
             },
             {
@@ -224,7 +224,7 @@ const ttsData = {
             },
             {
                 "type": "note",
-                "text": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SLA<div>بتكون بتاعت المشكلة الجديده</div>"
+                "text": "ال SLA بتكون بتاعت المشكلة الجديده."
             }
         ],
         "SEC_1794346451785": [
@@ -245,7 +245,7 @@ const ttsData = {
             },
             {
                 "type": "note",
-                "text": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SLA<div>&nbsp;بتكون بتاعت نفس المشكلة.</div>"
+                "text": "ال SLA بتكون بتاعت نفس المشكلة."
             }
         ],
         "SEC_1794346471034": [
@@ -300,17 +300,17 @@ const ttsData = {
         ]
     },
     "sectionTitles": {
-        "ADVANCED": "ما هي حالة الشكوه (Status) داخل القسم؟",
+        "ADVANCED": "<span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\">ما هي حالة الشكوه (Status)</span></span></span>",
         "TIME_FRAME": "📋 الخطوات المطلوبة:",
-        "MCU": "<span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\">حدد موقف الشكوه داخل MCU Call Center:</span></span></span>",
+        "MCU": "<span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\">حدد موقف الشكوه داخل MCU Call Center:</span></span></span></span></span>",
         "INSTALLATION_OPS": "اختر نطاق الخط الجغرافي:",
         "CLOSING_AUTOMATION": "اختر حالة الغلق الخاصة:",
         "SLS_FOLLOWUP": "ما هو موقف العميل والمشكلة؟",
-        "IU": "حدد موقف العميل في IU Maintenance:",
+        "IU": "<span style=\"font-size: 14px;\">حدد موقف العميل في IU Maintenance:</span>",
         "NOC": "موقف الشكوه في NOC:",
         "ADV_OTHER": false,
-        "CUSTOM_1794074541102": "&nbsp;Customer 360:",
-        "FOLLOWUP": "<span style=\"font-size: 16px;\">اول حاجه نشوف اخر ابديت عالشكوه لو احتجتا نصعد :-</span>",
+        "CUSTOM_1794074541102": false,
+        "FOLLOWUP": "<span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 12px;\">اول حاجه نشوف اخر ابديت عالشكوه لو احتجتا نصعد :-</span></span></span></span>",
         "POOL_1794337383186": "خطوات ومسارات القسم الجديد:",
         "SEC_1794339390400": "خطوات ومسارات الحالة الجديدة:",
         "SLS": "خطوات ومسارات CC-Second Level Support / Pilot-SLS:",
