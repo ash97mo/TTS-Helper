@@ -7,7 +7,7 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        /* شاشة البداية Splash Screen */
+        /* شاشة البداية Splash Screen الأصلية */
         .splash-screen {
             position: fixed; inset: 0;
             background: radial-gradient(circle at center, #1e293b 0%, #0b1120 100%);
@@ -40,14 +40,32 @@
         @keyframes splashAnim { 0% { transform: translateX(-100%); } 100% { transform: translateX(0); } }
 
         :root {
-            --bg-body: #0b0f19; --bg-container: #131d2e; --border-container: #1e293b;
-            --text-main: #f8fafc; --text-muted: #94a3b8; --text-highlight: #38bdf8;
-            --bg-btn: #1e293b; --border-btn: #334155; --text-btn: #cbd5e1;
-            --bg-btn-hover: #27354f; --border-btn-hover: #38bdf8; --header-border: #223049;
-            --context-box-bg: #0b1120; --context-box-border: #253349;
-            --list-item-bg: rgba(15, 23, 42, 0.75); --list-item-border: rgba(51, 65, 85, 0.6);
-            --modal-bg: #131d2e; --modal-border: rgba(56, 189, 248, 0.3);
-            --dec-card-bg: #0b1120; --dec-card-border: #1e293b;
+            /* استعادة الألوان الأصلية بالكامل */
+            --bg-body: #0b0f19; 
+            --bg-container: #131d2e; 
+            --border-container: #1e293b;
+            --text-main: #f8fafc; 
+            --text-muted: #94a3b8; 
+            --text-highlight: #38bdf8;
+
+            /* كروت الاختيارات مع لمسة تمييز أنيقة */
+            --bg-btn: #182335; 
+            --border-btn: #27374d; 
+            --text-btn: #e2e8f0;
+            --bg-btn-hover: #223249; 
+            --border-btn-hover: #38bdf8; 
+            --header-border: #223049;
+            
+            /* الكارت المحيط بالاختيارات بلون مميز وأنيق يختلف عن سواد الخلفية */
+            --dec-card-bg: #0e1726; 
+            --dec-card-border: #23354d;
+            --context-box-bg: #141f30; 
+            --context-box-border: #23354d;
+            
+            --list-item-bg: rgba(15, 23, 42, 0.85); 
+            --list-item-border: rgba(51, 65, 85, 0.6);
+            --modal-bg: #131d2e; 
+            --modal-border: rgba(56, 189, 248, 0.3);
             --note-bg: #0369a1;
         }
         body.theme-light {
@@ -55,10 +73,10 @@
             --text-main: #0f172a; --text-muted: #64748b; --text-highlight: #0284c7;
             --bg-btn: #f8fafc; --border-btn: #cbd5e1; --text-btn: #1e293b;
             --bg-btn-hover: #e0f2fe; --border-btn-hover: #0284c7; --header-border: #e2e8f0;
-            --context-box-bg: #f8fafc; --context-box-border: #cbd5e1;
+            --dec-card-bg: #f8fafc; --dec-card-border: #cbd5e1;
+            --context-box-bg: #ffffff; --context-box-border: #cbd5e1;
             --list-item-bg: #ffffff; --list-item-border: #e2e8f0;
             --modal-bg: #ffffff; --modal-border: #93c5fd;
-            --dec-card-bg: #f8fafc; --dec-card-border: #cbd5e1;
             --note-bg: #0284c7;
         }
         body {
@@ -69,7 +87,7 @@
         }
         .container {
             width: 100%; max-width: 860px; background: var(--bg-container);
-            border-radius: 16px; padding: 22px; box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border-radius: 16px; padding: 22px; box-shadow: 0 15px 35px rgba(0,0,0,0.35);
             border: 1px solid var(--border-container); position: relative;
         }
         header { border-bottom: 1.5px solid var(--header-border); padding-bottom: 14px; margin-bottom: 18px; }
@@ -162,14 +180,18 @@
         .fmt-color-input::-webkit-color-swatch-wrapper { padding: 0; }
         .fmt-color-input::-webkit-color-swatch { border-radius: 3px; border: 1px solid #818cf8; }
 
-        .btn-back {
+        /* أزرار التنقل: زر الرجوع وزر الرئيسية بجانبه */
+        .nav-actions-wrap {
+            display: flex; align-items: center; gap: 8px; margin-bottom: 14px;
+        }
+        .btn-nav-round {
             width: 36px; height: 36px; border-radius: 50%; background: var(--text-highlight);
             border: 1.5px solid var(--text-highlight); color: #ffffff; display: inline-flex;
             align-items: center; justify-content: center; cursor: pointer;
-            margin-bottom: 14px; transition: all 0.2s ease; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+            transition: all 0.2s ease; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
         }
-        .btn-back:hover { opacity: 0.9; transform: scale(1.08); }
-        .btn-back svg { width: 19px; height: 19px; stroke-width: 2.6; }
+        .btn-nav-round:hover { opacity: 0.9; transform: scale(1.08); }
+        .btn-nav-round svg { width: 19px; height: 19px; }
 
         .view-box { animation: fadeIn 0.25s ease; }
 
@@ -201,6 +223,7 @@
         .unified-flow-list { display: flex; flex-direction: column; gap: 10px; width: 100%; }
         .flow-item-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
 
+        /* كروت الحالات والاختيارات */
         .card-case {
             flex: 1; background: var(--bg-btn); color: var(--text-btn);
             border: 1.5px solid var(--border-btn); padding: 14px 16px; border-radius: 10px;
@@ -281,17 +304,12 @@
         }
         .context-arrow { color: var(--text-muted); font-size: 12px; }
 
+        /* الكارت المميز المحيط بالاختيارات */
         .decision-card {
             background: var(--dec-card-bg); border: 1.5px solid var(--dec-card-border);
             border-radius: 12px; padding: 18px; animation: fadeIn 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
         }
-
-        .btn-reset {
-            background: var(--bg-btn); color: var(--text-main); border: 1px solid var(--border-btn);
-            padding: 12px; border-radius: 8px; font-size: 13px; font-weight: bold; cursor: pointer;
-            margin-top: 16px; width: 100%; transition: 0.2s;
-        }
-        .btn-reset:hover { background: var(--bg-btn-hover); }
 
         .admin-options-row {
             display: none; flex-wrap: wrap; gap: 8px; margin-top: 14px; padding-top: 12px;
@@ -427,12 +445,20 @@
         </div>
     </div>
 
-    <button class="btn-back hidden" id="backButton" onclick="goBack()" title="رجوع">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-        </svg>
-    </button>
+    <!-- أزرار التنقل: زر الرجوع وزر الرئيسية بجانبه -->
+    <div class="nav-actions-wrap hidden" id="navActionsWrap">
+        <button class="btn-nav-round" id="backButton" onclick="goBack()" title="رجوع">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+        </button>
+        <button class="btn-nav-round" id="homeButton" onclick="resetToStart()" title="الرئيسية">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 10.5L12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5h-5a1.5 1.5 0 0 1-1.5-1.5v-4.5h-2V20A1.5 1.5 0 0 1 9.5 21.5h-5A1.5 1.5 0 0 1 3 20V10.5z"></path>
+            </svg>
+        </button>
+    </div>
 
     <!-- شاشة الصفحة الرئيسية -->
     <div class="view-box" id="viewMain">
@@ -490,7 +516,6 @@
                 <button class="add-new-btn" onclick="addNewDecisionStepFast()">➕ إضافة خطوة</button>
                 <button class="add-new-btn" onclick="addNewDecisionNoteFast()">📝 إضافة ملاحظة زرقاء</button>
             </div>
-            <button class="btn-reset" onclick="resetToStart()">🔄 بدء فحص شكوى أخرى</button>
         </div>
     </div>
 </div>
@@ -806,11 +831,11 @@
         const cur = navStack[navStack.length - 1];
         document.querySelectorAll('.view-box').forEach(el => el.classList.add('hidden'));
 
-        const backBtn = document.getElementById('backButton');
+        const navActions = document.getElementById('navActionsWrap');
         if (navStack.length > 1) {
-            backBtn.classList.remove('hidden');
+            navActions.classList.remove('hidden');
         } else {
-            backBtn.classList.add('hidden');
+            navActions.classList.add('hidden');
         }
 
         if (cur.viewId === 'viewMain') {
