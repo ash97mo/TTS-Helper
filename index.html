@@ -47,17 +47,19 @@
             --context-box-bg: #0b1120; --context-box-border: #253349;
             --list-item-bg: rgba(15, 23, 42, 0.75); --list-item-border: rgba(51, 65, 85, 0.6);
             --modal-bg: #131d2e; --modal-border: rgba(56, 189, 248, 0.3);
-            --dec-card-bg: #092c24; --dec-card-border: #10b981;
+            --dec-card-bg: #0b1120; --dec-card-border: #1e293b;
+            --note-bg: #0369a1;
         }
         body.theme-light {
             --bg-body: #f1f5f9; --bg-container: #ffffff; --border-container: #cbd5e1;
             --text-main: #0f172a; --text-muted: #64748b; --text-highlight: #0284c7;
             --bg-btn: #f8fafc; --border-btn: #cbd5e1; --text-btn: #1e293b;
             --bg-btn-hover: #e0f2fe; --border-btn-hover: #0284c7; --header-border: #e2e8f0;
-            --context-box-bg: #f8fafc; --context-box-border: #e2e8f0;
+            --context-box-bg: #f8fafc; --context-box-border: #cbd5e1;
             --list-item-bg: #ffffff; --list-item-border: #e2e8f0;
             --modal-bg: #ffffff; --modal-border: #93c5fd;
-            --dec-card-bg: #ecfdf5; --dec-card-border: #10b981;
+            --dec-card-bg: #f8fafc; --dec-card-border: #cbd5e1;
+            --note-bg: #0284c7;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -66,7 +68,7 @@
             transition: background 0.25s, color 0.25s;
         }
         .container {
-            width: 100%; max-width: 840px; background: var(--bg-container);
+            width: 100%; max-width: 860px; background: var(--bg-container);
             border-radius: 16px; padding: 22px; box-shadow: 0 15px 35px rgba(0,0,0,0.15);
             border: 1px solid var(--border-container); position: relative;
         }
@@ -74,37 +76,43 @@
         .header-title-box { display: flex; align-items: center; justify-content: center; gap: 10px; position: relative; }
         header h1 { font-size: 25px; color: var(--text-highlight); font-weight: 900; letter-spacing: 1px; margin: 0; direction: ltr; }
         
-        /* الحرف السري المخفي داخل كلمة Helper */
         .gear-secret {
-            cursor: pointer;
-            display: inline-block;
-            transition: color 0.2s ease, transform 0.2s ease;
-            user-select: none;
+            cursor: pointer; display: inline-block;
+            transition: color 0.2s ease, transform 0.2s ease; user-select: none;
         }
         .gear-secret:hover { color: #f59e0b; }
         .gear-secret.active-gear { color: #f59e0b; text-shadow: 0 0 8px rgba(245, 158, 11, 0.6); }
 
-        .header-icons-box { position: absolute; right: 0; top: 50%; transform: translateY(-50%); display: flex; align-items: center; }
+        .header-icons-box { 
+            position: absolute; right: 0; top: 50%; transform: translateY(-50%); 
+            display: flex; align-items: center; gap: 6px; 
+        }
 
-        .theme-btn {
-            background: transparent; border: none; color: var(--text-muted); font-size: 14px;
-            width: 26px; height: 26px; border-radius: 50%; cursor: pointer;
+        .icon-btn {
+            background: transparent; border: none; color: var(--text-muted); font-size: 15px;
+            width: 30px; height: 30px; border-radius: 50%; cursor: pointer;
             display: inline-flex; align-items: center; justify-content: center; transition: all 0.2s ease;
         }
-        .theme-btn:hover { color: var(--text-highlight); transform: scale(1.15); }
+        .icon-btn:hover { color: var(--text-highlight); transform: scale(1.15); background: var(--bg-btn); }
 
+        /* شريط الأدمن وأدوات التنسيق */
         .admin-bar {
-            background: #1e1b4b; border: 1px dashed #818cf8; padding: 4px 8px;
-            border-radius: 6px; margin-bottom: 12px; display: flex;
-            justify-content: space-between; align-items: center; gap: 6px; animation: fadeIn 0.3s ease;
+            background: #1e1b4b; border: 1px dashed #818cf8; padding: 8px 12px;
+            border-radius: 10px; margin-bottom: 14px; display: flex; flex-direction: column;
+            gap: 8px; animation: fadeIn 0.3s ease;
         }
         body.theme-light .admin-bar { background: #e0e7ff; border-color: #6366f1; }
-        .admin-bar-info { font-size: 11px; color: #c7d2fe; font-weight: 700; white-space: nowrap; }
+        .admin-bar-top {
+            display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap;
+            border-bottom: 1px dashed rgba(129, 140, 248, 0.35); padding-bottom: 6px;
+        }
+        body.theme-light .admin-bar-top { border-color: rgba(99, 102, 241, 0.25); }
+        .admin-bar-info { font-size: 12px; color: #c7d2fe; font-weight: 700; white-space: nowrap; }
         body.theme-light .admin-bar-info { color: #3730a3; }
-        .admin-bar-actions { display: flex; gap: 4px; align-items: center; }
+        .admin-bar-actions { display: flex; gap: 6px; align-items: center; }
         .adm-btn {
-            padding: 3px 7px; border-radius: 4px; border: none; font-size: 11px;
-            font-weight: 700; cursor: pointer; transition: 0.2s; display: inline-flex; align-items: center; gap: 2px;
+            padding: 4px 9px; border-radius: 6px; border: none; font-size: 11.5px;
+            font-weight: 700; cursor: pointer; transition: 0.2s; display: inline-flex; align-items: center; gap: 4px;
             width: auto; line-height: 1.2; box-shadow: 0 1px 3px rgba(0,0,0,0.2);
         }
         .adm-save { background: #10b981; color: #fff; }
@@ -115,20 +123,80 @@
         .adm-close { background: #475569; color: #fff; }
         .adm-close:hover { background: #334155; }
 
-        .btn-back {
-            width: 36px; height: 36px; border-radius: 50%; background: #0284c7;
-            border: 1.5px solid #38bdf8; color: #ffffff; display: inline-flex;
-            align-items: center; justify-content: center; cursor: pointer;
-            margin-bottom: 14px; transition: all 0.2s ease; box-shadow: 0 4px 10px rgba(2, 132, 199, 0.35);
+        /* شريط تنسيق النصوص للآدمن */
+        .admin-formatting-bar {
+            display: flex; align-items: center; flex-wrap: wrap; gap: 6px; padding-top: 2px;
         }
-        .btn-back:hover { background: #0369a1; transform: scale(1.08); border-color: #7dd3fc; }
+        .fmt-label { font-size: 11px; font-weight: 700; color: #c7d2fe; margin-left: 2px; }
+        body.theme-light .fmt-label { color: #3730a3; }
+        .fmt-btn {
+            background: #312e81; color: #e0e7ff; border: 1px solid #4338ca;
+            min-width: 27px; height: 27px; padding: 0 6px; border-radius: 5px; cursor: pointer;
+            font-size: 12px; font-weight: bold; display: inline-flex; align-items: center; justify-content: center;
+            transition: 0.15s;
+        }
+        body.theme-light .fmt-btn { background: #ffffff; color: #312e81; border-color: #c7d2fe; }
+        .fmt-btn:hover { background: #4338ca; color: #ffffff; transform: scale(1.06); }
+        body.theme-light .fmt-btn:hover { background: #e0e7ff; color: #1e1b4b; }
+        .fmt-separator { width: 1px; height: 18px; background: rgba(129, 140, 248, 0.4); margin: 0 2px; }
+        .fmt-select {
+            background: #312e81; color: #e0e7ff; border: 1px solid #4338ca; padding: 2px 6px;
+            border-radius: 5px; font-size: 11px; font-weight: bold; cursor: pointer; outline: none; height: 27px;
+        }
+        body.theme-light .fmt-select { background: #ffffff; color: #312e81; border-color: #c7d2fe; }
+
+        .fmt-group {
+            display: inline-flex; align-items: center; gap: 3px; background: rgba(49, 46, 129, 0.6);
+            border: 1px solid #4338ca; padding: 2px 6px; border-radius: 5px; height: 27px;
+        }
+        body.theme-light .fmt-group { background: #ffffff; border-color: #c7d2fe; }
+        .swatch-btn {
+            width: 15px; height: 15px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.4);
+            cursor: pointer; transition: transform 0.15s;
+        }
+        .swatch-btn:hover { transform: scale(1.25); }
+        .fmt-color-input {
+            -webkit-appearance: none; border: none; width: 17px; height: 17px;
+            border-radius: 3px; cursor: pointer; background: transparent; padding: 0;
+        }
+        .fmt-color-input::-webkit-color-swatch-wrapper { padding: 0; }
+        .fmt-color-input::-webkit-color-swatch { border-radius: 3px; border: 1px solid #818cf8; }
+
+        .btn-back {
+            width: 36px; height: 36px; border-radius: 50%; background: var(--text-highlight);
+            border: 1.5px solid var(--text-highlight); color: #ffffff; display: inline-flex;
+            align-items: center; justify-content: center; cursor: pointer;
+            margin-bottom: 14px; transition: all 0.2s ease; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        }
+        .btn-back:hover { opacity: 0.9; transform: scale(1.08); }
         .btn-back svg { width: 19px; height: 19px; stroke-width: 2.6; }
 
         .view-box { animation: fadeIn 0.25s ease; }
-        .step-question {
-            font-size: 15px; font-weight: 700; color: var(--text-highlight);
-            margin-bottom: 14px; outline: none; text-align: center;
+
+        /* منطقة عنوان الخطوات المطلوبة مع زر الحذف */
+        .section-title-wrap {
+            position: relative; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; width: 100%;
         }
+        .decision-header {
+            font-size: 16.5px; font-weight: 800; color: var(--text-highlight);
+            text-align: center; outline: none; flex: 1; padding: 2px 30px;
+        }
+        .btn-del-title {
+            display: none; position: absolute; left: 6px; top: 50%; transform: translateY(-50%);
+            background: #ef4444; color: #ffffff; border: none; width: 24px; height: 24px; border-radius: 50%;
+            font-size: 11px; font-weight: bold; cursor: pointer; align-items: center; justify-content: center;
+            transition: 0.2s; box-shadow: 0 2px 6px rgba(0,0,0,0.3); z-index: 10;
+        }
+        .btn-del-title:hover { background: #dc2626; transform: translateY(-50%) scale(1.15); }
+        .edit-mode-active .section-title-wrap .btn-del-title { display: inline-flex !important; }
+
+        .btn-add-title {
+            display: none; width: 100%; max-width: 300px; margin: 0 auto 16px;
+            background: rgba(56, 189, 248, 0.08); border: 1.5px dashed var(--text-highlight);
+            color: var(--text-highlight); padding: 8px 14px; border-radius: 8px; font-size: 12.5px;
+            font-weight: 700; cursor: pointer; transition: 0.2s; text-align: center;
+        }
+        .btn-add-title:hover { background: rgba(56, 189, 248, 0.18); transform: scale(1.02); }
 
         .unified-flow-list { display: flex; flex-direction: column; gap: 10px; width: 100%; }
         .flow-item-wrapper { position: relative; width: 100%; display: flex; align-items: center; }
@@ -145,25 +213,23 @@
 
         .item-actions-box, .btn-go-step { display: none !important; }
 
-        .edit-mode-active .card-case {
-            padding-right: 90px; padding-left: 50px; cursor: default; user-select: text;
-        }
+        .edit-mode-active .card-case { padding-right: 90px; padding-left: 50px; cursor: default; user-select: text; }
         .edit-mode-active .card-case .item-actions-box {
             display: inline-flex !important; position: absolute; right: 8px; left: auto;
             top: 50%; transform: translateY(-50%); gap: 3px; z-index: 10;
         }
         .edit-mode-active .card-case .btn-go-step {
             display: inline-flex !important; position: absolute; left: 8px; right: auto;
-            top: 50%; transform: translateY(-50%); background: #0284c7; color: #fff; border: none;
+            top: 50%; transform: translateY(-50%); background: var(--text-highlight); color: #fff; border: none;
             width: 28px; height: 28px; border-radius: 50%; font-size: 14px; font-weight: bold;
             cursor: pointer; align-items: center; justify-content: center; transition: all 0.2s;
             z-index: 10; box-shadow: 0 2px 6px rgba(0,0,0,0.25);
         }
-        .edit-mode-active .card-case .btn-go-step:hover { background: #0369a1; transform: translateY(-50%) scale(1.12); }
+        .edit-mode-active .card-case .btn-go-step:hover { transform: translateY(-50%) scale(1.12); opacity: 0.9; }
 
         .card-step {
             flex: 1; background: var(--list-item-bg); border: 1px solid var(--list-item-border);
-            border-right: 4px solid #38bdf8; padding: 10px 14px; border-radius: 8px;
+            border-right: 4px solid var(--text-highlight); padding: 10px 14px; border-radius: 8px;
             font-size: 13.5px; line-height: 1.6; display: flex; align-items: flex-start;
             gap: 12px; color: var(--text-main); position: relative;
         }
@@ -174,14 +240,14 @@
         }
 
         .step-number {
-            background: #0284c7; color: #ffffff; min-width: 32px; height: 32px;
+            background: var(--text-highlight); color: #ffffff; min-width: 32px; height: 32px;
             border-radius: 8px; display: inline-flex; align-items: center; justify-content: center;
             font-size: 13.5px; font-weight: 800; flex-shrink: 0; margin-top: 1px;
             outline: none; padding: 0 5px; user-select: text; transition: all 0.2s ease;
         }
 
         .card-note {
-            flex: 1; background: #0369a1; color: #fff; padding: 11px 14px; border-radius: 8px;
+            flex: 1; background: var(--note-bg); color: #fff; padding: 11px 14px; border-radius: 8px;
             font-size: 13.5px; font-weight: 700; border-right: 4px solid #facc15;
             line-height: 1.6; outline: none; position: relative;
         }
@@ -199,7 +265,7 @@
             align-items: center; justify-content: center; transition: 0.15s;
         }
         .btn-ctrl-order { background: #334155; color: #cbd5e1; }
-        .btn-ctrl-order:hover { background: #0284c7; color: #fff; transform: scale(1.1); }
+        .btn-ctrl-order:hover { background: var(--text-highlight); color: #fff; transform: scale(1.1); }
         .btn-ctrl-del { background: #ef4444; color: #fff; }
         .btn-ctrl-del:hover { background: #b91c1c; transform: scale(1.1); }
 
@@ -216,10 +282,9 @@
         .context-arrow { color: var(--text-muted); font-size: 12px; }
 
         .decision-card {
-            background: var(--dec-card-bg); border: 2px solid var(--dec-card-border);
-            border-radius: 12px; padding: 20px; animation: fadeIn 0.3s ease;
+            background: var(--dec-card-bg); border: 1.5px solid var(--dec-card-border);
+            border-radius: 12px; padding: 18px; animation: fadeIn 0.3s ease;
         }
-        .decision-header { font-size: 16.5px; font-weight: 800; margin-bottom: 15px; color: var(--text-main); text-align: center; }
 
         .btn-reset {
             background: var(--bg-btn); color: var(--text-main); border: 1px solid var(--border-btn);
@@ -242,8 +307,8 @@
         }
         .add-new-btn:hover { background: var(--bg-btn-hover); }
 
-        .edit-mode-active [contenteditable="true"] { outline: 1.5px dashed #38bdf8 !important; border-radius: 5px; padding: 2px 6px; cursor: text; }
-        .edit-mode-active [contenteditable="true"]:focus { outline: 2px solid #facc15 !important; background: rgba(2, 132, 199, 0.15); }
+        .edit-mode-active [contenteditable="true"] { outline: 1.5px dashed var(--text-highlight) !important; border-radius: 5px; padding: 2px 6px; cursor: text; }
+        .edit-mode-active [contenteditable="true"]:focus { outline: 2px solid #facc15 !important; background: rgba(56, 189, 248, 0.15); }
 
         .modal-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -253,7 +318,7 @@
         }
         .modal-card {
             background: var(--modal-bg); border: 1px solid var(--modal-border);
-            border-radius: 20px; width: 100%; max-width: 340px; padding: 22px;
+            border-radius: 20px; width: 100%; max-width: 380px; padding: 22px;
             box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45); text-align: center;
             animation: popUpScale 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -266,7 +331,7 @@
         }
         .modal-card h2 { font-size: 16px; color: var(--text-main); margin-bottom: 6px; font-weight: 800; }
         .modal-card p { font-size: 13px; color: var(--text-muted); margin-bottom: 15px; line-height: 1.5; }
-        .modal-btns-row { display: flex; gap: 8px; margin-top: 4px; }
+        .modal-btns-row { display: flex; gap: 8px; margin-top: 14px; }
         .btn-modal-action {
             flex: 1; padding: 9px; border-radius: 8px; border: none; font-weight: bold;
             font-size: 12.5px; cursor: pointer; transition: 0.2s; display: inline-flex;
@@ -276,6 +341,7 @@
         .btn-modal-danger:hover { background: #b91c1c; }
         .btn-modal-cancel { background: #475569; color: #fff; }
         .btn-modal-cancel:hover { background: #334155; }
+
         @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
         .hidden { display: none !important; }
     </style>
@@ -295,20 +361,69 @@
 <div class="container" id="appContainer">
     <header>
         <div class="header-title-box">
-            <!-- الزرار السري مدمج داخل حرف الـ e في كلمة Helper -->
             <h1>TTS Help<span id="gearBtn" class="gear-secret" onclick="toggleAdminMode()" title="">e</span>r</h1>
             <div class="header-icons-box">
-                <button class="theme-btn" id="themeToggleBtn" onclick="toggleTheme()" title="تبديل الوضع (معتم / ساطع)">☀️</button>
+                <button class="icon-btn" id="themeToggleBtn" onclick="toggleTheme()" title="تبديل الوضع (معتم / ساطع)">☀️</button>
             </div>
         </div>
     </header>
 
+    <!-- شريط الإدارة المتكامل مع أدوات التنسيق -->
     <div class="admin-bar hidden" id="adminBar">
-        <div class="admin-bar-info">✏️ وضع التعديل مفعّل</div>
-        <div class="admin-bar-actions">
-            <button class="adm-btn adm-undo" id="admUndoBtn" onclick="undoLastChange()" title="تراجع عن آخر تعديل">↩️ تراجع</button>
-            <button class="adm-btn adm-save" onclick="saveDirectlyToFile()">💾 حفظ</button>
-            <button class="adm-btn adm-close" onclick="exitAdminMode()">✖ إلغاء</button>
+        <div class="admin-bar-top">
+            <div class="admin-bar-info">✏️ وضع التعديل مفعّل</div>
+            <div class="admin-bar-actions">
+                <button class="adm-btn adm-undo" id="admUndoBtn" onclick="undoLastChange()" title="تراجع عن آخر تعديل">↩️ تراجع</button>
+                <button class="adm-btn adm-save" onclick="saveDirectlyToFile()">💾 حفظ</button>
+                <button class="adm-btn adm-close" onclick="exitAdminMode()">✖ إلغاء</button>
+            </div>
+        </div>
+        
+        <!-- شريط أدوات التنسيق للنصوص المحددة -->
+        <div class="admin-formatting-bar">
+            <span class="fmt-label">تنسيق النص المحدد:</span>
+            <button class="fmt-btn" onmousedown="event.preventDefault(); execFormat('bold');" title="عريض (Bold)"><b>B</b></button>
+            <button class="fmt-btn" onmousedown="event.preventDefault(); execFormat('underline');" title="تسطير (Underline)"><u>U</u></button>
+            <button class="fmt-btn" onmousedown="event.preventDefault(); execFormat('strikeThrough');" title="يتوسطه خط (Strike)"><s>S</s></button>
+            
+            <div class="fmt-separator"></div>
+
+            <select class="fmt-select" onchange="formatFontSize(this.value); this.selectedIndex=0;" onmousedown="event.stopPropagation()" title="حجم الخط">
+                <option value="" disabled selected>الحجم</option>
+                <option value="12px">12px صغير</option>
+                <option value="14px">14px عادي</option>
+                <option value="16px">16px متوسط</option>
+                <option value="18px">18px كبير</option>
+                <option value="22px">22px كبير جداً</option>
+            </select>
+
+            <div class="fmt-separator"></div>
+
+            <!-- لون الخط -->
+            <div class="fmt-group" title="لون الخط">
+                <span style="font-weight:900; color:var(--text-highlight); font-size:12px;">A</span>
+                <button class="swatch-btn" style="background:#ffffff;" onmousedown="event.preventDefault(); formatTextColor('#ffffff');" title="أبيض"></button>
+                <button class="swatch-btn" style="background:#38bdf8;" onmousedown="event.preventDefault(); formatTextColor('#38bdf8');" title="أزرق"></button>
+                <button class="swatch-btn" style="background:#facc15;" onmousedown="event.preventDefault(); formatTextColor('#facc15');" title="أصفر"></button>
+                <button class="swatch-btn" style="background:#f87171;" onmousedown="event.preventDefault(); formatTextColor('#f87171');" title="أحمر"></button>
+                <button class="swatch-btn" style="background:#4ade80;" onmousedown="event.preventDefault(); formatTextColor('#4ade80');" title="أخضر"></button>
+                <input type="color" class="fmt-color-input" onchange="formatTextColor(this.value)" onmousedown="event.stopPropagation()" title="لون خط مخصص">
+            </div>
+
+            <!-- هايلايت النص -->
+            <div class="fmt-group" title="هايلايت تمييز النص">
+                <span style="font-size:12px;">🖍️</span>
+                <button class="swatch-btn" style="background:#fef08a;" onmousedown="event.preventDefault(); formatHighlight('#fef08a');" title="هايلايت أصفر"></button>
+                <button class="swatch-btn" style="background:#86efac;" onmousedown="event.preventDefault(); formatHighlight('#86efac');" title="هايلايت أخضر"></button>
+                <button class="swatch-btn" style="background:#7dd3fc;" onmousedown="event.preventDefault(); formatHighlight('#7dd3fc');" title="هايلايت سماوي"></button>
+                <button class="swatch-btn" style="background:#f472b6;" onmousedown="event.preventDefault(); formatHighlight('#f472b6');" title="هايلايت وردي"></button>
+                <input type="color" class="fmt-color-input" onchange="formatHighlight(this.value)" onmousedown="event.stopPropagation()" title="هايلايت مخصص">
+                <button class="fmt-btn" style="font-size:10px; padding:0 4px; height:20px;" onmousedown="event.preventDefault(); formatHighlight('transparent');" title="إزالة الهايلايت">إزالة</button>
+            </div>
+
+            <div class="fmt-separator"></div>
+
+            <button class="fmt-btn" onmousedown="event.preventDefault(); execFormat('removeFormat');" title="مسح التنسيقات">🧹</button>
         </div>
     </div>
 
@@ -329,30 +444,53 @@
 
     <!-- الشاشة الموحدة للأقسام والتفرعات -->
     <div class="view-box hidden" id="viewSection">
-        <div class="step-question" id="secTitle" contenteditable="false">ما هو الموقف الحالي؟</div>
-        <div class="unified-flow-list" id="secItemsList"></div>
-        <div class="admin-options-row">
-            <button class="add-new-btn" onclick="addNewStepFast()">➕ إضافة خطوة</button>
-            <button class="add-new-btn" onclick="addNewCaseFast()">➕ إضافة حالة</button>
-            <button class="add-new-btn" onclick="addNewNoteFast()">📝 إضافة ملاحظة زرقاء</button>
+        <div class="decision-card">
+            <!-- مسار الشكوى الموحد لجميع التفرعات -->
+            <div class="context-path-box">
+                <span class="context-path-label">📍 مسار الشكوى الحالي:</span>
+                <div id="secBreadcrumb" style="display:flex; align-items:center; flex-wrap:wrap; gap:6px;"></div>
+            </div>
+            
+            <!-- عنوان الخطوات المطلوبة القابل للتعديل أو الحذف -->
+            <div class="section-title-wrap" id="secHeaderWrap">
+                <div class="decision-header" id="secTitle" contenteditable="false">📋 الخطوات المطلوبة:</div>
+                <button class="btn-del-title" onclick="removeSectionTitle()" title="حذف هذا العنوان">✖</button>
+            </div>
+            <button class="btn-add-title" id="btnAddSecTitle" onclick="addSectionTitle()">➕ إضافة عنوان / الخطوات المطلوبة</button>
+
+            <div class="unified-flow-list" id="secItemsList"></div>
+            
+            <div class="admin-options-row">
+                <button class="add-new-btn" onclick="addNewStepFast()">➕ إضافة خطوة</button>
+                <button class="add-new-btn" onclick="addNewCaseFast()">➕ إضافة حالة</button>
+                <button class="add-new-btn" onclick="addNewNoteFast()">📝 إضافة ملاحظة زرقاء</button>
+            </div>
         </div>
     </div>
 
     <!-- شاشة القرار النهائي -->
     <div class="view-box hidden" id="viewDecision">
         <div class="decision-card" id="decCard">
+            <!-- مسار الشكوى الموحد للقرار -->
             <div class="context-path-box">
-                <span class="context-path-label">📍 مسار الشكوه الحالي:</span>
+                <span class="context-path-label">📍 مسار الشكوى الحالي:</span>
                 <div id="decBreadcrumb" style="display:flex; align-items:center; flex-wrap:wrap; gap:6px;"></div>
             </div>
-            <div class="decision-header" id="decHeader">📋 الخطوات المطلوبة:</div>
+
+            <!-- عنوان الخطوات المطلوبة في القرار -->
+            <div class="section-title-wrap" id="decHeaderWrap">
+                <div class="decision-header" id="decHeader" contenteditable="false">📋 الخطوات المطلوبة:</div>
+                <button class="btn-del-title" onclick="removeDecisionTitle()" title="حذف هذا العنوان">✖</button>
+            </div>
+            <button class="btn-add-title" id="btnAddDecTitle" onclick="addDecisionTitle()">➕ إضافة عنوان / الخطوات المطلوبة</button>
+
             <div class="unified-flow-list" id="decItemsList"></div>
             
             <div class="admin-options-row">
                 <button class="add-new-btn" onclick="addNewDecisionStepFast()">➕ إضافة خطوة</button>
                 <button class="add-new-btn" onclick="addNewDecisionNoteFast()">📝 إضافة ملاحظة زرقاء</button>
             </div>
-            <button class="btn-reset" onclick="resetToStart()">🔄 بدء فحص شكوه أخرى</button>
+            <button class="btn-reset" onclick="resetToStart()">🔄 بدء فحص شكوى أخرى</button>
         </div>
     </div>
 </div>
@@ -374,10 +512,8 @@
 <script src="data.js"></script>
 
 <script>
-    // كلمة المرور لوضع التعديل
     const ADMIN_PASSWORD = "1234";
 
-    // تحميل البيانات من localStorage أو من ملف data.js بأمان
     let loaded = null;
     try {
         loaded = JSON.parse(localStorage.getItem('ttsAppData'));
@@ -398,9 +534,118 @@
     let isEditMode = false;
     let undoStack = [];
     const ARABIC_DIGITS = ['١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩', '١٠', '١١', '١٢', '١٣', '١٤', '١٥', '١٦', '١٧', '١٨', '١٩', '٢٠'];
-
     let navStack = [{ viewId: 'viewMain', path: [] }];
 
+    /* --- إدارة وحفظ تحديد النصوص بدقة --- */
+    let savedSelectionRange = null;
+
+    function saveCurrentSelection() {
+        const sel = window.getSelection();
+        if (sel.rangeCount > 0 && !sel.isCollapsed) {
+            let node = sel.anchorNode;
+            while (node) {
+                if (node.isContentEditable) {
+                    savedSelectionRange = sel.getRangeAt(0).cloneRange();
+                    return;
+                }
+                node = node.parentNode;
+            }
+        }
+    }
+
+    document.addEventListener('selectionchange', () => {
+        if (isEditMode) saveCurrentSelection();
+    });
+
+    function restoreSelection() {
+        if (savedSelectionRange) {
+            const sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(savedSelectionRange);
+        }
+    }
+
+    function syncCurrentEditedContent() {
+        const el = document.activeElement;
+        if (el && el.isContentEditable) {
+            el.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+    }
+
+    /* --- دوال أدوات التنسيق --- */
+    function execFormat(cmd, value = null) {
+        restoreSelection();
+        recordUndoSnapshot();
+        document.execCommand(cmd, false, value);
+        syncCurrentEditedContent();
+    }
+
+    function formatTextColor(color) {
+        restoreSelection();
+        recordUndoSnapshot();
+        const sel = window.getSelection();
+        if (!sel.rangeCount || sel.isCollapsed) {
+            document.execCommand('foreColor', false, color);
+        } else {
+            const range = sel.getRangeAt(0);
+            const span = document.createElement('span');
+            span.style.color = color;
+            span.appendChild(range.extractContents());
+            range.insertNode(span);
+            sel.removeAllRanges();
+            const newRange = document.createRange();
+            newRange.selectNodeContents(span);
+            sel.addRange(newRange);
+        }
+        syncCurrentEditedContent();
+    }
+
+    function formatHighlight(bgColor) {
+        restoreSelection();
+        recordUndoSnapshot();
+        const sel = window.getSelection();
+        if (!sel.rangeCount || sel.isCollapsed) return;
+        const range = sel.getRangeAt(0);
+        const span = document.createElement('span');
+        
+        if (bgColor === 'transparent') {
+            span.style.backgroundColor = 'transparent';
+            span.style.color = 'inherit';
+        } else {
+            span.style.backgroundColor = bgColor;
+            span.style.color = '#000000';
+            span.style.padding = '1px 4px';
+            span.style.borderRadius = '3px';
+        }
+
+        span.appendChild(range.extractContents());
+        range.insertNode(span);
+        sel.removeAllRanges();
+        const newRange = document.createRange();
+        newRange.selectNodeContents(span);
+        sel.addRange(newRange);
+        syncCurrentEditedContent();
+    }
+
+    function formatFontSize(size) {
+        if (!size) return;
+        restoreSelection();
+        recordUndoSnapshot();
+        const sel = window.getSelection();
+        if (!sel.rangeCount || sel.isCollapsed) return;
+        const range = sel.getRangeAt(0);
+        const span = document.createElement('span');
+        span.style.fontSize = size;
+        span.appendChild(range.extractContents());
+        range.insertNode(span);
+        sel.removeAllRanges();
+        const newRange = document.createRange();
+        newRange.selectNodeContents(span);
+        sel.addRange(newRange);
+        syncCurrentEditedContent();
+    }
+
+    /* --- إدارة الحذف والتأكيد --- */
     let dialogResolver = null;
     function showCustomDialog({ title, message }) {
         return new Promise((resolve) => {
@@ -446,13 +691,9 @@
 
         const currentNav = navStack[navStack.length - 1];
         if (currentNav.viewId === 'viewSection') {
-            if (!appData.sections[currentNav.secKey]) {
-                navStack.pop();
-            }
+            if (!appData.sections[currentNav.secKey]) navStack.pop();
         } else if (currentNav.viewId === 'viewDecision') {
-            if (!appData.decisions[currentNav.decKey]) {
-                navStack.pop();
-            }
+            if (!appData.decisions[currentNav.decKey]) navStack.pop();
         }
 
         renderCurrentNavState();
@@ -478,7 +719,6 @@
         }
     }
 
-    // تفعيل وضع التعديل عبر الحرف السري بكلمة مرور
     function toggleAdminMode() {
         if (isEditMode) {
             exitAdminMode();
@@ -513,13 +753,13 @@
     }
 
     function enableInPlaceEditing() {
-        document.querySelectorAll('.editable-content, .step-number, #secTitle').forEach(el => {
+        document.querySelectorAll('.editable-content, .step-number, #secTitle, #decHeader').forEach(el => {
             el.setAttribute('contenteditable', 'true');
         });
     }
 
     function disableInPlaceEditing() {
-        document.querySelectorAll('.editable-content, .step-number, #secTitle').forEach(el => {
+        document.querySelectorAll('.editable-content, .step-number, #secTitle, #decHeader').forEach(el => {
             el.setAttribute('contenteditable', 'false');
         });
     }
@@ -539,6 +779,27 @@
         downloadLink.click();
         document.body.removeChild(downloadLink);
         alert('✅ تم حفظ التعديلات وتحميل ملف data.js الجديد بنجاح!');
+    }
+
+    /* --- دالة رسم مسار الشكوى الموحد --- */
+    function renderBreadcrumbs(containerId) {
+        const breadcrumbEl = document.getElementById(containerId);
+        if (!breadcrumbEl) return;
+        breadcrumbEl.innerHTML = '';
+        const cur = navStack[navStack.length - 1];
+        const path = cur.path || [];
+
+        if (path.length === 0) {
+            breadcrumbEl.innerHTML = `<span class="context-chip">الرئيسية</span>`;
+            return;
+        }
+
+        path.forEach((p, idx) => {
+            breadcrumbEl.innerHTML += `<span class="context-chip">${p}</span>`;
+            if (idx < path.length - 1) {
+                breadcrumbEl.innerHTML += `<span class="context-arrow">⬅</span>`;
+            }
+        });
     }
 
     function renderCurrentNavState() {
@@ -571,7 +832,9 @@
         const cur = navStack[navStack.length - 1];
         const newPath = [...(cur.path || []), title];
         if (!appData.sections[secKey]) appData.sections[secKey] = [];
-        if (!appData.sectionTitles[secKey]) appData.sectionTitles[secKey] = 'خطوات ومسارات ' + title + ':';
+        if (typeof appData.sectionTitles[secKey] === 'undefined') {
+            appData.sectionTitles[secKey] = '📋 الخطوات المطلوبة:';
+        }
 
         navStack.push({ viewId: 'viewSection', secKey: secKey, path: newPath });
         renderCurrentNavState();
@@ -596,12 +859,6 @@
 
     function resetToStart() {
         navStack = [{ viewId: 'viewMain', path: [] }];
-        renderCurrentNavState();
-    }
-
-    function initAppUI() {
-        ensureDataStructure();
-        initTheme();
         renderCurrentNavState();
     }
 
@@ -637,7 +894,7 @@
             const [upBtn, downBtn, delBtn] = wrapper.querySelectorAll('.btn-ctrl');
 
             editableSpan.onblur = function() {
-                const newTxt = this.innerText.trim();
+                const newTxt = this.innerHTML.trim();
                 if (pool.title !== newTxt) {
                     recordUndoSnapshot();
                     pool.title = newTxt;
@@ -666,20 +923,9 @@
         const newKey = 'POOL_' + Date.now();
         appData.mainPools.push({ key: newKey, title: 'اضغط لتعديل اسم القسم...' });
         appData.sections[newKey] = [];
-        appData.sectionTitles[newKey] = 'خطوات ومسارات القسم الجديد:';
+        appData.sectionTitles[newKey] = '📋 الخطوات المطلوبة:';
         renderMainPools();
         if (isEditMode) enableInPlaceEditing();
-
-        const allSpans = document.querySelectorAll('#mainPoolsGrid .editable-content');
-        if (allSpans.length > 0) {
-            const last = allSpans[allSpans.length - 1];
-            last.focus();
-            const range = document.createRange();
-            range.selectNodeContents(last);
-            const sel = window.getSelection();
-            sel.removeAllRanges();
-            sel.addRange(range);
-        }
     }
 
     async function deleteMainPool(idx) {
@@ -694,17 +940,51 @@
         }
     }
 
+    /* --- إدارة وحذف وإضافة عنوان الخطوات في الأقسام --- */
+    function removeSectionTitle() {
+        const cur = navStack[navStack.length - 1];
+        if (cur.viewId !== 'viewSection') return;
+        recordUndoSnapshot();
+        appData.sectionTitles[cur.secKey] = false;
+        renderSectionView(cur.secKey);
+        if (isEditMode) enableInPlaceEditing();
+    }
+
+    function addSectionTitle() {
+        const cur = navStack[navStack.length - 1];
+        if (cur.viewId !== 'viewSection') return;
+        recordUndoSnapshot();
+        appData.sectionTitles[cur.secKey] = '📋 الخطوات المطلوبة:';
+        renderSectionView(cur.secKey);
+        if (isEditMode) enableInPlaceEditing();
+    }
+
     function renderSectionView(secKey) {
         ensureDataStructure();
+        renderBreadcrumbs('secBreadcrumb');
+
+        const secTitleVal = appData.sectionTitles[secKey];
+        const secWrap = document.getElementById('secHeaderWrap');
+        const btnAddSec = document.getElementById('btnAddSecTitle');
         const titleEl = document.getElementById('secTitle');
-        titleEl.innerText = appData.sectionTitles[secKey] || 'ما هو الموقف الحالي؟';
-        titleEl.onblur = function() {
-            const newTxt = this.innerText.trim();
-            if (appData.sectionTitles[secKey] !== newTxt) {
-                recordUndoSnapshot();
-                appData.sectionTitles[secKey] = newTxt;
-            }
-        };
+
+        if (secTitleVal === false) {
+            secWrap.classList.add('hidden');
+            if (isEditMode) btnAddSec.style.display = 'block';
+            else btnAddSec.style.display = 'none';
+        } else {
+            secWrap.classList.remove('hidden');
+            btnAddSec.style.display = 'none';
+            const displayTitle = (typeof secTitleVal === 'string' && secTitleVal.trim() !== '') ? secTitleVal : '📋 الخطوات المطلوبة:';
+            titleEl.innerHTML = displayTitle;
+            titleEl.onblur = function() {
+                const newTxt = this.innerHTML.trim();
+                if (appData.sectionTitles[secKey] !== newTxt) {
+                    recordUndoSnapshot();
+                    appData.sectionTitles[secKey] = newTxt;
+                }
+            };
+        }
 
         const container = document.getElementById('secItemsList');
         container.innerHTML = '';
@@ -731,7 +1011,7 @@
                 const goBtn = wrapper.querySelector('.btn-go-step');
 
                 editSpan.onblur = function() {
-                    const txt = this.innerText.trim();
+                    const txt = this.innerHTML.trim();
                     if (item.text !== txt) { recordUndoSnapshot(); item.text = txt; }
                 };
                 editSpan.onclick = (e) => { if (isEditMode) e.stopPropagation(); };
@@ -769,10 +1049,7 @@
                     if (n && item.num !== n) { recordUndoSnapshot(); item.num = n; }
                 };
                 numSpan.onkeydown = (e) => { 
-                    if (e.key === 'Enter') { 
-                        e.preventDefault(); 
-                        numSpan.blur(); 
-                    } 
+                    if (e.key === 'Enter') { e.preventDefault(); numSpan.blur(); } 
                 };
 
                 const textDiv = wrapper.querySelector('.editable-content');
@@ -840,7 +1117,7 @@
         const items = appData.sections[cur.secKey];
         const targetKey = 'SEC_' + Date.now();
         appData.sections[targetKey] = [];
-        appData.sectionTitles[targetKey] = 'خطوات ومسارات الحالة الجديدة:';
+        appData.sectionTitles[targetKey] = '📋 الخطوات المطلوبة:';
         items.push({ type: 'case', text: 'اضغط لتعديل اسم الحالة...', target: targetKey });
         renderSectionView(cur.secKey);
         if (isEditMode) enableInPlaceEditing();
@@ -869,10 +1146,32 @@
         if (isEditMode) enableInPlaceEditing();
     }
 
+    /* --- إدارة وحذف وإضافة عنوان الخطوات في القرار النهائي --- */
+    function removeDecisionTitle() {
+        const cur = navStack[navStack.length - 1];
+        if (cur.viewId !== 'viewDecision') return;
+        recordUndoSnapshot();
+        if (!appData.decisions[cur.decKey]) appData.decisions[cur.decKey] = { items: [] };
+        appData.decisions[cur.decKey].title = false;
+        renderDecisionView(cur.decKey);
+        if (isEditMode) enableInPlaceEditing();
+    }
+
+    function addDecisionTitle() {
+        const cur = navStack[navStack.length - 1];
+        if (cur.viewId !== 'viewDecision') return;
+        recordUndoSnapshot();
+        if (!appData.decisions[cur.decKey]) appData.decisions[cur.decKey] = { items: [] };
+        appData.decisions[cur.decKey].title = '📋 الخطوات المطلوبة:';
+        renderDecisionView(cur.decKey);
+        if (isEditMode) enableInPlaceEditing();
+    }
+
     function renderDecisionView(key) {
         ensureDataStructure();
         if (!appData.decisions[key]) {
             appData.decisions[key] = {
+                title: '📋 الخطوات المطلوبة:',
                 items: [{ type: 'step', num: '١', text: 'اضغط لكتابة تفاصيل الخطوة هنا...' }]
             };
         }
@@ -883,15 +1182,29 @@
             if (dec.notes) dec.notes.forEach(n => dec.items.push({ type: 'note', text: n.text }));
         }
 
-        const breadcrumbEl = document.getElementById('decBreadcrumb');
-        breadcrumbEl.innerHTML = '';
-        const cur = navStack[navStack.length - 1];
-        (cur.path || []).forEach((p, idx) => {
-            breadcrumbEl.innerHTML += `<span class="context-chip">${p}</span>`;
-            if (idx < cur.path.length - 1) {
-                breadcrumbEl.innerHTML += `<span class="context-arrow">⬅</span>`;
-            }
-        });
+        renderBreadcrumbs('decBreadcrumb');
+
+        const decWrap = document.getElementById('decHeaderWrap');
+        const btnAddDec = document.getElementById('btnAddDecTitle');
+        const headerEl = document.getElementById('decHeader');
+
+        if (dec.title === false) {
+            decWrap.classList.add('hidden');
+            if (isEditMode) btnAddDec.style.display = 'block';
+            else btnAddDec.style.display = 'none';
+        } else {
+            decWrap.classList.remove('hidden');
+            btnAddDec.style.display = 'none';
+            const displayTitle = (typeof dec.title === 'string' && dec.title.trim() !== '') ? dec.title : '📋 الخطوات المطلوبة:';
+            headerEl.innerHTML = displayTitle;
+            headerEl.onblur = function() {
+                const txt = this.innerHTML.trim();
+                if (dec.title !== txt) {
+                    recordUndoSnapshot();
+                    dec.title = txt;
+                }
+            };
+        }
 
         const container = document.getElementById('decItemsList');
         container.innerHTML = '';
@@ -922,10 +1235,7 @@
                     if (n && item.num !== n) { recordUndoSnapshot(); item.num = n; }
                 };
                 numSpan.onkeydown = (e) => { 
-                    if (e.key === 'Enter') { 
-                        e.preventDefault(); 
-                        numSpan.blur(); 
-                    } 
+                    if (e.key === 'Enter') { e.preventDefault(); numSpan.blur(); } 
                 };
 
                 const textDiv = wrapper.querySelector('.editable-content');
@@ -1008,7 +1318,8 @@
     });
 
     window.onload = function() {
-        initAppUI();
+        initTheme();
+        renderCurrentNavState();
     };
 </script>
 </body>
