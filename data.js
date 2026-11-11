@@ -16,12 +16,12 @@ const ttsData = {
             "title": "IU Maintenance"
         },
         {
-            "key": "ADVANCED",
-            "title": "Second Level Advanced"
-        },
-        {
             "key": "CUSTOM_1794074541102",
             "title": "Customer 360"
+        },
+        {
+            "key": "ADVANCED",
+            "title": "Second Level Advanced"
         },
         {
             "key": "INSTALLATION_OPS",
@@ -40,7 +40,7 @@ const ttsData = {
         "ADVANCED": [
             {
                 "type": "case",
-                "text": "لو ال Status :Own The Case",
+                "text": "Status :Own The Case",
                 "target": "TIME_FRAME"
             },
             {
@@ -78,12 +78,12 @@ const ttsData = {
             },
             {
                 "type": "case",
-                "text": "شكوه مقفولة خلال 5 أيام",
+                "text": "شكوه مقفولة خلال 5 أيام وعنده نفس المشكلة",
                 "decKey": "MCU_CLOSED_WITHIN_5DAYS"
             },
             {
                 "type": "case",
-                "text": "شكوة مقفولة أكثر 5 أيام",
+                "text": "شكوة مقفولة أكثر 5 أيام&nbsp;",
                 "decKey": "MCU_CLOSED_OVER_5DAYS"
             }
         ],
@@ -176,9 +176,14 @@ const ttsData = {
         ],
         "CUSTOM_1794074541102": [
             {
-                "type": "step",
-                "num": "١",
-                "text": "اضغط لكتابة تفاصيل الخطوة هنا..."
+                "type": "case",
+                "text": "<span style=\"font-weight: 400; text-align: start;\">وعنده مشكلة فيزيكال&nbsp;</span>",
+                "target": "SEC_1794356595043"
+            },
+            {
+                "type": "case",
+                "text": "عنده مشكله لوجيكال",
+                "target": "SEC_1794356613469"
             }
         ],
         "FOLLOWUP": [
@@ -254,26 +259,66 @@ const ttsData = {
                 "num": "٢",
                 "text": "اضغط لكتابة تفاصيل الخطوة هنا..."
             }
+        ],
+        "SEC_1794356595043": [
+            {
+                "type": "step",
+                "num": "1",
+                "text": "مش هنعمل اي خطوات ونبلغ العميل&nbsp; أن مشكلتة قيد المعالجة وأنه هيتم المتابعة بمجرد الانتهاء من الفحص خلال ٤ ساعات"
+            },
+            {
+                "type": "step",
+                "num": "2",
+                "text": "لو العميل وضح ان مشكلته الخدمة غير مستقرة هنعرض تعويض ٠١٥ ."
+            },
+            {
+                "type": "step",
+                "num": "3",
+                "text": "هنعمل SR&nbsp;<div>Super agent - In progress&nbsp;</div>"
+            }
+        ],
+        "SEC_1794356613469": [
+            {
+                "type": "step",
+                "num": "1",
+                "text": "هنتابع مع العميل خطوات المشكله اللي عنده&nbsp;"
+            },
+            {
+                "type": "step",
+                "num": "2",
+                "text": "لو احتجنا نصعد هنقفلها ونصعد المشكلة اللوجيكال.&nbsp;"
+            },
+            {
+                "type": "step",
+                "num": "3",
+                "text": "هنعمل SR Manual TS Steps"
+            },
+            {
+                "type": "note",
+                "text": "ال SLA هتكون بتاعت المشكله اللوجيكال&nbsp;"
+            }
         ]
     },
     "sectionTitles": {
         "ADVANCED": "ما هي حالة الشكوه (Status) داخل القسم؟",
-        "TIME_FRAME": "خطوات ومسارات لو ال Status :Own The Case:",
-        "MCU": "حدد موقف الشكوه داخل MCU Call Center:",
+        "TIME_FRAME": "📋 الخطوات المطلوبة:",
+        "MCU": "<span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\">حدد موقف الشكوه داخل MCU Call Center:</span></span></span>",
         "INSTALLATION_OPS": "اختر نطاق الخط الجغرافي:",
         "CLOSING_AUTOMATION": "اختر حالة الغلق الخاصة:",
         "SLS_FOLLOWUP": "ما هو موقف العميل والمشكلة؟",
         "IU": "حدد موقف العميل في IU Maintenance:",
         "NOC": "موقف الشكوه في NOC:",
-        "ADV_OTHER": "ما هو موقف العميل والمشكلة؟",
-        "CUSTOM_1794074541102": "خطوات وملاحظات Customer 360:",
-        "FOLLOWUP": "اول حاجه نشوف اخر ابديت عالشكوه لو احتجتا نصعد :-",
+        "ADV_OTHER": false,
+        "CUSTOM_1794074541102": "&nbsp;Customer 360:",
+        "FOLLOWUP": "<span style=\"font-size: 16px;\">اول حاجه نشوف اخر ابديت عالشكوه لو احتجتا نصعد :-</span>",
         "POOL_1794337383186": "خطوات ومسارات القسم الجديد:",
         "SEC_1794339390400": "خطوات ومسارات الحالة الجديدة:",
         "SLS": "خطوات ومسارات CC-Second Level Support / Pilot-SLS:",
-        "SEC_1794346437634": "خطوات ومسارات الحالة الجديدة:",
-        "SEC_1794346451785": "خطوات ومسارات الحالة الجديدة:",
-        "SEC_1794346471034": "خطوات ومسارات الحالة الجديدة:"
+        "SEC_1794346437634": "📋 الخطوات المطلوبة:",
+        "SEC_1794346451785": "📋 الخطوات المطلوبة:",
+        "SEC_1794346471034": "خطوات ومسارات الحالة الجديدة:",
+        "SEC_1794356595043": "📋 الخطوات المطلوبة:",
+        "SEC_1794356613469": "📋 الخطوات المطلوبة:"
     },
     "decisions": {
         "ADV_TIME_IN": {
@@ -335,6 +380,11 @@ const ttsData = {
                     "text": "هنعمل IR Acceleration لو مش حياة كريمة"
                 },
                 {
+                    "type": "step",
+                    "num": "5",
+                    "text": "هنعرض تعويض ٠١٥&nbsp;"
+                },
+                {
                     "type": "note",
                     "text": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sla<div>&nbsp;هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة</div>"
                 }
@@ -354,13 +404,8 @@ const ttsData = {
                 },
                 {
                     "type": "step",
-                    "num": "3",
-                    "text": "هنعمل IR Acceleration لو الخط مش حياة كريمة."
-                },
-                {
-                    "type": "step",
                     "num": "4",
-                    "text": "هنعمل IR Rework لو مش حياة كريمه."
+                    "text": "هنعمل IR Rework<div>وهنابدت بقمها جوه الشكوه&nbsp; لو مش حياة كريمه.</div>"
                 },
                 {
                     "type": "note",
@@ -526,7 +571,7 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "1",
-                    "text": "هنعمل IR Acceleration"
+                    "text": "هنعمل IR Acceleration لو مش حياة كريمة"
                 },
                 {
                     "type": "step",
@@ -593,6 +638,11 @@ const ttsData = {
                     "type": "step",
                     "num": "3",
                     "text": "هنعمل SR Follow Up&nbsp; Within / After sla حسب الشكوه."
+                },
+                {
+                    "type": "step",
+                    "num": "4",
+                    "text": "هنعرض تعويض ٠١٥ حسب باقتة لو عدا ٢٤ ساعة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها ابديت بان عنده مشكله في النت&nbsp; ٣ جيجا لمده يومين</div></div>"
                 },
                 {
                     "type": "note",
