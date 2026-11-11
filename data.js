@@ -322,7 +322,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "4",
-                "text": "هنعمل SR Follow After Sla.&nbsp;"
+                "text": "هنعمل SR Follow After Sla عالمشكلة اللي في TTS."
             },
             {
                 "type": "step",
@@ -665,7 +665,7 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "4",
-                    "text": "هنعمل SR Follow Up&nbsp; Within."
+                    "text": "هنعمل SR Follow Up&nbsp; Within. عالمشكله اللي في TTS."
                 },
                 {
                     "type": "step",
