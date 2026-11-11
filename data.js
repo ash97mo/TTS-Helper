@@ -141,8 +141,13 @@ const ttsData = {
             },
             {
                 "type": "case",
-                "text": "عنده مشكلة فيزيكال ثانية",
+                "text": "عنده مشكلة فيزيكال ثانية خلال المده",
                 "decKey": "IU_PHYS_WITHIN"
+            },
+            {
+                "type": "case",
+                "text": "عنده مشكلة فيزيكال ثانية وعدا المده",
+                "target": "SEC_1794363456024"
             },
             {
                 "type": "case",
@@ -182,7 +187,7 @@ const ttsData = {
             },
             {
                 "type": "case",
-                "text": "&nbsp;مشكلته Browsing او Unable to Obtain ip",
+                "text": "&nbsp;مشكلته<br>&nbsp;<span style=\"font-size: 12px;\">Browsing او Unable to Obtain ip</span>",
                 "target": "SEC_1794356613469"
             }
         ],
@@ -297,6 +302,33 @@ const ttsData = {
                 "type": "note",
                 "text": "ال SLA هتكون بتاعت المشكله اللوجيكال&nbsp;"
             }
+        ],
+        "SEC_1794363456024": [
+            {
+                "type": "step",
+                "num": "1",
+                "text": "هنأبدت عالشكوه المشكلة الفيزيكال الجديدة."
+            },
+            {
+                "type": "step",
+                "num": "2",
+                "text": "هنعمل IR Delay ونابدت جوه عالشكوه."
+            },
+            {
+                "type": "step",
+                "num": "3",
+                "text": "هنعمل IR Acceleration ونابدت جوه عالشكوه&nbsp; لو مش حياة كريمة"
+            },
+            {
+                "type": "step",
+                "num": "4",
+                "text": "هنعمل SR Follow After Sla.&nbsp;"
+            },
+            {
+                "type": "step",
+                "num": "5",
+                "text": "هنعرض تعويض ٠١٥ حسب باقته لو مضفش قبل كده."
+            }
         ]
     },
     "sectionTitles": {
@@ -318,7 +350,8 @@ const ttsData = {
         "SEC_1794346451785": "📋 الخطوات المطلوبة:",
         "SEC_1794346471034": "خطوات ومسارات الحالة الجديدة:",
         "SEC_1794356595043": "📋 الخطوات المطلوبة:",
-        "SEC_1794356613469": "📋 الخطوات المطلوبة:"
+        "SEC_1794356613469": "📋 الخطوات المطلوبة:",
+        "SEC_1794363456024": "📋 الخطوات المطلوبة:"
     },
     "decisions": {
         "ADV_TIME_IN": {
@@ -362,12 +395,12 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "1",
-                    "text": "لمشاكل BLQ و Instability&nbsp;<div>لازم نرن <b>Clear view</b>&nbsp;للتأكد من عدم حلها.</div>"
+                    "text": "لمشاكل BLQ و Instability&nbsp;<div>لازم نرن <b>Clear view علي ٢٤ .</b>&nbsp;للتأكد من عدم حلها.</div>"
                 },
                 {
                     "type": "step",
                     "num": "2",
-                    "text": "هنابدت الخطوات جوه الشكوه في TTS."
+                    "text": "هنابدت الخطوات جوه الشكوه في TTS ونرفعها لل IU."
                 },
                 {
                     "type": "step",
@@ -377,16 +410,16 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "4",
-                    "text": "هنعمل <span style=\"padding: 1px 4px; border-radius: 3px;\"><font color=\"#000000\"><span style=\"background-color: rgb(254, 240, 138);\">IR Acceleration </span></font>لو </span>مش حياة كريمة"
+                    "text": "هنعمل <span style=\"padding: 1px 4px; border-radius: 3px;\"><font color=\"#000000\"><span style=\"background-color: rgb(254, 240, 138);\">IR Acceleration</span></font>&nbsp;ونابدت بيه جوه الشكوه لو</span>مش حياة كريمة"
                 },
                 {
                     "type": "step",
                     "num": "5",
-                    "text": "هنعرض تعويض ٠١٥&nbsp;"
+                    "text": "<div>لو عدت ٢٤ ساعه من وقت اول تصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
                 },
                 {
                     "type": "note",
-                    "text": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sla<div>&nbsp;هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة</div>"
+                    "text": "ال Sla هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة"
                 }
             ]
         },
@@ -400,12 +433,12 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "2",
-                    "text": "لواحتجنا نصعد لازم نقفل الشكوه الحالية نهائياً عشان عدا أكثر من 5 أيام. ونصعد الشكوه الجديده."
+                    "text": "لو احتجنا نصعد لازم نقفل الشكوه الحالية نهائياً عشان عدا أكثر من 5 أيام. ونصعد الشكوه الجديده."
                 },
                 {
                     "type": "step",
                     "num": "4",
-                    "text": "هنعمل <span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">IR Rework</span><div>وهنابدت بقمها جوه الشكوه&nbsp; لو مش حياة كريمه.</div>"
+                    "text": "هنعمل <span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">IR Rework</span><div>وهنابدت بيه جوه الشكوه&nbsp; لو مش حياة كريمه.</div>"
                 },
                 {
                     "type": "note",
@@ -428,7 +461,7 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "3",
-                    "text": "هنعمل <span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">IR Rework</span> لو مش حياة كريمه."
+                    "text": "هنعمل <span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">IR Rework</span>&nbsp;ونابدت بيه جوه الشكوه لو مش حياة كريمه."
                 },
                 {
                     "type": "note",
@@ -571,22 +604,17 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "1",
-                    "text": "هنعمل IR Acceleration لو مش حياة كريمة"
+                    "text": "هنعمل IR Acceleration ونابدت بيه جوه الشكوه لو مش حياة كريمة"
                 },
                 {
                     "type": "step",
                     "num": "2",
-                    "text": "هنابدت برقم IR Acceleration<div>جوه الشكوه.</div>"
+                    "text": "هنعرض تعويض ٠١٥ لو متعرضش  والشكوه physical instability او BLQ.&nbsp;<div>او Voice down وعليها ابديت بان عنده مشكله في النت  ٣ جيجا لمده يومين</div>"
                 },
                 {
                     "type": "step",
                     "num": "3",
                     "text": "هنعمل SR Follow up Within sla"
-                },
-                {
-                    "type": "step",
-                    "num": "4",
-                    "text": "هنعرض تعويض ٠١٥ لو متعرضش قبل كده و الشكوه physical instability او BLQ.&nbsp;<div>او Voice down وعليها ابديت بان عنده مشكله في النت&nbsp;</div>"
                 },
                 {
                     "type": "note",
@@ -599,22 +627,22 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "1",
-                    "text": "هنعمل IR Acceleration لو مش حياة كريمة"
+                    "text": "هنعمل IR Acceleration ونابدت بيه عالشكوه&nbsp; لو مش حياة كريمة"
                 },
                 {
                     "type": "step",
                     "num": "2",
-                    "text": "هنعمل IR Delay"
+                    "text": "هنعمل IR Delay<div>ونابدت بيه جوه عالشكوه.</div>"
                 },
                 {
                     "type": "step",
                     "num": "3",
-                    "text": "هنابدت برقم ال delay وال Acceleration<div>جوه الشكوه.</div>"
+                    "text": "هنعرض تعويض ٠١٥ حسب باقته لو مضفش قبل كده."
                 },
                 {
                     "type": "step",
-                    "num": "٤",
-                    "text": "هنعرض تعويض ٠١٥ حسب باقته لو مضفش قبل كده."
+                    "num": "4",
+                    "text": "هنعمل SR Follow After Sla.&nbsp;"
                 },
                 {
                     "type": "note",
@@ -632,17 +660,17 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "2",
-                    "text": "عمل IR Acceleration لو مش حياة كريمة"
-                },
-                {
-                    "type": "step",
-                    "num": "3",
-                    "text": "هنعمل SR Follow Up&nbsp; Within / After sla حسب الشكوه."
+                    "text": "هنعمل IR Acceleration ونابدت بيه جوه الشكوه لو مش حياة كريمة"
                 },
                 {
                     "type": "step",
                     "num": "4",
-                    "text": "<div>لو عدت ٢٤ ساعه من وقت اول تصعيد.</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها ابديت بان عنده مشكله في النت&nbsp; ٣ جيجا لمده يومين</div></div>"
+                    "text": "هنعمل SR Follow Up&nbsp; Within."
+                },
+                {
+                    "type": "step",
+                    "num": "5",
+                    "text": "<div>هنعرض تعويض ٠١٥ لو متعرضش&nbsp; والشكوه physical instability او BLQ.&nbsp;</div><div><div>او Voice down وعليها ابديت بان عنده مشكله في النت&nbsp; ٣ جيجا لمده يومين</div></div>"
                 },
                 {
                     "type": "note",
