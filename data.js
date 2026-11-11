@@ -20,20 +20,20 @@ const ttsData = {
             "title": "Customer 360"
         },
         {
-            "key": "ADVANCED",
-            "title": "Second Level Advanced"
+            "key": "POOL_1794366041775",
+            "title": "<div>SLS - IVR Automation</div>"
         },
         {
             "key": "INSTALLATION_OPS",
             "title": "Installation Operations"
         },
         {
-            "key": "NOC",
-            "title": "NOC"
+            "key": "ADVANCED",
+            "title": "Second Level Advanced"
         },
         {
-            "key": "CLOSING_AUTOMATION",
-            "title": "Automation in progress"
+            "key": "NOC",
+            "title": "NOC"
         }
     ],
     "sections": {
@@ -90,12 +90,12 @@ const ttsData = {
         "INSTALLATION_OPS": [
             {
                 "type": "case",
-                "text": "لو الخط تابع للقاهرة، الجيزة أو الإسكندرية",
+                "text": "لو تابع للقاهرة، الجيزة أو الإسكندرية",
                 "decKey": "INSTALL_CAIRO"
             },
             {
                 "type": "case",
-                "text": "لو الخط تابع للمحافظات الأخرى والكباين",
+                "text": "لو تابع للمحافظات الأخرى&nbsp;",
                 "decKey": "INSTALL_OTHER"
             }
         ],
@@ -329,6 +329,18 @@ const ttsData = {
                 "num": "5",
                 "text": "هنعرض تعويض ٠١٥ حسب باقته لو مضفش قبل كده."
             }
+        ],
+        "POOL_1794366041775": [
+            {
+                "type": "step",
+                "num": "1",
+                "text": "<div>هنتابع مع مشكلة العميل الفنية بشكل طبيعي (فيزيكال او لوجيكال) وفقًا لكلام العميل والابديت ع الشكوي</div>"
+            },
+            {
+                "type": "step",
+                "num": "2",
+                "text": "وهنعمل SR&nbsp;"
+            }
         ]
     },
     "sectionTitles": {
@@ -351,7 +363,8 @@ const ttsData = {
         "SEC_1794346471034": "خطوات ومسارات الحالة الجديدة:",
         "SEC_1794356595043": "📋 الخطوات المطلوبة:",
         "SEC_1794356613469": "📋 الخطوات المطلوبة:",
-        "SEC_1794363456024": "📋 الخطوات المطلوبة:"
+        "SEC_1794363456024": "📋 الخطوات المطلوبة:",
+        "POOL_1794366041775": "📋 الخطوات المطلوبة:"
     },
     "decisions": {
         "ADV_TIME_IN": {
@@ -496,23 +509,18 @@ const ttsData = {
             "items": [
                 {
                     "type": "step",
-                    "num": "١",
-                    "text": "إصلاح البورتات التالفة وتعديل بيانات الـ Matrix للخطوط التابعة للمنطقة."
+                    "num": "1",
+                    "text": "مدة حل المشكلة&nbsp; يومين عمل.<div>ولو عدا المده هنجددها.</div>"
                 },
                 {
                     "type": "step",
-                    "num": "٢",
-                    "text": "مدة الإصلاح يومين عمل <b>(2 Working Days)</b>."
+                    "num": "2",
+                    "text": "<div><div>لو عدت ٢٤ ساعه من وقت اول التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div></div>"
                 },
                 {
                     "type": "step",
-                    "num": "٣",
-                    "text": "في حال تجاوز المهلة الزمنية يتم عمل تجديد للمهلة."
-                },
-                {
-                    "type": "step",
-                    "num": "٤",
-                    "text": "فتح <b>SR متابعة / استعجال</b> على نظام BSS."
+                    "num": "3",
+                    "text": "فتح <b>SR follow up within / after sla حسب الشكوه</b>"
                 }
             ]
         },
@@ -520,23 +528,18 @@ const ttsData = {
             "items": [
                 {
                     "type": "step",
-                    "num": "١",
-                    "text": "إصلاح البورتات وتعديل الـ Matrix للكباين وباقي المحافظات (MSAN / Cabins / UNO / Cable)."
+                    "num": "1",
+                    "text": "مدة حل المشكلة خمس ايام عمل&nbsp;<div>ولو عدا المده هنجددها</div>"
                 },
                 {
                     "type": "step",
-                    "num": "٢",
-                    "text": "مدة الإصلاح خمسة أيام عمل <b>(5 Working Days)</b>."
+                    "num": "2",
+                    "text": "<div>لو عدت ٢٤ ساعه من وقت اول التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
                 },
                 {
                     "type": "step",
-                    "num": "٣",
-                    "text": "في حال تجاوز المهلة الزمنية يتم عمل تجديد للمهلة."
-                },
-                {
-                    "type": "step",
-                    "num": "٤",
-                    "text": "فتح <b>SR متابعة / استعجال</b> على نظام BSS."
+                    "num": "3",
+                    "text": "فتح <b>SR follow up within / after sla حسب الشكوه</b>"
                 }
             ]
         },
@@ -547,57 +550,10 @@ const ttsData = {
             "items": []
         },
         "NOC_WITHIN": {
-            "items": [
-                {
-                    "type": "step",
-                    "num": "١",
-                    "text": "مراجعة وتطبيق تعليمات الـ Update الوارد من مهندسي NOC مع العميل."
-                },
-                {
-                    "type": "step",
-                    "num": "٢",
-                    "text": "هنأبدت عالشكوه بأن العميل يتابع معنا."
-                },
-                {
-                    "type": "step",
-                    "num": "٣",
-                    "text": "إبلاغ العميل بأن الشكوه ما زالت <b>ضمن المهلة المقررة</b> للصيانة."
-                },
-                {
-                    "type": "step",
-                    "num": "٤",
-                    "text": "فتح <b>SR متابعة عادية</b> على نظام BSS."
-                }
-            ]
+            "items": []
         },
         "NOC_PASS": {
-            "items": [
-                {
-                    "type": "step",
-                    "num": "١",
-                    "text": "مراجعة آخر Update وتطبيقه مع العميل."
-                },
-                {
-                    "type": "step",
-                    "num": "٢",
-                    "text": "رفع شكوه تأخير <b>(Delay Ticket)</b> على الشكوه الحالية بالـ TTS."
-                },
-                {
-                    "type": "step",
-                    "num": "٣",
-                    "text": "هنأبدت عالشكوه بطلب الاستعجال لتجاوز الوقت المحدد."
-                },
-                {
-                    "type": "step",
-                    "num": "٤",
-                    "text": "إبلاغ العميل بتصعيد الشكوه كحالة تأخير لتخطيها الـ SLA المعتمدة."
-                },
-                {
-                    "type": "step",
-                    "num": "٥",
-                    "text": "فتح <b>SR Delay</b> على نظام BSS."
-                }
-            ]
+            "items": []
         },
         "IU_SAME_WITHIN": {
             "items": [
