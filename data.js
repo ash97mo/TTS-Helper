@@ -182,14 +182,14 @@ const ttsData = {
             },
             {
                 "type": "case",
-                "text": "عنده مشكله لوجيكال",
+                "text": "&nbsp;مشكلته Browsing او Unable to Obtain ip",
                 "target": "SEC_1794356613469"
             }
         ],
         "FOLLOWUP": [
             {
                 "type": "case",
-                "text": "عنده مشكلة تاني",
+                "text": "مشكلة تاني",
                 "target": "SEC_1794346437634"
             },
             {
@@ -281,17 +281,17 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "1",
-                "text": "هنتابع مع العميل خطوات المشكله اللي عنده&nbsp;"
+                "text": "هنتابع مع العميل خطوات المشكله اللي عنده&nbsp;<div>لو اتحلت هنعمل SR الحل للمشكله.</div>"
             },
             {
                 "type": "step",
                 "num": "2",
-                "text": "لو احتجنا نصعد هنقفلها ونصعد المشكلة اللوجيكال.&nbsp;"
+                "text": "لو متحلتش واحتجنا نصعد هنقفلها ونصعد المشكلة اللوجيكال.&nbsp;"
             },
             {
                 "type": "step",
                 "num": "3",
-                "text": "هنعمل SR Manual TS Steps"
+                "text": "وهنعمل SR Manual TS Steps"
             },
             {
                 "type": "note",
