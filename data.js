@@ -40,7 +40,7 @@ const ttsData = {
         "ADVANCED": [
             {
                 "type": "case",
-                "text": "Status :Own The Case",
+                "text": "Own The Case",
                 "target": "TIME_FRAME"
             },
             {
@@ -73,7 +73,7 @@ const ttsData = {
             },
             {
                 "type": "case",
-                "text": "شكوه مفتوحة ورجعت بعد أكثر من 5 أيام",
+                "text": "شكوه مفتوحة ورجعت من ال IU بعد أكثر من 5 أيام",
                 "decKey": "MCU_RETURNED_OVER_5DAYS"
             },
             {
@@ -377,7 +377,7 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "4",
-                    "text": "هنعمل IR Acceleration لو مش حياة كريمة"
+                    "text": "هنعمل <span style=\"padding: 1px 4px; border-radius: 3px;\"><font color=\"#000000\"><span style=\"background-color: rgb(254, 240, 138);\">IR Acceleration </span></font>لو </span>مش حياة كريمة"
                 },
                 {
                     "type": "step",
@@ -405,7 +405,7 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "4",
-                    "text": "هنعمل IR Rework<div>وهنابدت بقمها جوه الشكوه&nbsp; لو مش حياة كريمه.</div>"
+                    "text": "هنعمل <span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">IR Rework</span><div>وهنابدت بقمها جوه الشكوه&nbsp; لو مش حياة كريمه.</div>"
                 },
                 {
                     "type": "note",
@@ -428,11 +428,11 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "3",
-                    "text": "هنعمل IR Rework لو مش حياة كريمه."
+                    "text": "هنعمل <span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">IR Rework</span> لو مش حياة كريمه."
                 },
                 {
                     "type": "note",
-                    "text": "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sla<div>&nbsp;هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة</div>"
+                    "text": "ال Sla هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة"
                 }
             ]
         },
@@ -451,7 +451,7 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "3",
-                    "text": "هنعمل IR Rework لو الشكوه القديمه رجعت من ال iu في خلال ٣٠ يوم .<div>لو مش حياة كريمه</div>"
+                    "text": "هنعمل <span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">IR Rework</span> لو الشكوه القديمه رجعت من ال iu في خلال ٣٠ يوم .<div>لو مش حياة كريمه</div>"
                 },
                 {
                     "type": "note",
@@ -576,7 +576,7 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "2",
-                    "text": "هنابدت عالشكوه برقم IR Acceleration."
+                    "text": "هنابدت برقم IR Acceleration<div>جوه الشكوه.</div>"
                 },
                 {
                     "type": "step",
@@ -609,7 +609,7 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "3",
-                    "text": "هنابدت عالشكوه برقم ال delay وال Acceleration"
+                    "text": "هنابدت برقم ال delay وال Acceleration<div>جوه الشكوه.</div>"
                 },
                 {
                     "type": "step",
@@ -627,7 +627,7 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "1",
-                    "text": "هنأبدت عالشكوه بتفاصيل المشكلة الفيزيكال الجديدة."
+                    "text": "هنأبدت عالشكوه المشكلة الفيزيكال الجديدة."
                 },
                 {
                     "type": "step",
@@ -642,7 +642,7 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "4",
-                    "text": "هنعرض تعويض ٠١٥ حسب باقتة لو عدا ٢٤ ساعة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها ابديت بان عنده مشكله في النت&nbsp; ٣ جيجا لمده يومين</div></div>"
+                    "text": "<div>لو عدت ٢٤ ساعه من وقت اول تصعيد.</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها ابديت بان عنده مشكله في النت&nbsp; ٣ جيجا لمده يومين</div></div>"
                 },
                 {
                     "type": "note",
@@ -655,7 +655,7 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "1",
-                    "text": "عمل خطوات الفحص كاملة للمشكلة الـ Logical."
+                    "text": "هنمشي خطوات المشكلة ال Logical لو اتحلت هنعمل SR الحل."
                 },
                 {
                     "type": "step",
