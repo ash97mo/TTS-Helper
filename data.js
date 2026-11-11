@@ -1,5 +1,5 @@
 const ttsData = {
-    "theme": "dark",
+    "theme": "light",
     "creatorName": "Ashraf AbdElfattah",
     "tlName": "Hadeer Abdou Eldabie",
     "mainPools": [
@@ -525,7 +525,7 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "3",
-                    "text": "هنعمل <span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">IR Rework</span>&nbsp;ونابدت بيه جوه الشكوه لو مش حياة كريمه."
+                    "text": "هنعمل <span style=\"padding: 1px 4px; background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); border-radius: 3px;\">IR Rework</span> لو الشكوه القديمه رجعت من ال iu في خلال ٣٠ يوم .<div>لو مش حياة كريمه</div>"
                 },
                 {
                     "type": "note",
