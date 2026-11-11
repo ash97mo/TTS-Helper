@@ -85,6 +85,11 @@ const ttsData = {
                 "type": "case",
                 "text": "شكوة مقفولة أكثر 5 أيام&nbsp;",
                 "decKey": "MCU_CLOSED_OVER_5DAYS"
+            },
+            {
+                "type": "case",
+                "text": "&nbsp;الشكوه متصعد من IVR ومراحتش لل IU",
+                "target": "SEC_1794390971766"
             }
         ],
         "INSTALLATION_OPS": [
@@ -194,7 +199,7 @@ const ttsData = {
         "FOLLOWUP": [
             {
                 "type": "case",
-                "text": "مشكلة تاني",
+                "text": "<span style=\"font-size: 14px;\">م<span style=\"font-size: 16px;\">شكلة تاني</span></span><span style=\"font-size: 16px;\"></span>",
                 "target": "SEC_1794346437634"
             },
             {
@@ -286,7 +291,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "1",
-                "text": "هنتابع مع العميل خطوات المشكله اللي عنده&nbsp;<div>لو اتحلت هنعمل SR الحل للمشكله.</div>"
+                "text": "هنتابع مع العميل خطوات المشكله اللي عنده&nbsp;<div>لو اتحلت هنعمل SR الحل .</div>"
             },
             {
                 "type": "step",
@@ -343,7 +348,48 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "2",
-                "text": "وهنعمل SR&nbsp;"
+                "text": "وهنعمل SR Manual TS Steps"
+            }
+        ],
+        "SEC_1794390971766": [
+            {
+                "type": "step",
+                "num": "1",
+                "text": "هنمشي خطوات مع العميل حسب مشكلتة لو اتحت هنعمل SR الحل ."
+            },
+            {
+                "type": "step",
+                "num": "2",
+                "text": "لو مشكلتة BLQ و Instability&nbsp;<div>لازم نرن <b>Clear view علي ٢٤ .</b></div>"
+            },
+            {
+                "type": "step",
+                "num": "3",
+                "text": "لو احتجنا نصعد هنابدت بالخطوات عالشكوه ونرفعها لل IU."
+            },
+            {
+                "type": "step",
+                "num": "4",
+                "text": "وهنعمل SR Manual TS Steps"
+            },
+            {
+                "type": "step",
+                "num": "5",
+                "text": "هنعمل SR ReEscalate للشكوه الموجوده في TTS."
+            },
+            {
+                "type": "step",
+                "num": "6",
+                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+            },
+            {
+                "type": "step",
+                "num": "7",
+                "text": "هنعمل <span style=\"padding: 1px 4px; border-radius: 3px;\"><font color=\"#000000\"><span style=\"background-color: rgb(254, 240, 138);\">IR Acceleration</span></font> ونابدت بيه جوه الشكوه لو</span>مش حياة كريمة"
+            },
+            {
+                "type": "note",
+                "text": "ال Sla هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة"
             }
         ]
     },
@@ -368,7 +414,8 @@ const ttsData = {
         "SEC_1794356595043": "📋 الخطوات المطلوبة:",
         "SEC_1794356613469": "📋 الخطوات المطلوبة:",
         "SEC_1794363456024": "📋 الخطوات المطلوبة:",
-        "POOL_1794366041775": "📋 الخطوات المطلوبة:"
+        "POOL_1794366041775": "📋 الخطوات المطلوبة:",
+        "SEC_1794390971766": "📋 الخطوات المطلوبة:"
     },
     "decisions": {
         "ADV_TIME_IN": {
@@ -412,7 +459,7 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "1",
-                    "text": "لمشاكل BLQ و Instability&nbsp;<div>لازم نرن <b>Clear view علي ٢٤ .</b>&nbsp;للتأكد من عدم حلها.</div>"
+                    "text": "لو مشكلتة BLQ و Instability&nbsp;<div>لازم نرن <b>Clear view علي ٢٤ .</b>&nbsp;للتأكد من عدم حلها.</div>"
                 },
                 {
                     "type": "step",
@@ -606,7 +653,7 @@ const ttsData = {
                 },
                 {
                     "type": "note",
-                    "text": "ال Sla هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة"
+                    "text": "ال Sla هتكون 24 ساعه وهتكون 24 ساعه لو حياة كريمة برضو"
                 }
             ]
         },
