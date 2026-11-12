@@ -32,6 +32,14 @@ const ttsData = {
             "title": "Second Level Advanced"
         },
         {
+            "key": "POOL_1794487341327",
+            "title": "Pilot-SLS"
+        },
+        {
+            "key": "POOL_1794487315512",
+            "title": "Second Level Support&nbsp;"
+        },
+        {
             "key": "NOC",
             "title": "NOC"
         }
@@ -58,7 +66,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "٢",
-                "text": "هنعمل&nbsp; IR TTS Case ونابدت برقمها جوه الشكوه"
+                "text": "هنعمل <span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">TTS Case</span> ونابدت برقمها جوه الشكوه"
             },
             {
                 "type": "note",
@@ -722,7 +730,68 @@ const ttsData = {
                 "type": "note",
                 "text": "ال SLA بتكون بتاعت المشكلة اللوجيكال"
             }
-        ]
+        ],
+        "POOL_1794487315512": [
+            {
+                "type": "case",
+                "text": "عنده نفس المشكلة",
+                "target": "SEC_1794488549230"
+            },
+            {
+                "type": "case",
+                "text": "عنده مشكلة تانية",
+                "target": "SEC_1794488549943"
+            }
+        ],
+        "POOL_1794487341327": [],
+        "SEC_1794488549230": [
+            {
+                "type": "step",
+                "num": "١",
+                "text": "اول حاجه هنشوف الابديت الموجود بيقول نعمل ايه"
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
+            },
+            {
+                "type": "step",
+                "num": "٣",
+                "text": "لو متحلتش واحتجنا نصعد <span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">هنعمل TTS Csae&nbsp;</span><div>ونحط فيها الخطوات</div>"
+            },
+            {
+                "type": "step",
+                "num": "٤",
+                "text": "وهنعمل SR ReEscalate لنفس المشكلة."
+            },
+            {
+                "type": "note",
+                "text": "ال SLA بتكون نفسها بتاعت المشكلة."
+            }
+        ],
+        "SEC_1794488549943": [
+            {
+                "type": "step",
+                "num": "١",
+                "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "لو متحلتش واحتجنا نصعد <span style=\"padding: 1px 4px; background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); border-radius: 3px;\">هنعمل TTS Csae&nbsp;</span><div>ونحط فيها الخطوات</div>"
+            },
+            {
+                "type": "step",
+                "num": "٣",
+                "text": "هنعمل SR Case Need to be Escalated للمشكلة الجديده"
+            },
+            {
+                "type": "note",
+                "text": "<span style=\"color: rgb(248, 250, 252); font-weight: 400;\">ال SLA بتكون بتاعت المشكلة الجديده.</span>"
+            }
+        ],
+        "SEC_1794488560660": []
     },
     "sectionTitles": {
         "ADVANCED": "<span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\">ما هي حالة الشكوه (Status)</span></span></span>",
@@ -760,7 +829,12 @@ const ttsData = {
         "SEC_1794396180763": "📋 الخطوات المطلوبة:",
         "SEC_1794465582630": "📋 الخطوات المطلوبة:",
         "SEC_1794465800265": "📋 الخطوات المطلوبة:",
-        "SEC_1794481536956": "📋 الخطوات المطلوبة:"
+        "SEC_1794481536956": "📋 الخطوات المطلوبة:",
+        "POOL_1794487315512": false,
+        "POOL_1794487341327": "📋 الخطوات المطلوبة:",
+        "SEC_1794488549230": "📋 الخطوات المطلوبة:",
+        "SEC_1794488549943": "📋 الخطوات المطلوبة:",
+        "SEC_1794488560660": "📋 الخطوات المطلوبة:"
     },
     "decisions": {
         "ADV_TIME_IN": {
