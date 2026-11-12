@@ -32,12 +32,12 @@ const ttsData = {
             "title": "Second Level Advanced"
         },
         {
-            "key": "POOL_1794487341327",
-            "title": "Pilot-SLS"
-        },
-        {
             "key": "POOL_1794487315512",
             "title": "Second Level Support&nbsp;"
+        },
+        {
+            "key": "POOL_1794487341327",
+            "title": "Pilot-SLS"
         },
         {
             "key": "NOC",
@@ -54,7 +54,7 @@ const ttsData = {
             {
                 "type": "case",
                 "text": "حاله تاني",
-                "target": "ADV_OTHER"
+                "target": "SEC_1794489870945"
             }
         ],
         "TIME_FRAME": [
@@ -791,7 +791,66 @@ const ttsData = {
                 "text": "<span style=\"color: rgb(248, 250, 252); font-weight: 400;\">ال SLA بتكون بتاعت المشكلة الجديده.</span>"
             }
         ],
-        "SEC_1794488560660": []
+        "SEC_1794488560660": [],
+        "SEC_1794489870945": [
+            {
+                "type": "case",
+                "text": "عنده نفس المشكلة",
+                "target": "SEC_1794489902543"
+            },
+            {
+                "type": "case",
+                "text": "عنده مشكلة تانية",
+                "target": "SEC_1794489924825"
+            }
+        ],
+        "SEC_1794489902543": [
+            {
+                "type": "step",
+                "num": "١",
+                "text": "اول حاجه هنشوف الابديت الموجود بيقول نعمل ايه"
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
+            },
+            {
+                "type": "step",
+                "num": "٣",
+                "text": "لو متحلتش واحتجنا نصعد <span style=\"padding: 1px 4px; background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); border-radius: 3px;\">هنعمل TTS Csae&nbsp;</span><div>ونحط فيها الخطوات</div>"
+            },
+            {
+                "type": "step",
+                "num": "٤",
+                "text": "وهنعمل SR ReEscalate لنفس المشكلة."
+            },
+            {
+                "type": "note",
+                "text": "ال SLA بتكون نفسها بتاعت المشكلة."
+            }
+        ],
+        "SEC_1794489924825": [
+            {
+                "type": "step",
+                "num": "١",
+                "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "لو متحلتش واحتجنا نصعد <span style=\"padding: 1px 4px; background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); border-radius: 3px;\">هنعمل TTS Csae&nbsp;</span><div>ونحط فيها الخطوات</div>"
+            },
+            {
+                "type": "step",
+                "num": "٣",
+                "text": "هنعمل SR Case Need to be Escalated للمشكلة الجديده"
+            },
+            {
+                "type": "note",
+                "text": "<span style=\"color: rgb(248, 250, 252); font-weight: 400;\">ال SLA بتكون بتاعت المشكلة الجديده.</span>"
+            }
+        ]
     },
     "sectionTitles": {
         "ADVANCED": "<span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\">ما هي حالة الشكوه (Status)</span></span></span>",
@@ -834,7 +893,10 @@ const ttsData = {
         "POOL_1794487341327": "📋 الخطوات المطلوبة:",
         "SEC_1794488549230": "📋 الخطوات المطلوبة:",
         "SEC_1794488549943": "📋 الخطوات المطلوبة:",
-        "SEC_1794488560660": "📋 الخطوات المطلوبة:"
+        "SEC_1794488560660": "📋 الخطوات المطلوبة:",
+        "SEC_1794489870945": false,
+        "SEC_1794489902543": "📋 الخطوات المطلوبة:",
+        "SEC_1794489924825": "📋 الخطوات المطلوبة:"
     },
     "decisions": {
         "ADV_TIME_IN": {
