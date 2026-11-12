@@ -68,28 +68,38 @@ const ttsData = {
         "MCU": [
             {
                 "type": "case",
-                "text": "شكوه مفتوحة ورجعت من الـ IU خلال 5 أيام أو أقل",
+                "text": "شكوة متصعده من <span style=\"color: rgb(250, 204, 21);\">IVR</span> ومراحتش لل <span style=\"color: rgb(250, 204, 21);\">IU</span>",
+                "target": "SEC_1794390971766"
+            },
+            {
+                "type": "case",
+                "text": "شكوة عليها ابديت <span style=\"padding: 1px 4px; border-radius: 3px;\"><span style=\"color: rgb(250, 204, 21);\">Out Side Tedata</span></span>",
+                "target": "SEC_1794465582630"
+            },
+            {
+                "type": "case",
+                "text": "شكوة عليها ابديت <span style=\"color: rgb(250, 204, 21);\">Major Fault 20</span>",
+                "target": "SEC_1794465800265"
+            },
+            {
+                "type": "case",
+                "text": "مفتوحة ورجعت من الـ <span style=\"color: rgb(250, 204, 21);\"><span style=\"color: rgb(56, 189, 248);\">IU</span></span> خلال <span style=\"color: rgb(56, 189, 248);\">5</span> أيام&nbsp;",
                 "decKey": "MCU_RETURNED_5DAYS"
             },
             {
                 "type": "case",
-                "text": "شكوه مفتوحة ورجعت من ال IU بعد أكثر من 5 أيام",
+                "text": "مفتوحة ورجعت من ال <span style=\"color: rgb(56, 189, 248);\">IU</span> بعد أكثر من <span style=\"color: rgb(56, 189, 248);\">5</span> أيام",
                 "decKey": "MCU_RETURNED_OVER_5DAYS"
             },
             {
                 "type": "case",
-                "text": "شكوه مقفولة خلال 5 أيام وعنده نفس المشكلة",
+                "text": "&nbsp;مقفولة خلال <span style=\"color: rgb(56, 189, 248);\">5</span> أيام وعنده نفس المشكلة",
                 "decKey": "MCU_CLOSED_WITHIN_5DAYS"
             },
             {
                 "type": "case",
-                "text": "شكوة مقفولة أكثر 5 أيام&nbsp;",
+                "text": "&nbsp;مقفولة أكثر <span style=\"color: rgb(56, 189, 248);\"><span style=\"color: rgb(56, 189, 248);\">5</span></span> أيام&nbsp;",
                 "decKey": "MCU_CLOSED_OVER_5DAYS"
-            },
-            {
-                "type": "case",
-                "text": "&nbsp;الشكوه متصعد من IVR ومراحتش لل IU",
-                "target": "SEC_1794390971766"
             }
         ],
         "INSTALLATION_OPS": [
@@ -136,12 +146,12 @@ const ttsData = {
         "IU": [
             {
                 "type": "case",
-                "text": "الشكوة اتصعدت مره وحده لل IU",
+                "text": "اتصعدت مره وحده لل IU",
                 "target": "SEC_1794393999106"
             },
             {
                 "type": "case",
-                "text": "<span style=\"background-color: rgba(2, 132, 199, 0.15);\">الشكوة اتصعدت اكتر من مره لل IU</span>",
+                "text": "اتصعدت اكتر من مره لل IU",
                 "target": "SEC_1794393974458"
             },
             {
@@ -189,13 +199,18 @@ const ttsData = {
         "FOLLOWUP": [
             {
                 "type": "case",
-                "text": "<span style=\"font-size: 14px;\">م<span style=\"font-size: 16px;\">شكلة تاني</span></span><span style=\"font-size: 16px;\"></span>",
+                "text": "عنده نفس المشكلة الفيزيكال",
+                "target": "SEC_1794346451785"
+            },
+            {
+                "type": "case",
+                "text": "<span style=\"font-size: 14px;\">عنده م<span style=\"font-size: 16px;\">شكلة تانية فيزيكال</span></span><span style=\"font-size: 16px;\"></span>",
                 "target": "SEC_1794346437634"
             },
             {
                 "type": "case",
-                "text": "نفس المشكلة",
-                "target": "SEC_1794346451785"
+                "text": "عنده مشكلة تانية لوجيكال",
+                "target": "SEC_1794481536956"
             }
         ],
         "POOL_1794337383186": [],
@@ -205,47 +220,87 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "1",
-                "text": "هنعمل TTS Case<div>ونحط فيه الخطوات</div>"
+                "text": "هنمشي خطوات حل المشكله لو اتحلت هنعمل SR حل المشكلة."
             },
             {
                 "type": "step",
                 "num": "2",
-                "text": "هنابدت بالخطوات ورقم tts case جوه الشكوه."
+                "text": "لو مشكلتة BLQ و Instability&nbsp;<div>لازم نرن <b>Clear view علي ٢٤ .</b></div>"
             },
             {
                 "type": "step",
                 "num": "3",
-                "text": "هنعمل SR حل المشكله القديمه&nbsp;"
+                "text": "لو احتجنا نصعد<div><span style=\"padding: 1px 4px; background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); border-radius: 3px;\">هنعمل TTS Case </span>&nbsp;ونحط فيه الخطوات.</div>"
             },
             {
                 "type": "step",
                 "num": "4",
+                "text": "هنابدت بالخطوات ورقم tts case جوه الشكوه."
+            },
+            {
+                "type": "step",
+                "num": "5",
+                "text": "هنعمل IR Acceleration ونابدت بيه جوه الشكوه لو مش حياة كريمة"
+            },
+            {
+                "type": "step",
+                "num": "6",
+                "text": "هنعمل SR حل المشكله القديمه&nbsp;"
+            },
+            {
+                "type": "step",
+                "num": "7",
                 "text": "هنعمل SR Case Need to be Escalated للمشكلة الجديده"
             },
             {
+                "type": "step",
+                "num": "8",
+                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+            },
+            {
                 "type": "note",
-                "text": "ال SLA بتكون بتاعت المشكلة الجديده."
+                "text": "ال Sla هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة"
             }
         ],
         "SEC_1794346451785": [
             {
                 "type": "step",
-                "num": "١",
-                "text": "هنعمل TTS Case<div>ونحط فيه الخطوات.</div>"
+                "num": "1",
+                "text": "هنمشي خطوات حل المشكله لو اتحلت هنعمل SR حل المشكلة."
             },
             {
                 "type": "step",
-                "num": "٢",
+                "num": "2",
+                "text": "لو مشكلتة BLQ و Instability&nbsp;<div>لازم نرن <b>Clear view علي ٢٤ .</b></div>"
+            },
+            {
+                "type": "step",
+                "num": "3",
+                "text": "لو احتجنا نصعد<div><span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">هنعمل TTS Case</span>  ونحط فيه الخطوات.</div>"
+            },
+            {
+                "type": "step",
+                "num": "4",
                 "text": "هنابدت بالخطوات ورقم tts case جوه الشكوه."
             },
             {
                 "type": "step",
-                "num": "٣",
+                "num": "5",
+                "text": "هنعمل IR Acceleration ونابدت بيه جوه الشكوه لو مش حياة كريمة"
+            },
+            {
+                "type": "step",
+                "num": "6",
                 "text": "هنعمل SR ReEscalate للمشكله نفسها."
             },
             {
+                "type": "step",
+                "num": "7",
+                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+            },
+            {
                 "type": "note",
-                "text": "ال SLA بتكون بتاعت نفس المشكلة."
+                "text": "ال Sla هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة"
             }
         ],
         "SEC_1794346471034": [
@@ -355,7 +410,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "3",
-                "text": "لو احتجنا نصعد هنابدت بالخطوات عالشكوه ونرفعها لل IU."
+                "text": "لو احتجنا نصعد هنابدت بالخطوات عالشكوه ونرفعها لل <span style=\"padding: 1px 4px; border-radius: 3px;\"></span><span style=\"padding: 1px 4px; border-radius: 3px;\"></span><span style=\"color: rgb(250, 204, 21);\"><span style=\"padding: 1px 4px; border-radius: 3px;\"><b>IU</b></span>.</span>"
             },
             {
                 "type": "step",
@@ -634,6 +689,39 @@ const ttsData = {
                 "type": "note",
                 "text": "ال Sla هتكون 24 ساعه وهتكون 24 ساعه لو حياة كريمة برضو"
             }
+        ],
+        "SEC_1794465582630": [],
+        "SEC_1794465800265": [],
+        "SEC_1794481536956": [
+            {
+                "type": "step",
+                "num": "1",
+                "text": "هنمشي خطوات حل المشكله لو اتحلت هنعمل SR حل المشكلة."
+            },
+            {
+                "type": "step",
+                "num": "2",
+                "text": "لو احتجنا نصعد<div><span style=\"padding: 1px 4px; background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); border-radius: 3px;\">هنعمل TTS Case</span> ونحط فيه الخطوات.</div>"
+            },
+            {
+                "type": "step",
+                "num": "3",
+                "text": "هنابدت بالخطوات ورقم tts case جوه الشكوه."
+            },
+            {
+                "type": "step",
+                "num": "4",
+                "text": "هنعمل SR حل المشكله القديمه."
+            },
+            {
+                "type": "step",
+                "num": "5",
+                "text": "هنعمل SR Case Need to be Escalated للمشكلة الجديده."
+            },
+            {
+                "type": "note",
+                "text": "ال SLA بتكون بتاعت المشكلة اللوجيكال"
+            }
         ]
     },
     "sectionTitles": {
@@ -647,7 +735,7 @@ const ttsData = {
         "NOC": "موقف الشكوه في NOC:",
         "ADV_OTHER": false,
         "CUSTOM_1794074541102": false,
-        "FOLLOWUP": "<span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 12px;\">اول حاجه نشوف اخر ابديت عالشكوه لو احتجتا نصعد :-</span></span></span></span>",
+        "FOLLOWUP": "<span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 12px;\">اول حاجه نشوف اخر ابديت عالشكوه</span></span></span></span>",
         "POOL_1794337383186": "خطوات ومسارات القسم الجديد:",
         "SEC_1794339390400": "خطوات ومسارات الحالة الجديدة:",
         "SLS": "خطوات ومسارات CC-Second Level Support / Pilot-SLS:",
@@ -669,7 +757,10 @@ const ttsData = {
         "SEC_1794395215315": "📋 الخطوات المطلوبة:",
         "SEC_1794395399583": "📋 الخطوات المطلوبة:",
         "SEC_1794395810049": "📋 الخطوات المطلوبة:",
-        "SEC_1794396180763": "📋 الخطوات المطلوبة:"
+        "SEC_1794396180763": "📋 الخطوات المطلوبة:",
+        "SEC_1794465582630": "📋 الخطوات المطلوبة:",
+        "SEC_1794465800265": "📋 الخطوات المطلوبة:",
+        "SEC_1794481536956": "📋 الخطوات المطلوبة:"
     },
     "decisions": {
         "ADV_TIME_IN": {
