@@ -783,26 +783,21 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "1",
-                "text": "اول حاجه هنشوف الابديت الموجود بيقول نعمل ايه"
+                "text": "اول حاجه هنشوف الابديت الموجود بيقول نعمل ايه.<div>---<br><div>هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;</div></div>"
             },
             {
                 "type": "step",
                 "num": "2",
-                "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
-            },
-            {
-                "type": "step",
-                "num": "3",
                 "text": "لو متحلتش واحتجنا نصعد <span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">هنعمل TTS Csae&nbsp;</span><div>ونحط فيها الخطوات</div>"
             },
             {
                 "type": "step",
-                "num": "4",
+                "num": "3",
                 "text": "هنابدت بالخطوات ورقم tts case جوه الشكوه."
             },
             {
                 "type": "step",
-                "num": "5",
+                "num": "4",
                 "text": "وهنعمل SR ReEscalate لنفس المشكلة."
             },
             {
@@ -853,26 +848,21 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "1",
-                "text": "اول حاجه هنشوف الابديت الموجود بيقول نعمل ايه"
+                "text": "اول حاجه هنشوف الابديت الموجود بيقول نعمل ايه.<div>---<br><div>هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;</div></div>"
             },
             {
                 "type": "step",
                 "num": "2",
-                "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
-            },
-            {
-                "type": "step",
-                "num": "3",
                 "text": "لو متحلتش واحتجنا نصعد <span style=\"padding: 1px 4px; background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); border-radius: 3px;\">هنعمل TTS Csae&nbsp;</span><div>ونحط فيها الخطوات</div>"
             },
             {
                 "type": "step",
-                "num": "4",
+                "num": "3",
                 "text": "هنابدت بالخطوات ورقم tts case جوه الشكوه."
             },
             {
                 "type": "step",
-                "num": "5",
+                "num": "4",
                 "text": "وهنعمل SR ReEscalate لنفس المشكلة."
             },
             {
