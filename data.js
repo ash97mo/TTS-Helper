@@ -1,5 +1,5 @@
 const ttsData = {
-    "theme": "dark",
+    "theme": "light",
     "creatorName": "Ashraf AbdElfattah",
     "tlName": "Hadeer Abdou Eldabie",
     "mainPools": [
@@ -168,18 +168,7 @@ const ttsData = {
                 "decKey": "IU_LOGICAL"
             }
         ],
-        "NOC": [
-            {
-                "type": "case",
-                "text": "ما زالت ضمن الـ SLA (Within SLA)",
-                "decKey": "NOC_WITHIN"
-            },
-            {
-                "type": "case",
-                "text": "تجاوزت المهلة المقررة (Pass SLA)",
-                "decKey": "NOC_PASS"
-            }
-        ],
+        "NOC": [],
         "ADV_OTHER": [
             {
                 "type": "case",
@@ -228,7 +217,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "1",
-                "text": "<span style=\"background-color: rgba(15, 23, 42, 0.85);\">هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;</span>"
+                "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
             },
             {
                 "type": "step",
@@ -274,36 +263,41 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "1",
-                "text": "<span style=\"background-color: rgba(15, 23, 42, 0.85);\">هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;</span>"
+                "text": "اول حاجه هنشوف الابديت الموجود بيقول نعمل ايه"
             },
             {
                 "type": "step",
                 "num": "2",
-                "text": "لو مشكلتة BLQ و Instability&nbsp;<div>لازم نرن <b>Clear view علي ٢٤ .</b></div>"
+                "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
             },
             {
                 "type": "step",
                 "num": "3",
-                "text": "لو احتجنا نصعد<div><span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">هنعمل TTS Case</span>  ونحط فيه الخطوات.</div>"
+                "text": "لو مشكلتة BLQ و Instability&nbsp;<div>لازم نرن <b>Clear view علي ٢٤ .</b></div>"
             },
             {
                 "type": "step",
                 "num": "4",
-                "text": "هنابدت بالخطوات ورقم tts case جوه الشكوه."
+                "text": "لو احتجنا نصعد<div><span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">هنعمل TTS Case</span>  ونحط فيه الخطوات.</div>"
             },
             {
                 "type": "step",
                 "num": "5",
-                "text": "هنعمل IR Acceleration ونابدت بيه جوه الشكوه لو مش حياة كريمة"
+                "text": "هنابدت بالخطوات ورقم tts case جوه الشكوه."
             },
             {
                 "type": "step",
                 "num": "6",
-                "text": "هنعمل SR ReEscalate للمشكله نفسها."
+                "text": "هنعمل IR Acceleration ونابدت بيه جوه الشكوه لو مش حياة كريمة"
             },
             {
                 "type": "step",
                 "num": "7",
+                "text": "هنعمل SR ReEscalate للمشكله نفسها."
+            },
+            {
+                "type": "step",
+                "num": "8",
                 "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
             },
             {
@@ -344,7 +338,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "1",
-                "text": "هنتابع مع العميل خطوات المشكله اللي عنده&nbsp;<div>لو اتحلت هنعمل SR الحل .</div>"
+                "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
             },
             {
                 "type": "step",
@@ -733,7 +727,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "1",
-                "text": "<span style=\"background-color: rgba(15, 23, 42, 0.85);\">هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;</span>"
+                "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
             },
             {
                 "type": "step",
@@ -905,14 +899,14 @@ const ttsData = {
         "ADVANCED": "<span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\">ما هي حالة الشكوه (Status)</span></span></span>",
         "TIME_FRAME": "📋 الخطوات المطلوبة:",
         "MCU": "<span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\">حدد موقف الشكوه داخل MCU Call Center:</span></span></span></span></span>",
-        "INSTALLATION_OPS": "اختر نطاق الخط الجغرافي:",
+        "INSTALLATION_OPS": false,
         "CLOSING_AUTOMATION": "اختر حالة الغلق الخاصة:",
         "SLS_FOLLOWUP": "ما هو موقف العميل والمشكلة؟",
         "IU": "<span style=\"font-size: 14px;\"><span style=\"color: rgb(250, 204, 21);\">هنشوف الشكوة متصعدة كام مره لل IU&nbsp;</span></span>",
-        "NOC": "موقف الشكوه في NOC:",
+        "NOC": false,
         "ADV_OTHER": false,
         "CUSTOM_1794074541102": false,
-        "FOLLOWUP": "<span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 12px;\">اول حاجه نشوف اخر ابديت عالشكوه</span></span></span></span>",
+        "FOLLOWUP": false,
         "POOL_1794337383186": "خطوات ومسارات القسم الجديد:",
         "SEC_1794339390400": "خطوات ومسارات الحالة الجديدة:",
         "SLS": "خطوات ومسارات CC-Second Level Support / Pilot-SLS:",
@@ -939,7 +933,7 @@ const ttsData = {
         "SEC_1794465800265": "📋 الخطوات المطلوبة:",
         "SEC_1794481536956": "📋 الخطوات المطلوبة:",
         "POOL_1794487315512": false,
-        "POOL_1794487341327": "📋 الخطوات المطلوبة:",
+        "POOL_1794487341327": false,
         "SEC_1794488549230": "📋 الخطوات المطلوبة:",
         "SEC_1794488549943": "📋 الخطوات المطلوبة:",
         "SEC_1794488560660": "📋 الخطوات المطلوبة:",
@@ -989,7 +983,7 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "1",
-                    "text": "<span style=\"background-color: rgba(15, 23, 42, 0.85);\">هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;</span>"
+                    "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
                 },
                 {
                     "type": "step",
@@ -1027,7 +1021,7 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "1",
-                    "text": "<span style=\"background-color: rgba(15, 23, 42, 0.85);\">هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;</span>"
+                    "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
                 },
                 {
                     "type": "step",
