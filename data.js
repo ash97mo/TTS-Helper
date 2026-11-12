@@ -396,19 +396,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "1",
-                "text": "<div>هنتابع مع مشكلة العميل الفنية بشكل طبيعي (فيزيكال او لوجيكال) وفقًا لكلام العميل والابديت ع الشكوي</div>"
-            },
-            {
-                "type": "step",
-                "num": "2",
-                "text": "وهنعمل SR Manual TS Steps"
-            }
-        ],
-        "SEC_1794390971766": [
-            {
-                "type": "step",
-                "num": "1",
-                "text": "هنمشي خطوات مع العميل حسب مشكلتة لو اتحت هنعمل SR الحل ."
+                "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
             },
             {
                 "type": "step",
@@ -418,7 +406,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "3",
-                "text": "لو احتجنا نصعد هنابدت بالخطوات عالشكوه ونرفعها لل <span style=\"padding: 1px 4px; border-radius: 3px;\"></span><span style=\"padding: 1px 4px; border-radius: 3px;\"></span><span style=\"color: rgb(250, 204, 21);\"><span style=\"padding: 1px 4px; border-radius: 3px;\"><b>IU</b></span>.</span>"
+                "text": "لو احتجنا نصعد هنابدت بالخطوات عالشكوه ونرفعها لل <span style=\"padding: 1px 4px; border-radius: 3px;\"></span><span style=\"padding: 1px 4px; border-radius: 3px;\"></span><span style=\"color: rgb(250, 204, 21);\"><span style=\"padding: 1px 4px; border-radius: 3px;\"><b>IU</b></span></span>"
             },
             {
                 "type": "step",
@@ -433,12 +421,53 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "6",
-                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+                "text": "هنعمل <span style=\"padding: 1px 4px; border-radius: 3px;\"><font color=\"#000000\"><span style=\"background-color: rgb(254, 240, 138);\">IR Acceleration</span></font> ونابدت بيه جوه الشكوه لو</span>مش حياة كريمة"
             },
             {
                 "type": "step",
                 "num": "7",
+                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+            },
+            {
+                "type": "note",
+                "text": "ال Sla هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة"
+            }
+        ],
+        "SEC_1794390971766": [
+            {
+                "type": "step",
+                "num": "1",
+                "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
+            },
+            {
+                "type": "step",
+                "num": "2",
+                "text": "لو مشكلتة BLQ و Instability&nbsp;<div>لازم نرن <b>Clear view علي ٢٤ .</b></div>"
+            },
+            {
+                "type": "step",
+                "num": "3",
+                "text": "لو احتجنا نصعد هنابدت بالخطوات عالشكوه ونرفعها لل <span style=\"padding: 1px 4px; border-radius: 3px;\"></span><span style=\"padding: 1px 4px; border-radius: 3px;\"></span><span style=\"color: rgb(250, 204, 21);\"><span style=\"padding: 1px 4px; border-radius: 3px;\"><b>IU</b></span></span>"
+            },
+            {
+                "type": "step",
+                "num": "4",
+                "text": "وهنعمل SR Manual TS Steps"
+            },
+            {
+                "type": "step",
+                "num": "5",
+                "text": "هنعمل SR ReEscalate للشكوه الموجوده في TTS."
+            },
+            {
+                "type": "step",
+                "num": "6",
                 "text": "هنعمل <span style=\"padding: 1px 4px; border-radius: 3px;\"><font color=\"#000000\"><span style=\"background-color: rgb(254, 240, 138);\">IR Acceleration</span></font> ونابدت بيه جوه الشكوه لو</span>مش حياة كريمة"
+            },
+            {
+                "type": "step",
+                "num": "7",
+                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
             },
             {
                 "type": "note",
