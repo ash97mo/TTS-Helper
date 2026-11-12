@@ -926,12 +926,12 @@ const ttsData = {
         "SEC_1794510071622": [
             {
                 "type": "case",
-                "text": "Within SLA",
+                "text": "خلال ال SLA",
                 "target": "SEC_1794510230395"
             },
             {
                 "type": "case",
-                "text": "Passed SLA",
+                "text": "عدت ال SLA",
                 "target": "SEC_1794510231114"
             }
         ],
@@ -950,12 +950,12 @@ const ttsData = {
         "SEC_1794510173497": [
             {
                 "type": "case",
-                "text": "Within SLA",
+                "text": "خلال ال SLA",
                 "target": "SEC_1794510294511"
             },
             {
                 "type": "case",
-                "text": "Passed SLA",
+                "text": "عدت ال SLA",
                 "target": "SEC_1794510337136"
             }
         ],
