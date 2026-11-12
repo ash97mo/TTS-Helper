@@ -101,12 +101,12 @@ const ttsData = {
             },
             {
                 "type": "case",
-                "text": "&nbsp;مقفولة خلال <span style=\"color: rgb(56, 189, 248);\">5</span> أيام وعنده نفس المشكلة",
+                "text": "&nbsp;مقفولة ورجعت من الـ <span style=\"color: rgb(250, 204, 21);\"><span style=\"color: rgb(56, 189, 248);\">IU</span></span> خلال <span style=\"color: rgb(56, 189, 248);\">5&nbsp;</span>أيام&nbsp;وعنده نفس المشكلة",
                 "decKey": "MCU_CLOSED_WITHIN_5DAYS"
             },
             {
                 "type": "case",
-                "text": "&nbsp;مقفولة أكثر <span style=\"color: rgb(56, 189, 248);\"><span style=\"color: rgb(56, 189, 248);\">5</span></span> أيام&nbsp;",
+                "text": "&nbsp;مقفولة ورجعت من ال <span style=\"color: rgb(56, 189, 248);\">IU</span> بعد أكثر من <span style=\"color: rgb(56, 189, 248);\">5</span> أيام&nbsp;",
                 "decKey": "MCU_CLOSED_OVER_5DAYS"
             }
         ],
@@ -228,7 +228,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "1",
-                "text": "هنمشي خطوات حل المشكله لو اتحلت هنعمل SR حل المشكلة."
+                "text": "<span style=\"background-color: rgba(15, 23, 42, 0.85);\">هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;</span>"
             },
             {
                 "type": "step",
@@ -274,7 +274,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "1",
-                "text": "هنمشي خطوات حل المشكله لو اتحلت هنعمل SR حل المشكلة."
+                "text": "<span style=\"background-color: rgba(15, 23, 42, 0.85);\">هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;</span>"
             },
             {
                 "type": "step",
@@ -733,7 +733,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "1",
-                "text": "هنمشي خطوات حل المشكله لو اتحلت هنعمل SR حل المشكلة."
+                "text": "<span style=\"background-color: rgba(15, 23, 42, 0.85);\">هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;</span>"
             },
             {
                 "type": "step",
@@ -776,22 +776,27 @@ const ttsData = {
         "SEC_1794488549230": [
             {
                 "type": "step",
-                "num": "١",
+                "num": "1",
                 "text": "اول حاجه هنشوف الابديت الموجود بيقول نعمل ايه"
             },
             {
                 "type": "step",
-                "num": "٢",
+                "num": "2",
                 "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
             },
             {
                 "type": "step",
-                "num": "٣",
+                "num": "3",
                 "text": "لو متحلتش واحتجنا نصعد <span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">هنعمل TTS Csae&nbsp;</span><div>ونحط فيها الخطوات</div>"
             },
             {
                 "type": "step",
-                "num": "٤",
+                "num": "4",
+                "text": "هنابدت بالخطوات ورقم tts case جوه الشكوه."
+            },
+            {
+                "type": "step",
+                "num": "5",
                 "text": "وهنعمل SR ReEscalate لنفس المشكلة."
             },
             {
@@ -802,17 +807,22 @@ const ttsData = {
         "SEC_1794488549943": [
             {
                 "type": "step",
-                "num": "١",
+                "num": "1",
                 "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
             },
             {
                 "type": "step",
-                "num": "٢",
+                "num": "2",
                 "text": "لو متحلتش واحتجنا نصعد <span style=\"padding: 1px 4px; background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); border-radius: 3px;\">هنعمل TTS Csae&nbsp;</span><div>ونحط فيها الخطوات</div>"
             },
             {
                 "type": "step",
-                "num": "٣",
+                "num": "3",
+                "text": "هنابدت بالخطوات ورقم tts case جوه الشكوه."
+            },
+            {
+                "type": "step",
+                "num": "4",
                 "text": "هنعمل SR Case Need to be Escalated للمشكلة الجديده"
             },
             {
@@ -836,22 +846,27 @@ const ttsData = {
         "SEC_1794489902543": [
             {
                 "type": "step",
-                "num": "١",
+                "num": "1",
                 "text": "اول حاجه هنشوف الابديت الموجود بيقول نعمل ايه"
             },
             {
                 "type": "step",
-                "num": "٢",
+                "num": "2",
                 "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
             },
             {
                 "type": "step",
-                "num": "٣",
+                "num": "3",
                 "text": "لو متحلتش واحتجنا نصعد <span style=\"padding: 1px 4px; background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); border-radius: 3px;\">هنعمل TTS Csae&nbsp;</span><div>ونحط فيها الخطوات</div>"
             },
             {
                 "type": "step",
-                "num": "٤",
+                "num": "4",
+                "text": "هنابدت بالخطوات ورقم tts case جوه الشكوه."
+            },
+            {
+                "type": "step",
+                "num": "5",
                 "text": "وهنعمل SR ReEscalate لنفس المشكلة."
             },
             {
@@ -862,17 +877,22 @@ const ttsData = {
         "SEC_1794489924825": [
             {
                 "type": "step",
-                "num": "١",
+                "num": "1",
                 "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;"
             },
             {
                 "type": "step",
-                "num": "٢",
+                "num": "2",
                 "text": "لو متحلتش واحتجنا نصعد <span style=\"padding: 1px 4px; background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); border-radius: 3px;\">هنعمل TTS Csae&nbsp;</span><div>ونحط فيها الخطوات</div>"
             },
             {
                 "type": "step",
-                "num": "٣",
+                "num": "3",
+                "text": "هنابدت بالخطوات ورقم tts case جوه الشكوه."
+            },
+            {
+                "type": "step",
+                "num": "4",
                 "text": "هنعمل SR Case Need to be Escalated للمشكلة الجديده"
             },
             {
@@ -969,26 +989,31 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "1",
-                    "text": "لو مشكلتة BLQ و Instability&nbsp;<div>لازم نرن <b>Clear view علي ٢٤ .</b>&nbsp;للتأكد من عدم حلها.</div>"
+                    "text": "<span style=\"background-color: rgba(15, 23, 42, 0.85);\">هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;</span>"
                 },
                 {
                     "type": "step",
                     "num": "2",
-                    "text": "هنابدت الخطوات جوه الشكوه في TTS ونرفعها لل IU."
+                    "text": "لو مشكلتة BLQ و Instability&nbsp;<div>لازم نرن <b>Clear view علي ٢٤ .</b>&nbsp;للتأكد من عدم حلها.</div>"
                 },
                 {
                     "type": "step",
                     "num": "3",
-                    "text": "هنعمل SR ReEscalate للشكوه الموجوده في TTS."
+                    "text": "هنابدت الخطوات جوه الشكوه في TTS ونرفعها لل <span style=\"color: rgb(250, 204, 21);\"><b>IU</b></span>."
                 },
                 {
                     "type": "step",
                     "num": "4",
-                    "text": "هنعمل <span style=\"padding: 1px 4px; border-radius: 3px;\"><font color=\"#000000\"><span style=\"background-color: rgb(254, 240, 138);\">IR Acceleration</span></font>&nbsp;ونابدت بيه جوه الشكوه لو</span>مش حياة كريمة"
+                    "text": "هنعمل SR ReEscalate للشكوه الموجوده في TTS."
                 },
                 {
                     "type": "step",
                     "num": "5",
+                    "text": "هنعمل <span style=\"padding: 1px 4px; border-radius: 3px;\"><font color=\"#000000\"><span style=\"background-color: rgb(254, 240, 138);\">IR Acceleration</span></font>&nbsp;ونابدت بيه جوه الشكوه لو</span>مش حياة كريمة"
+                },
+                {
+                    "type": "step",
+                    "num": "6",
                     "text": "<div>لو عدت ٢٤ ساعه من وقت اول تصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
                 },
                 {
@@ -1002,7 +1027,7 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "1",
-                    "text": "هنمشي Troubleshooting كاملة من البداية مع العميل."
+                    "text": "<span style=\"background-color: rgba(15, 23, 42, 0.85);\">هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت وهنعمل SR حل المشكلة.&nbsp;</span>"
                 },
                 {
                     "type": "step",
@@ -1048,16 +1073,21 @@ const ttsData = {
                 {
                     "type": "step",
                     "num": "1",
-                    "text": "إعادة عمل خطوات الفحص كاملة مع العميل من البداية لتجاوز مهلة 5 أيام."
+                    "text": "هنمشي خطوات حل المشكلة لو اتحلت هنعمل SR حل المشكلة.&nbsp;"
                 },
                 {
                     "type": "step",
                     "num": "2",
-                    "text": "🚫 ممنوع نهائياً نسخ خطوات الفحص القديمة لأنها غير مقبولة بعد 5 أيام."
+                    "text": "لو احتجنا نصعد هنصعد شكوه جديده بالخطوات الجديده."
                 },
                 {
                     "type": "step",
                     "num": "3",
+                    "text": "🚫 ممنوع نهائياً نسخ خطوات الفحص القديمة لأنها غير مقبولة بعد 5 أيام."
+                },
+                {
+                    "type": "step",
+                    "num": "4",
                     "text": "هنعمل <span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">IR Rework</span> لو الشكوه القديمه رجعت من ال iu في خلال ٣٠ يوم .<div>لو مش حياة كريمه</div>"
                 },
                 {
