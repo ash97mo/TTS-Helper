@@ -81,16 +81,6 @@ const ttsData = {
             },
             {
                 "type": "case",
-                "text": "شكوة عليها ابديت <span style=\"padding: 1px 4px; border-radius: 3px;\"><span style=\"color: rgb(250, 204, 21);\">Out Side Tedata</span></span>",
-                "target": "SEC_1794465582630"
-            },
-            {
-                "type": "case",
-                "text": "شكوة عليها ابديت <span style=\"color: rgb(250, 204, 21);\">Major Fault 20</span>",
-                "target": "SEC_1794465800265"
-            },
-            {
-                "type": "case",
                 "text": "مفتوحة ورجعت من الـ <span style=\"color: rgb(250, 204, 21);\"><span style=\"color: rgb(56, 189, 248);\">IU</span></span> خلال <span style=\"color: rgb(56, 189, 248);\">5</span> أيام&nbsp;",
                 "decKey": "MCU_RETURNED_5DAYS"
             },
