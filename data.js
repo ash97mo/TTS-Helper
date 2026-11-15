@@ -48,12 +48,12 @@ const ttsData = {
         "ADVANCED": [
             {
                 "type": "case",
-                "text": "Own The Case",
+                "text": "<span style=\"font-size: 16px;\">Own The Case</span>",
                 "target": "TIME_FRAME"
             },
             {
                 "type": "case",
-                "text": "حاله تاني",
+                "text": "<span style=\"font-size: 16px;\">حاله تاني</span>",
                 "target": "SEC_1794489870945"
             }
         ],
@@ -76,39 +76,39 @@ const ttsData = {
         "MCU": [
             {
                 "type": "case",
-                "text": "شكوة متصعده من <span style=\"color: rgb(250, 204, 21);\">IVR</span> ومراحتش لل <span style=\"color: rgb(250, 204, 21);\">IU</span>",
+                "text": "<span style=\"font-size: 16px;\">شكوة متصعده من <span style=\"color: rgb(250, 204, 21);\">IVR</span> ومراحتش لل <span style=\"color: rgb(250, 204, 21);\">IU</span></span><span style=\"color: rgb(250, 204, 21);\"></span>",
                 "target": "SEC_1794390971766"
             },
             {
                 "type": "case",
-                "text": "مفتوحة ورجعت من الـ <span style=\"color: rgb(250, 204, 21);\"><span style=\"color: rgb(56, 189, 248);\">IU</span></span> خلال <span style=\"color: rgb(56, 189, 248);\">5</span> أيام&nbsp;",
+                "text": "<span style=\"font-size: 16px;\">مفتوحة ورجعت من الـ <span style=\"color: rgb(250, 204, 21);\"><span style=\"color: rgb(56, 189, 248);\">IU</span></span> خلال <span style=\"color: rgb(56, 189, 248);\">5</span> أيام&nbsp;</span>",
                 "decKey": "MCU_RETURNED_5DAYS"
             },
             {
                 "type": "case",
-                "text": "مفتوحة ورجعت من ال <span style=\"color: rgb(56, 189, 248);\">IU</span> بعد أكثر من <span style=\"color: rgb(56, 189, 248);\">5</span> أيام",
+                "text": "<span style=\"font-size: 16px;\">مفتوحة ورجعت من ال <span style=\"color: rgb(56, 189, 248);\">IU</span> بعد أكثر من <span style=\"color: rgb(56, 189, 248);\">5</span> أيام</span>",
                 "decKey": "MCU_RETURNED_OVER_5DAYS"
             },
             {
                 "type": "case",
-                "text": "&nbsp;مقفولة ورجعت من الـ <span style=\"color: rgb(250, 204, 21);\"><span style=\"color: rgb(56, 189, 248);\">IU</span></span> خلال <span style=\"color: rgb(56, 189, 248);\">5&nbsp;</span>أيام&nbsp;وعنده نفس المشكلة",
+                "text": "<span style=\"font-size: 16px;\">&nbsp;مقفولة ورجعت من الـ <span style=\"color: rgb(250, 204, 21);\"><span style=\"color: rgb(56, 189, 248);\">IU</span></span> خلال <span style=\"color: rgb(56, 189, 248);\">5&nbsp;</span>أيام&nbsp;وعنده نفس المشكلة</span>",
                 "decKey": "MCU_CLOSED_WITHIN_5DAYS"
             },
             {
                 "type": "case",
-                "text": "&nbsp;مقفولة ورجعت من ال <span style=\"color: rgb(56, 189, 248);\">IU</span> بعد أكثر من <span style=\"color: rgb(56, 189, 248);\">5</span> أيام&nbsp;",
+                "text": "<span style=\"font-size: 16px;\">&nbsp;مقفولة ورجعت من ال <span style=\"color: rgb(56, 189, 248);\">IU</span> بعد أكثر من <span style=\"color: rgb(56, 189, 248);\">5</span> أيام&nbsp;</span>",
                 "decKey": "MCU_CLOSED_OVER_5DAYS"
             }
         ],
         "INSTALLATION_OPS": [
             {
                 "type": "case",
-                "text": "القاهرة - الجيزة - الإسكندرية",
+                "text": "<span style=\"font-size: 16px;\">القاهرة - الجيزة - الإسكندرية</span>",
                 "target": "SEC_1794614404992"
             },
             {
                 "type": "case",
-                "text": "المحافظات الأخرى&nbsp;",
+                "text": "<span style=\"font-size: 16px;\">المحافظات الأخرى&nbsp;</span>",
                 "target": "SEC_1794614405738"
             }
         ],
@@ -144,29 +144,29 @@ const ttsData = {
         "IU": [
             {
                 "type": "case",
-                "text": "اتصعدت مره وحده لل IU",
+                "text": "<span style=\"font-size: 16px;\">اتصعدت مره وحده لل IU</span>",
                 "target": "SEC_1794393999106"
             },
             {
                 "type": "case",
-                "text": "اتصعدت اكتر من مره لل IU",
+                "text": "<span style=\"font-size: 16px;\">اتصعدت اكتر من مره لل IU</span>",
                 "target": "SEC_1794393974458"
             },
             {
                 "type": "case",
-                "text": "عندة مشكلة Logical",
+                "text": "<span style=\"font-size: 16px;\">عندة مشكلة لوجيكال</span>",
                 "decKey": "IU_LOGICAL"
             }
         ],
         "NOC": [
             {
                 "type": "case",
-                "text": "متصعدة مرة وحدة",
+                "text": "<span style=\"font-size: 16px;\">متصعدة مرة وحدة</span>",
                 "target": "SEC_1794510173497"
             },
             {
                 "type": "case",
-                "text": "متصعدة اكتر من مره",
+                "text": "<span style=\"font-size: 16px;\">متصعدة اكتر من مره</span>",
                 "target": "SEC_1794510156397"
             }
         ],
@@ -185,29 +185,29 @@ const ttsData = {
         "CUSTOM_1794074541102": [
             {
                 "type": "case",
-                "text": "<span style=\"font-weight: 400; text-align: start;\"><span style=\"font-size: 16px;\">&nbsp;مشكلتة فيزيكال&nbsp;</span></span>",
+                "text": "<span style=\"font-size: 16px;\">عندة مشكلة فيزيكال</span>",
                 "target": "SEC_1794356595043"
             },
             {
                 "type": "case",
-                "text": "&nbsp;مشكلته<br>&nbsp;<span style=\"font-size: 12px;\">Browsing او Unable to Obtain ip</span>",
+                "text": "<span style=\"font-size: 16px;\">عندة مشكلة لوجيكال</span>",
                 "target": "SEC_1794356613469"
             }
         ],
         "FOLLOWUP": [
             {
                 "type": "case",
-                "text": "<span style=\"font-size: 14px;\">عنده نفس المشكلة الفيزيكال</span>",
+                "text": "<span style=\"font-size: 14px;\"><span style=\"font-size: 16px;\">عنده نفس المشكلة الفيزيكال</span></span>",
                 "target": "SEC_1794346451785"
             },
             {
                 "type": "case",
-                "text": "<span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\">عنده م<span style=\"font-size: 16px;\">شكلة تانية فيزيكال</span></span><span style=\"font-size: 16px;\"></span></span><span style=\"font-size: 16px;\"></span>",
+                "text": "<span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\">عنده م<span style=\"font-size: 16px;\">شكلة تانية فيزيكال</span></span></span><span style=\"font-size: 16px;\"></span></span><span style=\"font-size: 16px;\"></span></span><span style=\"font-size: 16px;\"></span>",
                 "target": "SEC_1794346437634"
             },
             {
                 "type": "case",
-                "text": "<span style=\"font-size: 14px;\">عنده مشكلة تانية لوجيكال</span>",
+                "text": "<span style=\"font-size: 14px;\"><span style=\"font-size: 16px;\">عنده مشكلة تانية لوجيكال</span></span>",
                 "target": "SEC_1794481536956"
             }
         ],
@@ -348,7 +348,7 @@ const ttsData = {
             },
             {
                 "type": "note",
-                "text": "ال SLA هتكون بتاعت المشكله اللوجيكال&nbsp;"
+                "text": "<span style=\"color: rgb(250, 204, 21);\">ال SLA:</span> هتكون بتاعت المشكله اللوجيكال&nbsp;"
             }
         ],
         "SEC_1794363456024": [
@@ -385,12 +385,12 @@ const ttsData = {
         "POOL_1794366041775": [
             {
                 "type": "case",
-                "text": "عندة مشكلة فيزيكال",
+                "text": "<span style=\"font-size: 16px;\">عندة مشكلة فيزيكال</span>",
                 "target": "SEC_1794570845494"
             },
             {
                 "type": "case",
-                "text": "عندة مشكلة لوجيكال",
+                "text": "<span style=\"font-size: 16px;\">عندة مشكلة لوجيكال</span>",
                 "target": "SEC_1794570827643"
             }
         ],
@@ -724,24 +724,24 @@ const ttsData = {
         "POOL_1794487315512": [
             {
                 "type": "case",
-                "text": "&nbsp;Second Level Support",
+                "text": "<span style=\"font-size: 16px;\">&nbsp;Second Level Support</span>",
                 "target": "SEC_1794579039183"
             },
             {
                 "type": "case",
-                "text": "Pool تاني اخر",
+                "text": "<span style=\"font-size: 16px;\"><span style=\"color: rgb(56, 189, 248);\">Pool</span> تاني اخر</span>",
                 "target": "SEC_1794579096901"
             }
         ],
         "POOL_1794487341327": [
             {
                 "type": "case",
-                "text": "متصعدة مرة وحدة",
+                "text": "<span style=\"font-size: 16px;\">متصعدة مرة وحدة</span>",
                 "target": "SEC_1794510071622"
             },
             {
                 "type": "case",
-                "text": "متصعدة اكتر من مره",
+                "text": "<span style=\"font-size: 16px;\">متصعدة اكتر من مره</span>",
                 "target": "SEC_1794510070671"
             }
         ],
@@ -1086,6 +1086,25 @@ const ttsData = {
                 "type": "step",
                 "num": "١",
                 "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت ولازم نقفلها.<div>&nbsp;وهنعمل SR حل المشكلة.&nbsp;</div>"
+            },
+            {
+                "type": "step",
+                "num": "٣",
+                "text": "لو احتجنا نصعد هنابدت بالخطوات عالشكوه ونرفعها للقسم الخاص بالمشكلة"
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "وهنعمل SR Manual TS Request"
+            },
+            {
+                "type": "step",
+                "num": "٤",
+                "text": "وهنعمل SR&nbsp;<div><br></div>"
+            },
+            {
+                "type": "note",
+                "text": "<span style=\"color: rgb(250, 204, 21);\">ال SLA:</span> هتكون بتاعت المشكله اللوجيكال&nbsp;"
             }
         ],
         "SEC_1794570845494": [
@@ -1463,7 +1482,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "٣",
-                "text": "هنعمل SR Follow Up Within Sla"
+                "text": "هنعمل SR Installation Operation - Within Sla"
             }
         ],
         "SEC_1794614871738": [
@@ -1480,7 +1499,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "٣",
-                "text": "هنعمل SR Follow Up After Sla"
+                "text": "هنعمل SR Installation Operation - After Sla"
             }
         ],
         "SEC_1794615135068": [
@@ -1497,7 +1516,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "٣",
-                "text": "هنعمل SR Follow Up After ReEsclation Within Sla"
+                "text": "هنعمل SR Installation Operation - Within Sla"
             }
         ],
         "SEC_1794615135801": [
@@ -1514,7 +1533,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "٣",
-                "text": "هنعمل SR Follow Up After ReEsclation After Sla"
+                "text": "هنعمل SR Installation Operation - After Sla"
             }
         ],
         "SEC_1794615735155": [
