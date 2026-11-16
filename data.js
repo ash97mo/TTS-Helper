@@ -5,43 +5,43 @@ const ttsData = {
     "mainPools": [
         {
             "key": "FOLLOWUP",
-            "title": "CC-Follow Up"
+            "title": "<span style=\"font-size: 16px;\"><span style=\"font-size: 18px;\"><span style=\"color: rgb(250, 204, 21);\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(248, 113, 113);\">CC-Follow Up</span></span></span></span></span></span>"
         },
         {
             "key": "MCU",
-            "title": "MCU Call Center"
+            "title": "<span style=\"font-size: 18px;\"><span style=\"color: rgb(248, 113, 113);\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(74, 222, 128);\">MCU Call Center</span></span></span></span>"
         },
         {
             "key": "IU",
-            "title": "IU Maintenance"
+            "title": "<span style=\"font-size: 18px;\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(248, 113, 113);\">IU Maintenance</span></span></span></span>"
         },
         {
             "key": "CUSTOM_1794074541102",
-            "title": "Customer 360"
+            "title": "<span style=\"font-size: 18px;\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(248, 113, 113);\"><span style=\"color: rgb(74, 222, 128);\">Customer 360</span></span></span></span>"
         },
         {
             "key": "POOL_1794366041775",
-            "title": "<div>SLS - IVR Automation</div>"
+            "title": "<div><span style=\"font-size: 18px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"color: rgb(248, 113, 113);\">SLS - IVR Automation</span></span></span></span></span></div>"
         },
         {
             "key": "INSTALLATION_OPS",
-            "title": "Installation Operations"
+            "title": "<span style=\"font-size: 18px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(74, 222, 128);\"><span style=\"color: rgb(248, 113, 113);\"><span style=\"color: rgb(74, 222, 128);\">Installation Operation</span></span></span></span></span></span>"
         },
         {
             "key": "ADVANCED",
-            "title": "Second Level Advanced"
+            "title": "<span style=\"font-size: 18px;\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"color: rgb(248, 113, 113);\">Second Level Advanced</span></span></span></span>"
         },
         {
             "key": "POOL_1794487315512",
-            "title": "Second Level Support&nbsp;"
+            "title": "<span style=\"font-size: 18px;\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(74, 222, 128);\">Second Level Support&nbsp;</span></span></span>"
         },
         {
             "key": "POOL_1794487341327",
-            "title": "Pilot-SLS"
+            "title": "<span style=\"font-size: 18px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(248, 113, 113);\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"color: rgb(248, 113, 113);\">Pilot-SLS</span></span></span></span></span></span></span>"
         },
         {
             "key": "NOC",
-            "title": "NOC"
+            "title": "<span style=\"font-size: 18px;\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(74, 222, 128);\">NOC</span></span></span>"
         }
     ],
     "sections": {
