@@ -1,5 +1,5 @@
 const ttsData = {
-    "theme": "dark",
+    "theme": "light",
     "creatorName": "Ashraf AbdElfattah",
     "tlName": "Hadeer Abdou Eldabie",
     "mainPools": [
@@ -78,6 +78,11 @@ const ttsData = {
                 "type": "case",
                 "text": "<span style=\"font-size: 16px;\">شكوة متصعده من <span style=\"color: rgb(250, 204, 21);\">IVR</span> ومراحتش لل <span style=\"color: rgb(250, 204, 21);\">IU</span></span><span style=\"color: rgb(250, 204, 21);\"></span>",
                 "target": "SEC_1794390971766"
+            },
+            {
+                "type": "case",
+                "text": "<span style=\"font-size: 16px;\">شكوة رجعت من ال IU بابديت <span style=\"color: rgb(250, 204, 21);\">Major Fault</span></span><span style=\"color: rgb(250, 204, 21);\"></span>",
+                "target": "SEC_1795027085050"
             },
             {
                 "type": "case",
@@ -1603,7 +1608,116 @@ const ttsData = {
                 "num": "٣",
                 "text": "هنعمل SR Follow Up After ReEsclation After Sla"
             }
-        ]
+        ],
+        "SEC_1795027085050": [
+            {
+                "type": "case",
+                "text": "انا اللي مصعدها",
+                "target": "SEC_1795035317813"
+            },
+            {
+                "type": "case",
+                "text": "خلال ال SLA",
+                "target": "SEC_1795028321432"
+            },
+            {
+                "type": "case",
+                "text": "عدت ال SLA",
+                "target": "SEC_1795027681366"
+            }
+        ],
+        "SEC_1795027681366": [
+            {
+                "type": "step",
+                "num": "1",
+                "text": "هنعمل اعادة تصعيد للشكوة لو رجعت تاني بابديت Major fault&nbsp;<div>هنبلغ للعميل:</div><div>ان خط حضرتك من ضمن مجموعة من الخطوط المتأثرة بعطل جسيم في الشبكة الأرضية وده يتطلب تدخل من فرق الصيانة المختصة.</div><div>وهنجدد المده.</div>"
+            },
+            {
+                "type": "step",
+                "num": "2",
+                "text": "وهنعمل SR Physical Cases&gt;Major Fault After Sla"
+            },
+            {
+                "type": "step",
+                "num": "3",
+                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+            },
+            {
+                "type": "step",
+                "num": "4",
+                "text": "لو اتصعدت هنمشي خطوات مع العميل من الاول ونابدتها جوه الشكوة."
+            },
+            {
+                "type": "step",
+                "num": "5",
+                "text": "هنعمل SR ReEscalate للشكوه الموجوده في TTS."
+            },
+            {
+                "type": "step",
+                "num": "6",
+                "text": "وهنعمل SR Major Fault Problem Solved"
+            },
+            {
+                "type": "step",
+                "num": "7",
+                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+            }
+        ],
+        "SEC_1795028321432": [
+            {
+                "type": "step",
+                "num": "1",
+                "text": "هنعمل اعادة تصعيد للشكوة لو رجعت تاني بابديت Major fault&nbsp;<div>هنبلغ للعميل:</div><div>ان خط حضرتك من ضمن مجموعة من الخطوط المتأثرة بعطل جسيم في الشبكة الأرضية وده يتطلب تدخل من فرق الصيانة المختصة.</div>"
+            },
+            {
+                "type": "step",
+                "num": "2",
+                "text": "وهنعمل SR Physical Cases&gt;Major Fault Within Sla"
+            },
+            {
+                "type": "step",
+                "num": "3",
+                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+            },
+            {
+                "type": "step",
+                "num": "4",
+                "text": "<div><div>لو اتصعدت هنبلغ العميل ال normal SLA الخاصه بالشكوة.</div></div>"
+            },
+            {
+                "type": "step",
+                "num": "5",
+                "text": "هنعمل SR ReEscalate للشكوه الموجوده في TTS."
+            },
+            {
+                "type": "step",
+                "num": "6",
+                "text": "وهنعمل SR Major Fault Problem Solved"
+            },
+            {
+                "type": "step",
+                "num": "7",
+                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+            }
+        ],
+        "SEC_1795035317813": [
+            {
+                "type": "step",
+                "num": "١",
+                "text": "<div>هنبلغ للعميل:</div><div>ان خط حضرتك من ضمن مجموعة من الخطوط المتأثرة بعطل جسيم في الشبكة الأرضية وده يتطلب تدخل من فرق الصيانة المختصة.</div>"
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "وهنعمل SR Physical Cases&gt;Major Fault"
+            },
+            {
+                "type": "step",
+                "num": "٣",
+                "text": "هنعرض تعويض ٠١٥<div>٣ جيجا لمده يومين.</div>"
+            }
+        ],
+        "SEC_1795035333151": []
     },
     "sectionTitles": {
         "ADVANCED": "<span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\">ما هي حالة الشكوه (Status)</span></span></span>",
@@ -1708,7 +1822,12 @@ const ttsData = {
         "SEC_1794615735155": "📋 الخطوات المطلوبة:",
         "SEC_1794615736083": "📋 الخطوات المطلوبة:",
         "SEC_1794615770147": "📋 الخطوات المطلوبة:",
-        "SEC_1794615770798": "📋 الخطوات المطلوبة:"
+        "SEC_1794615770798": "📋 الخطوات المطلوبة:",
+        "SEC_1795027085050": false,
+        "SEC_1795027681366": "📋 الخطوات المطلوبة:",
+        "SEC_1795028321432": "📋 الخطوات المطلوبة:",
+        "SEC_1795035317813": "📋 الخطوات المطلوبة:",
+        "SEC_1795035333151": "📋 الخطوات المطلوبة:"
     },
     "decisions": {
         "ADV_TIME_IN": {
