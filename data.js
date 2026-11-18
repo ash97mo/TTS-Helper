@@ -1,5 +1,5 @@
 const ttsData = {
-    "theme": "light",
+    "theme": "dark",
     "creatorName": "Ashraf AbdElfattah",
     "tlName": "Hadeer Abdou Eldabie",
     "mainPools": [
@@ -81,8 +81,13 @@ const ttsData = {
             },
             {
                 "type": "case",
-                "text": "<span style=\"font-size: 16px;\">شكوة رجعت من ال IU بابديت <span style=\"color: rgb(250, 204, 21);\">Major Fault</span></span><span style=\"color: rgb(250, 204, 21);\"></span>",
+                "text": "<span style=\"font-size: 16px;\">شكوة عليها ابديت <span style=\"color: rgb(250, 204, 21);\">Major Fault</span></span><span style=\"color: rgb(250, 204, 21);\"></span>",
                 "target": "SEC_1795027085050"
+            },
+            {
+                "type": "case",
+                "text": "<span style=\"font-size: 16px;\">شكوة عليها&nbsp;</span><span style=\"font-size: 16px;\">ابديت <font color=\"#facc15\">Out Side TEdata</font></span>",
+                "target": "SEC_1795039523310"
             },
             {
                 "type": "case",
@@ -1661,6 +1666,10 @@ const ttsData = {
                 "type": "step",
                 "num": "7",
                 "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+            },
+            {
+                "type": "note",
+                "text": "طرق التواصل العميل هوا اللي بيتابع معانا"
             }
         ],
         "SEC_1795028321432": [
@@ -1698,6 +1707,10 @@ const ttsData = {
                 "type": "step",
                 "num": "7",
                 "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+            },
+            {
+                "type": "note",
+                "text": "طرق التواصل العميل هوا اللي بيتابع معانا"
             }
         ],
         "SEC_1795035317813": [
@@ -1715,9 +1728,62 @@ const ttsData = {
                 "type": "step",
                 "num": "٣",
                 "text": "هنعرض تعويض ٠١٥<div>٣ جيجا لمده يومين.</div>"
+            },
+            {
+                "type": "note",
+                "text": "طرق التواصل العميل هوا اللي بيتابع معانا"
             }
         ],
-        "SEC_1795035333151": []
+        "SEC_1795035333151": [],
+        "SEC_1795039523310": [
+            {
+                "type": "case",
+                "text": "خلال ال SLA",
+                "target": "SEC_1795039695850"
+            },
+            {
+                "type": "case",
+                "text": "عدت ال SLA",
+                "target": "SEC_1795039696681"
+            }
+        ],
+        "SEC_1795039695850": [
+            {
+                "type": "step",
+                "num": "١",
+                "text": "هنبلغ العميل ان شكوته لسه في القسم المختص وجاري العمل علي اصلاح المشكله خلال ال SLA."
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "وهنعمل SR Out Side TEdata<div>بتتعمل مره وحده بس.</div>"
+            },
+            {
+                "type": "note",
+                "text": "التواصل عن طريق مكالمه فقط"
+            }
+        ],
+        "SEC_1795039696681": [
+            {
+                "type": "step",
+                "num": "١",
+                "text": "هنشوف الشكوه عال ADF لو لسه مفتوحه هنبلغ العميل ان شكوته لسه في القسم المختص وجاري العمل علي اصلاح المشكله.<div>&nbsp;وهنجدد المده.</div>"
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "وهنعمل SR Out Side TEdata<div>بتتعمل مره وحده بس.</div>"
+            },
+            {
+                "type": "step",
+                "num": "٤",
+                "text": "لو الشكوة عال ADF مقفولة هنمشي خطوات من الاول."
+            },
+            {
+                "type": "note",
+                "text": "التواصل عن طريق مكالمه فقط"
+            }
+        ]
     },
     "sectionTitles": {
         "ADVANCED": "<span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\">ما هي حالة الشكوه (Status)</span></span></span>",
@@ -1827,7 +1893,10 @@ const ttsData = {
         "SEC_1795027681366": "📋 الخطوات المطلوبة:",
         "SEC_1795028321432": "📋 الخطوات المطلوبة:",
         "SEC_1795035317813": "📋 الخطوات المطلوبة:",
-        "SEC_1795035333151": "📋 الخطوات المطلوبة:"
+        "SEC_1795035333151": "📋 الخطوات المطلوبة:",
+        "SEC_1795039523310": "<span style=\"color: rgb(250, 204, 21);\"><span style=\"font-size: 14px;\">ال SLA: هتكون ٢٤ ساعه او ٧٢ لو حياة كريمه</span></span>",
+        "SEC_1795039695850": "📋 الخطوات المطلوبة:",
+        "SEC_1795039696681": "📋 الخطوات المطلوبة:"
     },
     "decisions": {
         "ADV_TIME_IN": {
