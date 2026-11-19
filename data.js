@@ -1633,84 +1633,26 @@ const ttsData = {
         ],
         "SEC_1795027681366": [
             {
-                "type": "step",
-                "num": "1",
-                "text": "هنعمل اعادة تصعيد للشكوة لو رجعت تاني بابديت Major fault&nbsp;<div>هنبلغ للعميل:</div><div>ان خط حضرتك من ضمن مجموعة من الخطوط المتأثرة بعطل جسيم في الشبكة الأرضية وده يتطلب تدخل من فرق الصيانة المختصة.</div><div>وهنجدد المده.</div>"
+                "type": "case",
+                "text": "لو نزلت تاني",
+                "target": "SEC_1795044146810"
             },
             {
-                "type": "step",
-                "num": "2",
-                "text": "وهنعمل SR Physical Cases&gt;Major Fault After Sla"
-            },
-            {
-                "type": "step",
-                "num": "3",
-                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
-            },
-            {
-                "type": "step",
-                "num": "4",
-                "text": "لو اتصعدت هنمشي خطوات مع العميل من الاول ونابدتها جوه الشكوة."
-            },
-            {
-                "type": "step",
-                "num": "5",
-                "text": "هنعمل SR ReEscalate للشكوه الموجوده في TTS."
-            },
-            {
-                "type": "step",
-                "num": "6",
-                "text": "وهنعمل SR Major Fault Problem Solved"
-            },
-            {
-                "type": "step",
-                "num": "7",
-                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
-            },
-            {
-                "type": "note",
-                "text": "طرق التواصل العميل هوا اللي بيتابع معانا"
+                "type": "case",
+                "text": "ثبتت في ال <span style=\"color: rgb(56, 189, 248);\">IU</span>",
+                "target": "SEC_1795044148909"
             }
         ],
         "SEC_1795028321432": [
             {
-                "type": "step",
-                "num": "1",
-                "text": "هنعمل اعادة تصعيد للشكوة لو رجعت تاني بابديت Major fault&nbsp;<div>هنبلغ للعميل:</div><div>ان خط حضرتك من ضمن مجموعة من الخطوط المتأثرة بعطل جسيم في الشبكة الأرضية وده يتطلب تدخل من فرق الصيانة المختصة.</div>"
+                "type": "case",
+                "text": "لو نزلت تاني",
+                "target": "SEC_1795043673880"
             },
             {
-                "type": "step",
-                "num": "2",
-                "text": "وهنعمل SR Physical Cases&gt;Major Fault Within Sla"
-            },
-            {
-                "type": "step",
-                "num": "3",
-                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
-            },
-            {
-                "type": "step",
-                "num": "4",
-                "text": "<div><div>لو اتصعدت هنبلغ العميل ال normal SLA الخاصه بالشكوة.</div></div>"
-            },
-            {
-                "type": "step",
-                "num": "5",
-                "text": "هنعمل SR ReEscalate للشكوه الموجوده في TTS."
-            },
-            {
-                "type": "step",
-                "num": "6",
-                "text": "وهنعمل SR Major Fault Problem Solved"
-            },
-            {
-                "type": "step",
-                "num": "7",
-                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
-            },
-            {
-                "type": "note",
-                "text": "طرق التواصل العميل هوا اللي بيتابع معانا"
+                "type": "case",
+                "text": "ثبتت في ال <span style=\"color: rgb(56, 189, 248);\">IU</span>",
+                "target": "SEC_1795043675836"
             }
         ],
         "SEC_1795035317813": [
@@ -1731,7 +1673,7 @@ const ttsData = {
             },
             {
                 "type": "note",
-                "text": "طرق التواصل العميل هوا اللي بيتابع معانا"
+                "text": "<span style=\"color: rgb(250, 204, 21);\">طرق التواصل</span>: العميل هوا اللي بيتابع معانا"
             }
         ],
         "SEC_1795035333151": [],
@@ -1782,6 +1724,100 @@ const ttsData = {
             {
                 "type": "note",
                 "text": "التواصل عن طريق مكالمه فقط"
+            }
+        ],
+        "SEC_1795043673880": [
+            {
+                "type": "step",
+                "num": "1",
+                "text": "<div><div>هنبلغ للعميل:</div><div>ان خط حضرتك من ضمن مجموعة من الخطوط المتأثرة بعطل جسيم في الشبكة الأرضية وده يتطلب تدخل من فرق الصيانة المختصة.</div></div>"
+            },
+            {
+                "type": "step",
+                "num": "2",
+                "text": "وهنعمل SR Physical Cases&gt;Major Fault Within Sla"
+            },
+            {
+                "type": "step",
+                "num": "3",
+                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+            },
+            {
+                "type": "note",
+                "text": "<span style=\"color: rgb(250, 204, 21);\">طرق التواصل</span>: العميل هوا اللي بيتابع معانا"
+            }
+        ],
+        "SEC_1795043675836": [
+            {
+                "type": "step",
+                "num": "1",
+                "text": "هنبلغ العميل ال normal SLA الخاصه بالشكوة."
+            },
+            {
+                "type": "step",
+                "num": "2",
+                "text": "هنعمل SR ReEscalate للشكوه الموجوده في TTS."
+            },
+            {
+                "type": "step",
+                "num": "3",
+                "text": "وهنعمل SR Major Fault Problem Solved"
+            },
+            {
+                "type": "step",
+                "num": "4",
+                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+            },
+            {
+                "type": "note",
+                "text": "<span style=\"color: rgb(250, 204, 21);\">طرق التواصل</span>: العميل هوا اللي بيتابع معانا"
+            }
+        ],
+        "SEC_1795044146810": [
+            {
+                "type": "step",
+                "num": "1",
+                "text": "<div>هنبلغ للعميل:</div><div>ان خط حضرتك من ضمن مجموعة من الخطوط المتأثرة بعطل جسيم في الشبكة الأرضية وده يتطلب تدخل من فرق الصيانة المختصة.</div><div>وهنجدد المده</div>"
+            },
+            {
+                "type": "step",
+                "num": "2",
+                "text": "وهنعمل SR Physical Cases&gt;Major Fault After Sla"
+            },
+            {
+                "type": "step",
+                "num": "3",
+                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+            },
+            {
+                "type": "note",
+                "text": "<span style=\"color: rgb(250, 204, 21);\">طرق التواصل</span>: العميل هوا اللي بيتابع معانا"
+            }
+        ],
+        "SEC_1795044148909": [
+            {
+                "type": "step",
+                "num": "1",
+                "text": "هنمشي خطوات المشكلة من الاول ونابدتها عالشكوة."
+            },
+            {
+                "type": "step",
+                "num": "2",
+                "text": "هنعمل SR ReEscalate للشكوه الموجوده في TTS."
+            },
+            {
+                "type": "step",
+                "num": "3",
+                "text": "وهنعمل SR Major Fault Problem Solved"
+            },
+            {
+                "type": "step",
+                "num": "4",
+                "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
+            },
+            {
+                "type": "note",
+                "text": "<span style=\"color: rgb(250, 204, 21);\">طرق التواصل</span>: العميل هوا اللي بيتابع معانا"
             }
         ]
     },
@@ -1890,13 +1926,17 @@ const ttsData = {
         "SEC_1794615770147": "📋 الخطوات المطلوبة:",
         "SEC_1794615770798": "📋 الخطوات المطلوبة:",
         "SEC_1795027085050": false,
-        "SEC_1795027681366": "📋 الخطوات المطلوبة:",
-        "SEC_1795028321432": "📋 الخطوات المطلوبة:",
+        "SEC_1795027681366": "<span style=\"color: rgb(250, 204, 21); font-size: 16px; text-align: start;\">هنعمل اعادة تصعيد لل </span><span style=\"font-size: 16px; text-align: start;\">IU</span>",
+        "SEC_1795028321432": "<span style=\"color: rgb(248, 250, 252); font-size: 13.5px; text-align: start;\"><span style=\"color: rgb(250, 204, 21);\"><span style=\"font-size: 16px;\">هنعمل اعادة تصعيد لل <span style=\"color: rgb(56, 189, 248);\">IU</span></span><span style=\"color: rgb(56, 189, 248);\"></span></span></span>",
         "SEC_1795035317813": "📋 الخطوات المطلوبة:",
         "SEC_1795035333151": "📋 الخطوات المطلوبة:",
         "SEC_1795039523310": "<span style=\"color: rgb(250, 204, 21);\"><span style=\"font-size: 14px;\">ال SLA: هتكون ٢٤ ساعه او ٧٢ لو حياة كريمه</span></span>",
         "SEC_1795039695850": "📋 الخطوات المطلوبة:",
-        "SEC_1795039696681": "📋 الخطوات المطلوبة:"
+        "SEC_1795039696681": "📋 الخطوات المطلوبة:",
+        "SEC_1795043673880": "📋 الخطوات المطلوبة:",
+        "SEC_1795043675836": "📋 الخطوات المطلوبة:",
+        "SEC_1795044146810": "📋 الخطوات المطلوبة:",
+        "SEC_1795044148909": "📋 الخطوات المطلوبة:"
     },
     "decisions": {
         "ADV_TIME_IN": {
