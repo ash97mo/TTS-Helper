@@ -1560,7 +1560,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "٣",
-                "text": "هنعمل SR Follow Up Within Sla"
+                "text": "هنعمل SR Installation Operation - Within Sla"
             }
         ],
         "SEC_1794615736083": [
@@ -1577,7 +1577,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "٣",
-                "text": "هنعمل SR Follow Up After Sla"
+                "text": "هنعمل SR Installation Operation - After Sla"
             }
         ],
         "SEC_1794615770147": [
@@ -1594,7 +1594,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "٣",
-                "text": "هنعمل SR Follow Up After ReEsclation Within Sla"
+                "text": "هنعمل SR Installation Operation - Within Sla"
             }
         ],
         "SEC_1794615770798": [
@@ -1611,7 +1611,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "٣",
-                "text": "هنعمل SR Follow Up After ReEsclation After Sla"
+                "text": "هنعمل SR Installation Operation - After Sla"
             }
         ],
         "SEC_1795027085050": [
