@@ -5,7 +5,7 @@ const ttsData = {
     "mainPools": [
         {
             "key": "FOLLOWUP",
-            "title": "<span style=\"font-size: 16px;\"><span style=\"font-size: 18px;\"><span style=\"color: rgb(250, 204, 21);\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(248, 113, 113);\">CC-Follow Up</span></span></span></span></span></span>"
+            "title": "<span style=\"font-size: 16px;\"><span style=\"font-size: 18px;\"><span style=\"color: rgb(250, 204, 21);\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(248, 113, 113);\"><span style=\"color: rgb(74, 222, 128);\"><span style=\"color: rgb(74, 222, 128);\">CC-Follow Up</span></span></span></span></span></span></span></span>"
         },
         {
             "key": "MCU",
@@ -13,7 +13,7 @@ const ttsData = {
         },
         {
             "key": "IU",
-            "title": "<span style=\"font-size: 18px;\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(248, 113, 113);\">IU Maintenance</span></span></span></span>"
+            "title": "<span style=\"font-size: 18px;\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(248, 113, 113);\"><span style=\"color: rgb(74, 222, 128);\">IU Maintenance</span></span></span></span></span>"
         },
         {
             "key": "CUSTOM_1794074541102",
@@ -21,7 +21,7 @@ const ttsData = {
         },
         {
             "key": "POOL_1794366041775",
-            "title": "<div><span style=\"font-size: 18px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"color: rgb(248, 113, 113);\">SLS - IVR Automation</span></span></span></span></span></div>"
+            "title": "<div><span style=\"font-size: 18px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"color: rgb(248, 113, 113);\"><span style=\"color: rgb(74, 222, 128);\">SLS - IVR Automation</span></span></span></span></span></span></div>"
         },
         {
             "key": "INSTALLATION_OPS",
@@ -29,7 +29,7 @@ const ttsData = {
         },
         {
             "key": "ADVANCED",
-            "title": "<span style=\"font-size: 18px;\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"color: rgb(248, 113, 113);\">Second Level Advanced</span></span></span></span>"
+            "title": "<span style=\"font-size: 18px;\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"color: rgb(248, 113, 113);\"><span style=\"color: rgb(74, 222, 128);\"><span style=\"color: rgb(74, 222, 128);\">Second Level Advanced</span></span></span></span></span></span>"
         },
         {
             "key": "POOL_1794487315512",
@@ -37,7 +37,7 @@ const ttsData = {
         },
         {
             "key": "POOL_1794487341327",
-            "title": "<span style=\"font-size: 18px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(248, 113, 113);\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"color: rgb(248, 113, 113);\">Pilot-SLS</span></span></span></span></span></span></span>"
+            "title": "<span style=\"font-size: 18px;\"><span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(248, 113, 113);\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"color: rgb(248, 113, 113);\"><span style=\"color: rgb(74, 222, 128);\">Pilot-SLS</span></span></span></span></span></span></span></span>"
         },
         {
             "key": "NOC",
@@ -1617,17 +1617,17 @@ const ttsData = {
         "SEC_1795027085050": [
             {
                 "type": "case",
-                "text": "انا اللي مصعدها",
+                "text": "<span style=\"font-size: 16px;\">انا اللي مصعدها</span>",
                 "target": "SEC_1795035317813"
             },
             {
                 "type": "case",
-                "text": "خلال ال SLA",
+                "text": "<span style=\"font-size: 16px;\"><span style=\"font-size: 16px;\">خلال ال SLA</span></span>",
                 "target": "SEC_1795028321432"
             },
             {
                 "type": "case",
-                "text": "عدت ال SLA",
+                "text": "<span style=\"font-size: 16px;\">عدت ال SLA</span>",
                 "target": "SEC_1795027681366"
             }
         ],
@@ -1680,12 +1680,12 @@ const ttsData = {
         "SEC_1795039523310": [
             {
                 "type": "case",
-                "text": "خلال ال SLA",
+                "text": "<span style=\"font-size: 16px;\">خلال ال SLA</span>",
                 "target": "SEC_1795039695850"
             },
             {
                 "type": "case",
-                "text": "عدت ال SLA",
+                "text": "<span style=\"font-size: 16px;\">عدت ال SLA</span>",
                 "target": "SEC_1795039696681"
             }
         ],
