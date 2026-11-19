@@ -1797,6 +1797,11 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "3",
+                "text": "هنعمل IR Delay<div>ونابدت بيه جوه عالشكوه.</div>"
+            },
+            {
+                "type": "step",
+                "num": "4",
                 "text": "<div>لو عدت ٢٤ ساعه من وقت التصعيد&nbsp;</div>هنعرض تعويض ٠١٥ حسب باقتة.<div>---------<br><div>&nbsp;لو خلال ٢٤ ساعه والشكوه physical instability او BLQ.&nbsp;</div><div>او Voice down وعليها بمشكله في النت ٣ جيجا لمده يومين</div></div>"
             },
             {
