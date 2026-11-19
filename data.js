@@ -1692,13 +1692,18 @@ const ttsData = {
         "SEC_1795039695850": [
             {
                 "type": "step",
-                "num": "١",
+                "num": "1",
                 "text": "هنبلغ العميل ان شكوته لسه في القسم المختص وجاري العمل علي اصلاح المشكله خلال ال SLA."
             },
             {
                 "type": "step",
-                "num": "٢",
+                "num": "2",
                 "text": "وهنعمل SR Out Side TEdata<div>بتتعمل مره وحده بس.</div>"
+            },
+            {
+                "type": "step",
+                "num": "3",
+                "text": "هنعمل SR Follow up Within sla"
             },
             {
                 "type": "note",
@@ -1708,17 +1713,22 @@ const ttsData = {
         "SEC_1795039696681": [
             {
                 "type": "step",
-                "num": "١",
+                "num": "1",
                 "text": "هنشوف الشكوه عال ADF لو لسه مفتوحه هنبلغ العميل ان شكوته لسه في القسم المختص وجاري العمل علي اصلاح المشكله.<div>&nbsp;وهنجدد المده.</div>"
             },
             {
                 "type": "step",
-                "num": "٢",
+                "num": "2",
+                "text": "هنعمل SR Follow Up After SLA"
+            },
+            {
+                "type": "step",
+                "num": "3",
                 "text": "وهنعمل SR Out Side TEdata<div>بتتعمل مره وحده بس.</div>"
             },
             {
                 "type": "step",
-                "num": "٤",
+                "num": "4",
                 "text": "لو الشكوة عال ADF مقفولة هنمشي خطوات من الاول."
             },
             {
@@ -1925,12 +1935,12 @@ const ttsData = {
         "SEC_1794615736083": "📋 الخطوات المطلوبة:",
         "SEC_1794615770147": "📋 الخطوات المطلوبة:",
         "SEC_1794615770798": "📋 الخطوات المطلوبة:",
-        "SEC_1795027085050": false,
+        "SEC_1795027085050": "<div><span style=\"color: rgb(250, 204, 21); font-size: 14px;\"></span></div><span style=\"color: rgb(56, 189, 248);\"><div><span style=\"color: rgb(250, 204, 21); font-size: 14px;\"></span></div><span style=\"color: rgb(56, 189, 248);\"><div><span style=\"color: rgb(250, 204, 21); font-size: 14px;\"></span></div><span style=\"color: rgb(56, 189, 248);\"><div><span style=\"color: rgb(250, 204, 21); font-size: 14px;\"></span></div><span style=\"color: rgb(248, 113, 113);\"><div><span style=\"color: rgb(250, 204, 21); font-size: 14px;\"></span></div><span style=\"color: rgb(56, 189, 248);\"><div><span style=\"color: rgb(250, 204, 21); font-size: 14px;\"></span></div></span></span></span></span></span><span style=\"font-size: 16px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 14px;\"><span style=\"font-size: 16px;\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"color: rgb(56, 189, 248);\"><span style=\"color: rgb(248, 113, 113);\"><span style=\"color: rgb(56, 189, 248);\"><div><span style=\"color: rgb(250, 204, 21); font-size: 14px;\">لو مفيش ابديت بال SLA</span></div></span><span style=\"color: rgb(250, 204, 21); font-size: 14px;\"></span></span></span></span></span><span style=\"color: rgb(250, 204, 21); font-size: 14px;\">هتكون <span style=\"color: rgb(56, 189, 248);\">72</span> ساعة</span><div><span style=\"color: rgb(250, 204, 21); font-size: 14px;\"><span style=\"color: rgb(56, 189, 248);\">وخمس</span> ايام لو حياة كريمه</span></div></span></span></span></span><div><span style=\"color: rgb(250, 204, 21); font-size: 14px;\"></span></div>",
         "SEC_1795027681366": "<span style=\"color: rgb(250, 204, 21); font-size: 16px; text-align: start;\">هنعمل اعادة تصعيد لل </span><span style=\"font-size: 16px; text-align: start;\">IU</span>",
         "SEC_1795028321432": "<span style=\"color: rgb(248, 250, 252); font-size: 13.5px; text-align: start;\"><span style=\"color: rgb(250, 204, 21);\"><span style=\"font-size: 16px;\">هنعمل اعادة تصعيد لل <span style=\"color: rgb(56, 189, 248);\">IU</span></span><span style=\"color: rgb(56, 189, 248);\"></span></span></span>",
         "SEC_1795035317813": "📋 الخطوات المطلوبة:",
         "SEC_1795035333151": "📋 الخطوات المطلوبة:",
-        "SEC_1795039523310": "<span style=\"color: rgb(250, 204, 21);\"><span style=\"font-size: 14px;\">ال SLA: هتكون ٢٤ ساعه او ٧٢ لو حياة كريمه</span></span>",
+        "SEC_1795039523310": "<span style=\"color: rgb(250, 204, 21);\"><span style=\"font-size: 14px;\"></span></span><span style=\"font-size: 16px;\"><span style=\"color: rgb(250, 204, 21);\"><span style=\"font-size: 14px;\">ال SLA</span></span><div><span style=\"color: rgb(250, 204, 21);\"><span style=\"font-size: 14px;\">هتكون <span style=\"color: rgb(56, 189, 248);\">٢٤</span> ساعه</span></span></div><div><span style=\"color: rgb(250, 204, 21);\"><span style=\"font-size: 14px;\">و <span style=\"color: rgb(56, 189, 248);\">٧٢</span> ساعة لو حياة كريمه</span></span></div></span><div><span style=\"color: rgb(250, 204, 21);\"><span style=\"font-size: 14px;\"></span></span></div>",
         "SEC_1795039695850": "📋 الخطوات المطلوبة:",
         "SEC_1795039696681": "📋 الخطوات المطلوبة:",
         "SEC_1795043673880": "📋 الخطوات المطلوبة:",
