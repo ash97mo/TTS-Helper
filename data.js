@@ -1680,6 +1680,11 @@ const ttsData = {
         "SEC_1795039523310": [
             {
                 "type": "case",
+                "text": "<span style=\"font-size: 16px;\">انا اللي مصعدها</span>",
+                "target": "SEC_1795150080679"
+            },
+            {
+                "type": "case",
                 "text": "<span style=\"font-size: 16px;\">خلال ال SLA</span>",
                 "target": "SEC_1795039695850"
             },
@@ -1703,7 +1708,7 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "3",
-                "text": "هنعمل SR Follow up Within sla"
+                "text": "هنعمل SR Follow Up Within Sla حسب الشكوة هنشوفها متصعده كام مره"
             },
             {
                 "type": "note",
@@ -1719,12 +1724,12 @@ const ttsData = {
             {
                 "type": "step",
                 "num": "2",
-                "text": "هنعمل SR Follow Up After SLA"
+                "text": "وهنعمل SR Out Side TEdata<div>بتتعمل مره وحده بس.</div>"
             },
             {
                 "type": "step",
                 "num": "3",
-                "text": "وهنعمل SR Out Side TEdata<div>بتتعمل مره وحده بس.</div>"
+                "text": "هنعمل SR Follow Up After Sla حسب الشكوة هنشوفها متصعده كام مره"
             },
             {
                 "type": "step",
@@ -1833,6 +1838,22 @@ const ttsData = {
             {
                 "type": "note",
                 "text": "<span style=\"color: rgb(250, 204, 21);\">طرق التواصل</span>: العميل هوا اللي بيتابع معانا"
+            }
+        ],
+        "SEC_1795150080679": [
+            {
+                "type": "step",
+                "num": "1",
+                "text": "هنبلغ العميل صعدنا الشكوه وهيتم حل المشكلة خلال ال SLA ."
+            },
+            {
+                "type": "step",
+                "num": "٢",
+                "text": "<div>وهنعمل SR Out Side TEdata<div>بتتعمل مره وحده بس.</div></div>"
+            },
+            {
+                "type": "note",
+                "text": "التواصل عن طريق مكالمه فقط"
             }
         ]
     },
@@ -1951,7 +1972,8 @@ const ttsData = {
         "SEC_1795043673880": "📋 الخطوات المطلوبة:",
         "SEC_1795043675836": "📋 الخطوات المطلوبة:",
         "SEC_1795044146810": "📋 الخطوات المطلوبة:",
-        "SEC_1795044148909": "📋 الخطوات المطلوبة:"
+        "SEC_1795044148909": "📋 الخطوات المطلوبة:",
+        "SEC_1795150080679": "📋 الخطوات المطلوبة:"
     },
     "decisions": {
         "ADV_TIME_IN": {
