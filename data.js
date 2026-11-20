@@ -1094,23 +1094,18 @@ const ttsData = {
         "SEC_1794570827643": [
             {
                 "type": "step",
-                "num": "١",
+                "num": "1",
                 "text": "هنمشي خطوات المشكلة لو اتحلت هنابدت الشكوه انها اتحلت ولازم نقفلها.<div>&nbsp;وهنعمل SR حل المشكلة.&nbsp;</div><div>وهنعمل SR Manual TS Request</div>"
             },
             {
                 "type": "step",
-                "num": "٣",
-                "text": "لو احتجنا نصعد هنابدت بالخطوات عالشكوه ونرفعها للقسم الخاص بالمشكلة"
+                "num": "2",
+                "text": "لو متحلتش واحتجنا نصعد هنقفلها ونصعد المشكلة اللوجيكال.&nbsp;"
             },
             {
                 "type": "step",
-                "num": "٢",
+                "num": "3",
                 "text": "وهنعمل SR Manual TS Request"
-            },
-            {
-                "type": "step",
-                "num": "٤",
-                "text": "وهنعمل SR&nbsp;<div><br></div>"
             },
             {
                 "type": "note",
