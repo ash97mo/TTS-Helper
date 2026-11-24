@@ -69,6 +69,11 @@ const ttsData = {
                 "text": "هنعمل <span style=\"background-color: rgb(254, 240, 138); color: rgb(0, 0, 0); padding: 1px 4px; border-radius: 3px;\">TTS Case</span>&nbsp;On Call ونابدت برقمها جوه الشكوه"
             },
             {
+                "type": "step",
+                "num": "٣",
+                "text": "وهنعمل SR Follow up&nbsp; عالشكوة نفسها حسب الشكوه"
+            },
+            {
                 "type": "note",
                 "text": "ال SLA&nbsp;<span style=\"color: rgb(248, 250, 252); font-weight: 400;\">&nbsp;هيتم التواصل معاك في خلال ١٥ دقيقة من جانب القسم القسم المختص من مواعيد العمل من ٨ صباحا ل ١١ مسا</span>"
             }
@@ -1780,7 +1785,7 @@ const ttsData = {
             },
             {
                 "type": "note",
-                "text": "<span style=\"color: rgb(250, 204, 21);\">طرق التواصل</span>: العميل هوا اللي بيتابع معانا"
+                "text": "ال Sla هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة"
             }
         ],
         "SEC_1795044146810": [
@@ -1832,7 +1837,7 @@ const ttsData = {
             },
             {
                 "type": "note",
-                "text": "<span style=\"color: rgb(250, 204, 21);\">طرق التواصل</span>: العميل هوا اللي بيتابع معانا"
+                "text": "ال Sla هتكون 24 ساعه وهتكون 72 ساعه لو حياة كريمة"
             }
         ],
         "SEC_1795150080679": [
